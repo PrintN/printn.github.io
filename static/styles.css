@@ -335,13 +335,32 @@ section {
   width: 100%;
 }
 
-.fa-brands {
-  background-color: var(--color-primary);
-  font-size: 315%;
-  cursor: pointer;
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
-.fa-brands:hover {
-  color: #c9c9c9;
+
+.socials a {
+  background-color: var(--color-primary);
+  font-size: 300%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  color: rgb(255, 255, 255); /* Set the default color for the icons */
+}
+
+.socials a:hover {
+  color: #c9c9c9; /* Change the color only on hover */
+}
+.light-mode .socials a i {
+  color: var(--color-secondary); /* Set the color for the icons in light mode */
+}
+.light-mode .socials a i:hover {
+  color: #a3a111; /* Set the color for the icons in light mode */
 }
 
 .port-text {
@@ -684,6 +703,10 @@ section {
 @media screen and (max-width: 700px) {
   .container {
     padding: 7rem 3rem;
+  }
+
+  .socials {
+    margin-bottom: 60px;
   }
 
   .about-stats .progress-bars {
