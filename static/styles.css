@@ -124,6 +124,23 @@ section {
   color: var(--color-white);
 }
 
+.text {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  left: -110%; /* Adjust this value for the desired sliding distance */
+}
+
+.control[data-id="portfolio"] .text {
+  left: -150%; /* Adjust this value for the "Portfolio" button */
+}
+
+.control:hover .text {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .theme-btn {
   top: 5%;
   right: 3%;
