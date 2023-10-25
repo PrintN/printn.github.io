@@ -133,7 +133,7 @@ section {
 }
 
 .control[data-id="portfolio"] .text {
-  left: -150%; /* Adjust this value for the "Portfolio" button */
+  left: -145%; /* Adjust this value for the "Portfolio" button */
 }
 
 .control:hover .text {
@@ -439,6 +439,13 @@ section {
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
+
+.portfolios .portfolio-item .hover-items p {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 .portfolios .portfolio-item .hover-items .icons .icon i {
   font-size: 1.5rem;
   color: var(--color-white);
