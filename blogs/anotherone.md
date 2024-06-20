@@ -8,6 +8,4 @@ image:
     alt: 'My github avatar.'
 tags: ["first", "blogging", "learning in public"]
 ---
-# My First Blog Post
-
 My first blog
