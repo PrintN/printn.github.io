@@ -4,7 +4,7 @@ pubDate: 20/06/2024
 description: This is the first post of my blog.
 author: PrintN
 image:
-    url: https://avatars.githubusercontent.com/u/127101769?v=4
+    url: https://avatars.githubusercontent.com/u/127101769?v=4](https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png
     alt: My github avatar.
 tags: ["first", "blogging", "learning in public"]
 ---
