@@ -135,6 +135,9 @@ section {
 .control[data-id="portfolio"] .text {
   left: -145%; /* Adjust this value for the "Portfolio" button */
 }
+.control[data-id="blogs"] .text {
+  left: -85%; /* Adjust this value for the "Portfolio" button */
+}
 
 .control:hover .text {
   transform: translateX(0);
@@ -761,3 +764,103 @@ section {
     padding-bottom: 110px;
   }
   }
+
+/* Blog Post */
+#blogs-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.blog-preview {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.blog-preview:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.blog-preview.expanded:hover {
+  transform: translateY(0px);
+  cursor: default;
+}
+
+.blog-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.blog-image {
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.blog-info .blog-description {
+  font-size: 18px;
+}
+.blog-info .blog-meta {
+  font-size: 14px;
+}
+
+.full-blog-image {
+  max-width: 100%; /* Ensure image is responsive */
+  margin-bottom: 16px;
+}
+
+.blog-full-content {
+  display: none;
+}
+
+.blog-preview.expanded .blog-full-content {
+  display: block;
+}
+.blog-preview.expanded {
+  margin: 0 auto;
+  min-width: 320%;
+}
+
+.blog-preview:not(.expanded) .blog-header,
+.blog-preview:not(.expanded) .blog-description,
+.blog-preview:not(.expanded) .blog-tags {
+  display: block;
+}
+
+.blog-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+.close-button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  line-height: 24px;
+  cursor: pointer;
+  color: var(--color-white);
+  display: none;
+}
+
+.blog-preview.expanded .close-button {
+  display: block;
+  position: relative;
+  float: inline-end;
+}
