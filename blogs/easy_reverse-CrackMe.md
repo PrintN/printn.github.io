@@ -15,16 +15,16 @@ tags: CrackMes,Reverse Engineering,Walkthrough
 ## What does it do?
 So the program is very simple it just asks us to provide a password when running it.
 
-<img src="https://github.com/user-attachments/assets/d806516a-6bf1-48fc-b0c8-a0c43cde6a8c" />
+<img src="https://github.com/user-attachments/assets/1ba76ef1-0952-48fa-9abe-339c4eeb36fb" />
 
 ## Decompiling with Ghidra
 Now we will just open it up in Ghidra and analyze it, we'll only enable the "Decompiler Parameter ID" and let the rest be on default.
 
-<img src="https://github.com/user-attachments/assets/c4736a9f-e8de-4e40-a367-ffa7c4d529e4" />
+<img src="https://github.com/user-attachments/assets/1e53aa3f-5d6d-485a-a009-3f39c366e35b" />
 
 Once analyzed the main function should automatically pop up in the Decompiled window, if it hasn't you can find it manually by going to the symbol tree and search for it.
 
-<img src="https://github.com/user-attachments/assets/821d3b76-0097-45c9-9e24-1cc7ed3fbcc6" />
+<img src="https://github.com/user-attachments/assets/3beaff0a-bda6-4f03-8cf9-60f5ab6dfc65" />
 
 Now we can take a look at the code.
    
@@ -73,6 +73,6 @@ if (*(char *)(param_2[1] + 4) == '@') {
 ## Running it with the correct password
 So now we can construct a password that meets the correct conditions.
 
-<img src="https://github.com/user-attachments/assets/2d4a5d95-85d2-4d8f-8d17-4120968b9e28" />
+<img src="https://github.com/user-attachments/assets/04bb8092-29ce-4b40-bdab-37ab29387831" />
 
 It works! I hope you learned something new, don't forget to check me out on [Youtube](https://youtube.com/@PrintN42) where I have some great videos.
