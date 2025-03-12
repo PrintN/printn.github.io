@@ -6,20 +6,7 @@
     <description>Recent content in Posts on PrintN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 17 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My Predictions Of The Future Of AI &amp; How To Prepare For It</title>
-      <link>http://localhost:1313/posts/my-predictions-of-the-future-of-ai-and-how-to-prepare-for-it/</link>
-      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/my-predictions-of-the-future-of-ai-and-how-to-prepare-for-it/</guid>
-      
-      <description>Introduction Artificial Intelligence (AI) has been around for over 60 years, but it has only recently begun to capture the public&amp;rsquo;s attention. With the release of advanced AI models like ChatGPT, everybody and their grandma are increasingly aware of its potential impact on our lives and jobs.
-My Predictions Here are some possible scenarious for how the future of AI may look like.
-Scenario 1: AI to AGI to ASI As AI continues to improve, we will eventually reach the stage of AGI (Artificial General Intelligence), where AI will have the ability to understand, learn, and apply knowledge across a wide range of tasks at a level equal to human capability.</description>
-      
-    </item>
-    
+    <lastBuildDate>Wed, 08 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FactCheck - PicoCTF Write-Up</title>
       <link>http://localhost:1313/posts/factcheck-picoctf/</link>
@@ -27,22 +14,35 @@ Scenario 1: AI to AGI to ASI As AI continues to improve, we will eventually reac
       
       <guid>http://localhost:1313/posts/factcheck-picoctf/</guid>
       
-      <description>Introduction Hello👋 Today we&amp;rsquo;re going to take a look at the challenge FactCheck on PicoCTF by Junias Bonou. The difficulty is medium.
-Challenge Description This binary is putting together some important piece of information&amp;hellip; Can you uncover that information? Examine this file . Do you understand its inner workings?
-Solution Let’s start by downloading the file.
-wget https://artifacts.picoctf.net/c_titan/186/bin Running strings on the file gives us a part of the flag.</description>
-      
-    </item>
-    
-    <item>
-      <title>Recap of 2024 🥳</title>
-      <link>http://localhost:1313/posts/recap-of-2024/</link>
-      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/recap-of-2024/</guid>
-      
-      <description>Welcome to my 2024 recap! In this post, I&amp;rsquo;ll share all the things I have done in 2024 and my plans for the next year (2025) 😀
-Things I have done in 2024 My Coding Journey in 2024 The year 2024 was an exciting and productive one for me in terms of coding. To improve my coding skills and work on projects more frequently, I made some effort to dedicate time to code / work on a project almost daily.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at the challenge FactCheck on PicoCTF by Junias Bonou. The difficulty is medium.&lt;/p&gt;
+&lt;h2 id=&#34;challenge-description&#34;&gt;Challenge Description&lt;/h2&gt;
+&lt;p&gt;This binary is putting together some important piece of information&amp;hellip; Can you uncover that information? Examine this &lt;a
+
+	
+	
+		href = &#34;https://artifacts.picoctf.net/c_titan/186/bin&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		file
+	&lt;/span&gt;
+
+&lt;/a&gt;. Do you understand its inner workings?&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Let’s start by downloading the file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget https://artifacts.picoctf.net/c_titan/186/bin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Running &lt;code&gt;strings&lt;/code&gt; on the file gives us a part of the flag.&lt;/p&gt;</description>
       
     </item>
     
@@ -53,8 +53,33 @@ Things I have done in 2024 My Coding Journey in 2024 The year 2024 was an exciti
       
       <guid>http://localhost:1313/posts/understand-your-threat-model/</guid>
       
-      <description>What Is a Threat Model? A threat model is a way to systematically identify and evaluate potential security risks to a system or asset. It helps both individuals and organizations recognize their vulnerabilities, understand the possible impacts of different threats, and determine the best strategies to protect against them.
-Assesing Your Threat Model https://ericmurphy.xyz/images/spectrum.png When assessing your individual threat model, consider the following steps to create a practical and effective strategy:</description>
+      <description>&lt;h2 id=&#34;what-is-a-threat-model&#34;&gt;What Is a Threat Model?&lt;/h2&gt;
+&lt;p&gt;A threat model is a way to systematically identify and evaluate potential security risks to a system or asset. It helps both individuals and organizations recognize their vulnerabilities, understand the possible impacts of different threats, and determine the best strategies to protect against them.&lt;/p&gt;
+&lt;h2 id=&#34;assesing-your-threat-model&#34;&gt;Assesing Your Threat Model&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/understand-your-threat-model/0.webp&#34; alt=&#34;Spectrum&#34;&gt;
+&lt;em&gt;&lt;a
+
+	
+	
+		href = &#34;https://ericmurphy.xyz/images/spectrum.png&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://ericmurphy.xyz/images/spectrum.png
+	&lt;/span&gt;
+
+&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;When assessing your individual threat model, consider the following steps to create a practical and effective strategy:&lt;/p&gt;</description>
       
     </item>
     
@@ -65,9 +90,11 @@ Assesing Your Threat Model https://ericmurphy.xyz/images/spectrum.png When asses
       
       <guid>http://localhost:1313/posts/why-you-should-start-using-rss-feed/</guid>
       
-      <description>What is RSS? RSS (Really Simple Syndication), is a way to get updates from your favorite websites and blogs in one place. It&amp;rsquo;s like a personalized feed that delivers new content from the sites you care about, so you don&amp;rsquo;t have to constantly check them individually.
-Why You Should Start Using RSS There are many reasons why one should setup a RSS feed. Here are the main reasons.
-Productivity: Save time by getting all your favorite content in one place.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/why-you-should-start-using-rss-feed/0.webp&#34; alt=&#34;Introduction Image&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-rss&#34;&gt;What is RSS?&lt;/h2&gt;
+&lt;p&gt;RSS (Really Simple Syndication), is a way to get updates from your favorite websites and blogs in one place. It&amp;rsquo;s like a personalized feed that delivers new content from the sites you care about, so you don&amp;rsquo;t have to constantly check them individually.&lt;/p&gt;
+&lt;h2 id=&#34;why-you-should-start-using-rss&#34;&gt;Why You Should Start Using RSS&lt;/h2&gt;
+&lt;p&gt;There are many reasons why one should setup a RSS feed. Here are the main reasons.&lt;/p&gt;</description>
       
     </item>
     
@@ -78,8 +105,103 @@ Productivity: Save time by getting all your favorite content in one place.</desc
       
       <guid>http://localhost:1313/posts/step-by-step-guide-for-publishing-your-open-source-app-on-f-droid/</guid>
       
-      <description>Introduction F-Droid is an open source app repository that provides a wide range of free and open source applications for Android devices. It offers a user-friendly alternative to Google Play, focusing on privacy and transparency. I just recently published my app to F-Droid, you can check it out here 👉 Human Benchmark .
-Prerequisites A Linux environment (use a virtual machine if you&amp;rsquo;re on Windows). The app&amp;rsquo;s source code must be publicly accessible on a version control system like GitHub.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/step-by-step-guide-for-publishing-your-open-source-app-on-f-droid/0.webp&#34; alt=&#34;Image 0&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;F-Droid is an open source app repository that provides a wide range of free and open source applications for Android devices. It offers a user-friendly alternative to Google Play, focusing on privacy and transparency. I just recently published my app to F-Droid, you can check it out here 👉 &lt;a
+
+	
+	
+		href = &#34;https://f-droid.org/en/packages/io.github.printn.humanbenchmark/&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		Human Benchmark
+	&lt;/span&gt;
+
+&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A Linux environment (use a virtual machine if you&amp;rsquo;re on Windows).&lt;/li&gt;
+&lt;li&gt;The app&amp;rsquo;s source code must be publicly accessible on a version control system like GitHub.&lt;/li&gt;
+&lt;li&gt;The repository should include a &lt;a
+
+	
+	
+		href = &#34;https://f-droid.org/docs/All_About_Descriptions_Graphics_and_Screenshots/&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		Fastlane or Triple-T structure
+	&lt;/span&gt;
+
+&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;It must be licensed under a Free/Libre license (&lt;a
+
+	
+	
+		href = &#34;https://spdx.org/licenses/&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		check here
+	&lt;/span&gt;
+
+&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;The app should not contain any &lt;a
+
+	
+	
+		href = &#34;https://f-droid.org/en/docs/Anti-Features/&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		anti-features
+	&lt;/span&gt;
+
+&lt;/a&gt; and must be fully open source, including all dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The process of publishing your app to F-Droid can take some time so remember to be patient :)&lt;/p&gt;</description>
       
     </item>
     
@@ -90,9 +212,36 @@ Prerequisites A Linux environment (use a virtual machine if you&amp;rsquo;re on 
       
       <guid>http://localhost:1313/posts/collaborative-development-picoctf/</guid>
       
-      <description>Introduction Today we&amp;rsquo;re going to take a look at the challenge Collaborative Development on PicoCTF by Jeffery John. The difficulty is easy.
-Challenge Description My team has been working very hard on new features for our flag printing program! I wonder how they&amp;rsquo;ll work together? You can download the challenge files here:
-challenge.zip Solution Let’s begin by extracting the contents of the downloaded .zip file and then navigate to the unzipped directory:</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Today we&amp;rsquo;re going to take a look at the challenge Collaborative Development on PicoCTF by Jeffery John. The difficulty is easy.&lt;/p&gt;
+&lt;h2 id=&#34;challenge-description&#34;&gt;Challenge Description&lt;/h2&gt;
+&lt;p&gt;My team has been working very hard on new features for our flag printing program! I wonder how they&amp;rsquo;ll work together? You can download the challenge files here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+
+	
+	
+		href = &#34;https://artifacts.picoctf.net/c_titan/178/challenge.zip&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		challenge.zip
+	&lt;/span&gt;
+
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Let’s begin by extracting the contents of the downloaded &lt;code&gt;.zip&lt;/code&gt; file and then navigate to the unzipped directory:&lt;/p&gt;</description>
       
     </item>
     
@@ -103,8 +252,34 @@ challenge.zip Solution Let’s begin by extracting the contents of the downloade
       
       <guid>http://localhost:1313/posts/lesson-learned-tryhackme/</guid>
       
-      <description>Introduction Today we&amp;rsquo;re going to take a look at Lesson Learned? room made by TryHackMe and Tib3rius. The difficulty is easy.
-The challenge description states there is no rabbit holes or hidden files but we have to treat the box as a real target. Going to the website https://[MACHINE_IP]/ we&amp;rsquo;re presented with a login form. Enumeration Doing a quick nmap scan we find the ports 22 and 80 open.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/lesson-learned-tryhackme/0.webp&#34; alt=&#34;Image 0&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Today we&amp;rsquo;re going to take a look at &lt;a
+
+	
+	
+		href = &#34;https://tryhackme.com/r/room/lessonlearned&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		Lesson Learned?
+	&lt;/span&gt;
+
+&lt;/a&gt; room made by TryHackMe and Tib3rius. The difficulty is easy.&lt;/p&gt;
+&lt;p&gt;The challenge description states there is no rabbit holes or hidden files but we have to treat the box as a real target. Going to the website &lt;code&gt;https://[MACHINE_IP]/&lt;/code&gt; we&amp;rsquo;re presented with a login form.
+&lt;img src=&#34;http://localhost:1313/posts/lesson-learned-tryhackme/1.webp&#34; alt=&#34;Screenshot 1&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;enumeration&#34;&gt;Enumeration&lt;/h2&gt;
+&lt;p&gt;Doing a quick &lt;code&gt;nmap&lt;/code&gt; scan we find the ports &lt;code&gt;22&lt;/code&gt; and &lt;code&gt;80&lt;/code&gt; open.&lt;/p&gt;</description>
       
     </item>
     
@@ -115,8 +290,15 @@ The challenge description states there is no rabbit holes or hidden files but we
       
       <guid>http://localhost:1313/posts/how-to-calculate-time-complexity/</guid>
       
-      <description>Introduction to Time Complexity Time complexity measures how the time to complete an algorithm grows with the size of its input. Understanding time complexity is crucial for optimizing performance in software development.
-Time Complexity vs. Space Complexity Time Complexity: Focuses on how long an algorithm takes to run. Space Complexity: Relates to how much memory an algorithm uses. Both are essential for efficient software design, as improving one may impact the other.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/how-to-calculate-time-complexity/0.webp&#34; alt=&#34;Image 0&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction-to-time-complexity&#34;&gt;Introduction to Time Complexity&lt;/h2&gt;
+&lt;p&gt;Time complexity measures how the time to complete an algorithm grows with the size of its input. Understanding time complexity is crucial for optimizing performance in software development.&lt;/p&gt;
+&lt;h3 id=&#34;time-complexity-vs-space-complexity&#34;&gt;Time Complexity vs. Space Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time Complexity&lt;/strong&gt;: Focuses on how long an algorithm takes to run.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space Complexity&lt;/strong&gt;: Relates to how much memory an algorithm uses.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both are essential for efficient software design, as improving one may impact the other.&lt;/p&gt;</description>
       
     </item>
     
@@ -127,9 +309,31 @@ Time Complexity vs. Space Complexity Time Complexity: Focuses on how long an alg
       
       <guid>http://localhost:1313/posts/redaction-gone-wrong-picoctf/</guid>
       
-      <description>Introduction Hello! 👋 Today, we&amp;rsquo;re going to take a look at the &amp;lsquo;Redaction gone wrong&amp;rsquo; challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.
-Challenge Description Now you DON’T see me. This report has some critical data in it, some of which have been redacted correctly, while some were not. Can you find an important key that was not redacted properly?
-Solution Let&amp;rsquo;s start by opening the provided PDF file.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Hello! 👋 Today, we&amp;rsquo;re going to take a look at the &amp;lsquo;Redaction gone wrong&amp;rsquo; challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.&lt;/p&gt;
+&lt;h2 id=&#34;challenge-description&#34;&gt;Challenge Description&lt;/h2&gt;
+&lt;p&gt;Now you DON’T see me. This &lt;a
+
+	
+	
+		href = &#34;https://artifacts.picoctf.net/c/84/Financial_Report_for_ABC_Labs.pdf&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		report
+	&lt;/span&gt;
+
+&lt;/a&gt; has some critical data in it, some of which have been redacted correctly, while some were not. Can you find an important key that was not redacted properly?&lt;/p&gt;</description>
       
     </item>
     
@@ -140,8 +344,11 @@ Solution Let&amp;rsquo;s start by opening the provided PDF file.</description>
       
       <guid>http://localhost:1313/posts/10-essential-nmap-flags/</guid>
       
-      <description>What is Nmap? Nmap, short for Network Mapper, is a powerful open-source tool designed for network discovery and security auditing. It&amp;rsquo;s an essential resource for network administrators, helping them identify devices on their networks, discover open ports, and detect potential vulnerabilities. Cybersecurity professionals and penetration testers frequently rely on Nmap to assess network security and bolster defenses.
-Installing Nmap If you&amp;rsquo;re using Kali Linux, you&amp;rsquo;re in luck—Nmap comes pre-installed and ready to go.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/10-essential-nmap-flags/0.webp&#34; alt=&#34;Image 0&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-nmap&#34;&gt;What is Nmap?&lt;/h2&gt;
+&lt;p&gt;Nmap, short for Network Mapper, is a powerful open-source tool designed for network discovery and security auditing. It&amp;rsquo;s an essential resource for network administrators, helping them identify devices on their networks, discover open ports, and detect potential vulnerabilities. Cybersecurity professionals and penetration testers frequently rely on Nmap to assess network security and bolster defenses.&lt;/p&gt;
+&lt;h2 id=&#34;installing-nmap&#34;&gt;Installing Nmap&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;re using Kali Linux, you&amp;rsquo;re in luck—Nmap comes pre-installed and ready to go. For other Linux distributions, you can easily install it with the following command:&lt;/p&gt;</description>
       
     </item>
     
@@ -152,12 +359,36 @@ Installing Nmap If you&amp;rsquo;re using Kali Linux, you&amp;rsquo;re in luck�
       
       <guid>http://localhost:1313/posts/unpackme-picoctf/</guid>
       
-      <description>Introduction Hello! 👋 Today, we&amp;rsquo;re going to take a look at the &amp;lsquo;unpackme&amp;rsquo; challenge on PicoCTF by LT &amp;lsquo;syreal&amp;rsquo; Jones. The difficulty level is medium.&amp;quot;
-Challenge Description Can you get the flag?
-Reverse engineer this binary .
-Solution So, let&amp;rsquo;s make the binary executable using chmod.
-chmod +x unpackme-upx Now, let&amp;rsquo;s try running the executable and see what it does.
-┌──(printn㉿printn)-[~] └─$ ./unpackme-upx What&amp;#39;s my favorite number? 1 Sorry, that&amp;#39;s not it!</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Hello! 👋 Today, we&amp;rsquo;re going to take a look at the &amp;lsquo;unpackme&amp;rsquo; challenge on PicoCTF by LT &amp;lsquo;syreal&amp;rsquo; Jones. The difficulty level is medium.&amp;quot;&lt;/p&gt;
+&lt;h2 id=&#34;challenge-description&#34;&gt;Challenge Description&lt;/h2&gt;
+&lt;p&gt;Can you get the flag?&lt;/p&gt;
+&lt;p&gt;Reverse engineer this &lt;a
+
+	
+	
+		href = &#34;https://artifacts.picoctf.net/c/205/unpackme-upx&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		binary
+	&lt;/span&gt;
+
+&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;So, let&amp;rsquo;s make the binary executable using &lt;strong&gt;chmod&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod +x unpackme-upx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, let&amp;rsquo;s try running the executable and see what it does.&lt;/p&gt;</description>
       
     </item>
     
@@ -168,9 +399,12 @@ chmod +x unpackme-upx Now, let&amp;rsquo;s try running the executable and see wh
       
       <guid>http://localhost:1313/posts/plumbing-picoctf/</guid>
       
-      <description>Introduction Hello👋 Today we&amp;rsquo;re going to take a look at the challenge Plumbing on PicoCTF by Alex Fulton &amp;amp; Danny Tunitis. The difficulty is medium.
-Challenge Description Sometimes you need to handle process data outside of a file. Can you find a way to keep the output from this program and search for the flag? Connect to jupiter.challenges.picoctf.org 4427.
-Solution When we connect to jupiter.challenges.picoctf.org 4427 we&amp;rsquo;re given a bunch of lines saying this is not the flag.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at the challenge Plumbing on PicoCTF by Alex Fulton &amp;amp; Danny Tunitis. The difficulty is medium.&lt;/p&gt;
+&lt;h2 id=&#34;challenge-description&#34;&gt;Challenge Description&lt;/h2&gt;
+&lt;p&gt;Sometimes you need to handle process data outside of a file. Can you find a way to keep the output from this program and search for the flag? Connect to &lt;code&gt;jupiter.challenges.picoctf.org 4427&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;When we connect to &lt;code&gt;jupiter.challenges.picoctf.org 4427&lt;/code&gt; we&amp;rsquo;re given a bunch of lines saying this is not the flag.&lt;/p&gt;</description>
       
     </item>
     
@@ -181,11 +415,37 @@ Solution When we connect to jupiter.challenges.picoctf.org 4427 we&amp;rsquo;re 
       
       <guid>http://localhost:1313/posts/blame-game-picoctf/</guid>
       
-      <description>Introduction Hello👋 Today we&amp;rsquo;re going to take a look at the challenge Blame Game on PicoCTF by Jeffery John. The difficulty is easy.
-Challenge Description Someone&amp;rsquo;s commits seems to be preventing the program from working. Who is it?
-You can download the challenge files here:
-challenge.zip Solution Let’s begin by extracting the contents of the downloaded .zip file and then navigate to the unzipped directory:
-unzip challenge.zip cd drop-in/ Inside this folder, we notice the presence of a .</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at the challenge Blame Game on PicoCTF by Jeffery John. The difficulty is easy.&lt;/p&gt;
+&lt;h2 id=&#34;challenge-description&#34;&gt;Challenge Description&lt;/h2&gt;
+&lt;p&gt;Someone&amp;rsquo;s commits seems to be preventing the program from working. Who is it?&lt;/p&gt;
+&lt;p&gt;You can download the challenge files here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+
+	
+	
+		href = &#34;https://artifacts.picoctf.net/c_titan/158/challenge.zip&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		challenge.zip
+	&lt;/span&gt;
+
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Let’s begin by extracting the contents of the downloaded &lt;code&gt;.zip&lt;/code&gt; file and then navigate to the unzipped directory:&lt;/p&gt;</description>
       
     </item>
     
@@ -196,9 +456,42 @@ unzip challenge.zip cd drop-in/ Inside this folder, we notice the presence of a 
       
       <guid>http://localhost:1313/posts/opsec-101/</guid>
       
-      <description>Introduction to OpSec Definition: Operational Security (OpSec) is a crucial process designed to safeguard sensitive information from unauthorized access and exploitation. Origins: Originally developed within military operations, OpSec has now become vital in business and personal safety contexts.
-Core Focus: OpSec aims to identify and mitigate risks to protect vital information, ensuring it remains confidential and secure.
-Why You Should Care About OpSec Risks of Ignoring OpSec Silk Road Example: Ross Ulbricht, founder of the Silk Road, made key OpSec mistakes like using his personal email for asking help to built the site on a forum.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/opsec-101/0.webp&#34; alt=&#34;Image 0&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction-to-opsec&#34;&gt;Introduction to OpSec&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;: Operational Security (OpSec) is a crucial process designed to safeguard sensitive information from unauthorized access and exploitation.
+Origins: Originally developed within military operations, OpSec has now become vital in business and personal safety contexts.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Core Focus&lt;/strong&gt;: OpSec aims to identify and mitigate risks to protect vital information, ensuring it remains confidential and secure.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-you-should-care-about-opsec&#34;&gt;Why You Should Care About OpSec&lt;/h2&gt;
+&lt;h3 id=&#34;risks-of-ignoring-opsec&#34;&gt;Risks of Ignoring OpSec&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Silk Road Example&lt;/strong&gt;:
+Ross Ulbricht, founder of the Silk Road, made key OpSec mistakes like using his personal email for asking help to built the site on a forum. These errors allowed law enforcement to track him, resulting in his arrest and a life sentence. This shows how small lapses in OpSec can have severe consequences. &lt;a
+
+	
+	
+		href = &#34;https://www.youtube.com/watch?v=HBTYVVUBAGs&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		Video
+	&lt;/span&gt;
+
+&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -209,9 +502,37 @@ Why You Should Care About OpSec Risks of Ignoring OpSec Silk Road Example: Ross 
       
       <guid>http://localhost:1313/posts/permx-hackthebox/</guid>
       
-      <description>Introduction Hello👋 Today we&amp;rsquo;re going to take a look at PermX machine on HackTheBox by mtzsec. The difficulty is easy.
-We&amp;rsquo;ll have to start by adding the target IP Adress to our /etc/hosts use nano or vim to edit this.
-[YOUR_TARGET_IP] permx.htb Enumeration We&amp;rsquo;ll start by scanning for open ports with Nmap. We get port 80 and 22, which means there is a website running. There is nothing much of interest on the homepage.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/permx-hackthebox/0.webp&#34; alt=&#34;Image 0&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a
+
+	
+	
+		href = &#34;https://www.hackthebox.com/machines/permx&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		PermX
+	&lt;/span&gt;
+
+&lt;/a&gt; machine on HackTheBox by mtzsec. The difficulty is easy.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll have to start by adding the target IP Adress to our &lt;code&gt;/etc/hosts&lt;/code&gt; use nano or vim to edit this.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff636f&#34;&gt;[&lt;/span&gt;YOUR_TARGET_IP&lt;span style=&#34;color:#ff636f&#34;&gt;]&lt;/span&gt; permx.htb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;enumeration&#34;&gt;Enumeration&lt;/h2&gt;
+&lt;p&gt;We&amp;rsquo;ll start by scanning for open ports with Nmap.
+&lt;img src=&#34;http://localhost:1313/posts/permx-hackthebox/1.webp&#34; alt=&#34;Screenshot 1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We get port 80 and 22, which means there is a website running. There is nothing much of interest on the homepage.
+&lt;img src=&#34;http://localhost:1313/posts/permx-hackthebox/2.webp&#34; alt=&#34;Screenshot 2&#34;&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -222,9 +543,34 @@ We&amp;rsquo;ll have to start by adding the target IP Adress to our /etc/hosts u
       
       <guid>http://localhost:1313/posts/creative-tryhackme/</guid>
       
-      <description>Introduction Hello👋 Today we&amp;rsquo;re going to take a look at Creative room on TryHackMe by sSaadakhtarr. The difficulty is easy.
-We&amp;rsquo;ll have to start by adding the target IP Adress to our /etc/hosts use nano or vim to edit this.
-[YOUR_TARGET_IP] creative.thm We can now take a look at the website http://creative.thm. It looks like a simple html website. Enumeration We&amp;rsquo;ll just start off with a simple Nmap scan. We see that the ports 22 and 80 are open.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/creative-tryhackme/0.webp&#34; alt=&#34;Image 0&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a
+
+	
+	
+		href = &#34;https://tryhackme.com/r/room/creative&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		Creative
+	&lt;/span&gt;
+
+&lt;/a&gt; room on TryHackMe by sSaadakhtarr. The difficulty is easy.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll have to start by adding the target IP Adress to our &lt;code&gt;/etc/hosts&lt;/code&gt; use nano or vim to edit this.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff636f&#34;&gt;[&lt;/span&gt;YOUR_TARGET_IP&lt;span style=&#34;color:#ff636f&#34;&gt;]&lt;/span&gt; creative.thm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We can now take a look at the website &lt;code&gt;http://creative.thm&lt;/code&gt;. It looks like a simple html website.
+&lt;img src=&#34;http://localhost:1313/posts/creative-tryhackme/1.webp&#34; alt=&#34;Screenshot 1&#34;&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -235,20 +581,32 @@ We&amp;rsquo;ll have to start by adding the target IP Adress to our /etc/hosts u
       
       <guid>http://localhost:1313/posts/w1seguy-tryhackme/</guid>
       
-      <description>Hello👋 Today we&amp;rsquo;re going to take a look at W1seGuy room on TryHackMe by hadrian3689 and DrGonz0. The difficulty is easy.
-What Does It Do? We&amp;rsquo;re being told we have to connect to our target machine IP on port 1337 with Netcat. We can see that it gives us an XOR encrypted string and then asks us to provide an encryption key. Analyzing The Code We&amp;rsquo;re provided with a Source.</description>
-      
-    </item>
-    
-    <item>
-      <title>Avoiding Surveillance Cameras</title>
-      <link>http://localhost:1313/posts/avoiding-surveillance-cameras/</link>
-      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/avoiding-surveillance-cameras/</guid>
-      
-      <description>Why Might You Want to Avoid Surveillance Cameras? Surveillance cameras are increasingly present in public and private spaces. While their purpose is often linked to safety and security, many people have valid concerns about being constantly monitored. Here are some common motivations for avoiding these cameras:
-Activists and Protesters: Individuals advocating for social or political change often wish to protect their identities from authorities or opposing groups. They fear that being identified on camera could lead to harassment, retaliation, or suppression of their efforts.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/w1seguy-tryhackme/0.webp&#34; alt=&#34;Image 0&#34;&gt;
+Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a
+
+	
+	
+		href = &#34;https://tryhackme.com/r/room/w1seguy&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		W1seGuy
+	&lt;/span&gt;
+
+&lt;/a&gt; room on TryHackMe by hadrian3689 and DrGonz0. The difficulty is easy.&lt;/p&gt;
+&lt;h2 id=&#34;what-does-it-do&#34;&gt;What Does It Do?&lt;/h2&gt;
+&lt;p&gt;We&amp;rsquo;re being told we have to connect to our target machine IP on port 1337 with Netcat. We can see that it gives us an XOR encrypted string and then asks us to provide an encryption key.
+&lt;img src=&#34;http://localhost:1313/posts/w1seguy-tryhackme/1.webp&#34; alt=&#34;Screenshot 1&#34;&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -259,7 +617,10 @@ Activists and Protesters: Individuals advocating for social or political change 
       
       <guid>http://localhost:1313/posts/should-you-be-using-vpns/</guid>
       
-      <description>Have you ever seen those ads promising that using a VPN will keep you safe from hackers and government surveillance? It’s easy to get caught up in the hype, but how much of it is actually true?What Is A VPN? A Virtual Private Network (VPN) is a technology that routes your internet traffic through a remote server, masking your IP address and hiding your online activity from your Internet Service Provider (ISP).</description>
+      <description>&lt;img src=&#34;1.webp&#34; alt=&#34;VPN&#34; &gt;
+Have you ever seen those ads promising that using a VPN will keep you safe from hackers and government surveillance? It’s easy to get caught up in the hype, but how much of it is actually true?
+&lt;h2 id=&#34;what-is-a-vpn&#34;&gt;What Is A VPN?&lt;/h2&gt;
+&lt;p&gt;A Virtual Private Network (VPN) is a technology that routes your internet traffic through a remote server, masking your IP address and hiding your online activity from your Internet Service Provider (ISP).&lt;/p&gt;</description>
       
     </item>
     
@@ -270,8 +631,23 @@ Activists and Protesters: Individuals advocating for social or political change 
       
       <guid>http://localhost:1313/posts/your-privacy-matters/</guid>
       
-      <description>Definition of Privacy The terms privacy, security, and anonymity are often confused and used interchangeably, yet they each serve distinct purposes in the digital world:
-Privacy: The ability to control what information you share and with whom, ensuring that your personal data and activities remain within your chosen boundaries. Security: The protection of your information and digital assets against potential threats or harm, such as hacking or unauthorized access. Anonymity: The ability to act online without revealing your identity, allowing you to engage in activities without being personally identified.</description>
+      <description>&lt;img src=&#34;1.webp&#34; alt=&#34;Surveillance cameras&#34; /&gt;
+&lt;h2 id=&#34;definition-of-privacy&#34;&gt;Definition of Privacy&lt;/h2&gt;
+&lt;p&gt;The terms &lt;strong&gt;privacy&lt;/strong&gt;, &lt;strong&gt;security&lt;/strong&gt;, and &lt;strong&gt;anonymity&lt;/strong&gt; are often confused and used interchangeably, yet they each serve distinct purposes in the digital world:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Privacy&lt;/strong&gt;: The ability to control what information you share and with whom, ensuring that your personal data and activities remain within your chosen boundaries.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Security&lt;/strong&gt;: The protection of your information and digital assets against potential threats or harm, such as hacking or unauthorized access.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Anonymity&lt;/strong&gt;: The ability to act online without revealing your identity, allowing you to engage in activities without being personally identified.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;but-i-have-nothing-to-hide-why-should-i-care&#34;&gt;&amp;ldquo;But I have nothing to hide, why should I care?&amp;rdquo;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Future Risks&lt;/strong&gt;: What seems safe today could be dangerous tomorrow. Taking privacy seriously now protects you from unforeseen threats later.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Right to Freedom&lt;/strong&gt;: Privacy is about more than hiding, it&amp;rsquo;s about maintaining your right to think and act freely without constant monitoring.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Security Breaches&lt;/strong&gt;: Even the most secure systems are vulnerable to breaches. Once your information is out there, it can be exploited by malicious actors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;the-advantages-of-open-source-software&#34;&gt;The Advantages of Open Source Software&lt;/h2&gt;
+&lt;h3 id=&#34;definition-open-source-software&#34;&gt;Definition Open Source Software&lt;/h3&gt;
+&lt;p&gt;Open source software (OSS) is code that&amp;rsquo;s open for anyone to view, modify, and share. This transparency builds trust and collaboration. Popular examples include Linux, Firefox, and LibreOffice.&lt;/p&gt;</description>
       
     </item>
     
@@ -282,7 +658,8 @@ Privacy: The ability to control what information you share and with whom, ensuri
       
       <guid>http://localhost:1313/posts/degoogle-your-life-now/</guid>
       
-      <description>What is Google We enjoy their free services like Google search, Youtube, maps and the list goes on, but we often forget that nothing truly comes for free. Google collects our data with every search and click, building detailed profiles of us along the way. While we think we&amp;rsquo;re just using helpful apps, we&amp;rsquo;re actually giving away our privacy. As we rely more on Google, we have to wonder: what are we giving up in exchange for convenience?</description>
+      <description>&lt;h3 id=&#34;what-is-google&#34;&gt;What is Google&lt;/h3&gt;
+&lt;p&gt;We enjoy their free services like Google search, Youtube, maps and the list goes on, but we often forget that nothing truly comes for free. Google collects our data with every search and click, building detailed profiles of us along the way. While we think we&amp;rsquo;re just using helpful apps, we&amp;rsquo;re actually giving away our privacy. As we rely more on Google, we have to wonder: what are we giving up in exchange for convenience?&lt;/p&gt;</description>
       
     </item>
     
@@ -293,8 +670,15 @@ Privacy: The ability to control what information you share and with whom, ensuri
       
       <guid>http://localhost:1313/posts/good_boy-crackmes/</guid>
       
-      <description>Hello 👋 Today we are going to reverse engineer &amp;ldquo;good_boy&amp;rdquo; by fdisotto. NOTE: Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&amp;rsquo;t solve it then please don&amp;rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.
-Prerequisites: Ghidra good_boy executable (unzip with password &amp;ldquo;crackmes.one&amp;rdquo;) What does it do? So the program is very simple it just asks us to provide a password when running it and if we give the false password it calls us a bad boy.</description>
+      <description>&lt;h3 id=&#34;hello--today-we-are-going-to-reverse-engineer-good_boy-by-fdisotto&#34;&gt;Hello 👋 Today we are going to reverse engineer &amp;ldquo;good_boy&amp;rdquo; by fdisotto.&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&amp;rsquo;t solve it then please don&amp;rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Ghidra&lt;/li&gt;
+&lt;li&gt;good_boy executable (unzip with password &amp;ldquo;crackmes.one&amp;rdquo;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;what-does-it-do&#34;&gt;What does it do?&lt;/h2&gt;
+&lt;p&gt;So the program is very simple it just asks us to provide a password when running it and if we give the false password it calls us a bad boy.&lt;/p&gt;</description>
       
     </item>
     
@@ -305,8 +689,15 @@ Prerequisites: Ghidra good_boy executable (unzip with password &amp;ldquo;crackm
       
       <guid>http://localhost:1313/posts/easy_reverse-crackmes/</guid>
       
-      <description>Hello 👋 Today we are going to reverse engineer &amp;ldquo;easy_reverse&amp;rdquo; from cbm-hackers. NOTE: Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&amp;rsquo;t solve it then please don&amp;rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.
-Prerequisites: Ghidra easy_reverse executable (unzip with password &amp;ldquo;crackmes.one&amp;rdquo;) What does it do? So the program is very simple it just asks us to provide a password when running it.</description>
+      <description>&lt;h3 id=&#34;hello--today-we-are-going-to-reverse-engineer-easy_reverse-from-cbm-hackers&#34;&gt;Hello 👋 Today we are going to reverse engineer &amp;ldquo;easy_reverse&amp;rdquo; from cbm-hackers.&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&amp;rsquo;t solve it then please don&amp;rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Ghidra&lt;/li&gt;
+&lt;li&gt;easy_reverse executable (unzip with password &amp;ldquo;crackmes.one&amp;rdquo;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;what-does-it-do&#34;&gt;What does it do?&lt;/h2&gt;
+&lt;p&gt;So the program is very simple it just asks us to provide a password when running it.&lt;/p&gt;</description>
       
     </item>
     
@@ -317,7 +708,15 @@ Prerequisites: Ghidra easy_reverse executable (unzip with password &amp;ldquo;cr
       
       <guid>http://localhost:1313/posts/my-first-blog-post/</guid>
       
-      <description> Welcome to my first post on this blog, here is a quick overview of what you can expect: Walkthroughs: TryHackMe, HackTheBox, CrackMes, PicoCTF etc. Projects: explaining why and how I made some of my projects. Random Posts: on topics I find interesting. </description>
+      <description>&lt;div align=&#34;center&#34;&gt;
+    &lt;img src=&#34;https://media1.tenor.com/m/fNAswc_iQIUAAAAC/despicable-me-minion.gif&#34; alt=&#34;Minion Dancing&#34;&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;welcome-to-my-first-post-on-this-blog-here-is-a-quick-overview-of-what-you-can-expect&#34;&gt;Welcome to my first post on this blog, here is a quick overview of what you can expect:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Walkthroughs&lt;/strong&gt;: TryHackMe, HackTheBox, CrackMes, PicoCTF etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Projects&lt;/strong&gt;: explaining why and how I made some of my projects.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Random Posts&lt;/strong&gt;: on topics I find interesting.&lt;/li&gt;
+&lt;/ul&gt;</description>
       
     </item>
     

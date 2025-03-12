@@ -14,11 +14,37 @@
       
       <guid>http://localhost:1313/posts/blame-game-picoctf/</guid>
       
-      <description>Introduction Hello👋 Today we&amp;rsquo;re going to take a look at the challenge Blame Game on PicoCTF by Jeffery John. The difficulty is easy.
-Challenge Description Someone&amp;rsquo;s commits seems to be preventing the program from working. Who is it?
-You can download the challenge files here:
-challenge.zip Solution Let’s begin by extracting the contents of the downloaded .zip file and then navigate to the unzipped directory:
-unzip challenge.zip cd drop-in/ Inside this folder, we notice the presence of a .</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at the challenge Blame Game on PicoCTF by Jeffery John. The difficulty is easy.&lt;/p&gt;
+&lt;h2 id=&#34;challenge-description&#34;&gt;Challenge Description&lt;/h2&gt;
+&lt;p&gt;Someone&amp;rsquo;s commits seems to be preventing the program from working. Who is it?&lt;/p&gt;
+&lt;p&gt;You can download the challenge files here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+
+	
+	
+		href = &#34;https://artifacts.picoctf.net/c_titan/158/challenge.zip&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		challenge.zip
+	&lt;/span&gt;
+
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Let’s begin by extracting the contents of the downloaded &lt;code&gt;.zip&lt;/code&gt; file and then navigate to the unzipped directory:&lt;/p&gt;</description>
       
     </item>
     

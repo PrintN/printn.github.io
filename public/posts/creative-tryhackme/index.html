@@ -68,21 +68,25 @@
     </script>
 
 
-<meta name="generator" content="Hugo 0.123.7">
+<meta name="generator" content="Hugo 0.144.0">
 
     
-    <meta property="og:title" content="Creative - TryHackMe Write-Up" />
-<meta property="og:description" content="A write-up on the room Creative." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/creative-tryhackme/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-09-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-09-23T00:00:00+00:00" />
-
+    <meta property="og:url" content="http://localhost:1313/posts/creative-tryhackme/">
+  <meta property="og:site_name" content="PrintN">
+  <meta property="og:title" content="Creative - TryHackMe Write-Up">
+  <meta property="og:description" content="A write-up on the room Creative.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-09-23T00:00:00+00:00">
 
 
     
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Creative - TryHackMe Write-Up"/>
-<meta name="twitter:description" content="A write-up on the room Creative."/>
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Creative - TryHackMe Write-Up">
+  <meta name="twitter:description" content="A write-up on the room Creative.">
 
 
     
@@ -210,7 +214,7 @@ stroke-linejoin="round" class="feather feather-home">
 </nav>
     </details>
             <div class="page-content">
-                <p><img alt="Image 0" src="/posts/creative-tryhackme/0.webp"></p>
+                <p><img src="/posts/creative-tryhackme/0.webp" alt="Image 0"></p>
 <h2 id="introduction">Introduction</h2>
 <p>Hello👋 Today we&rsquo;re going to take a look at <a
 
@@ -237,62 +241,62 @@ stroke-linejoin="round" class="feather feather-home">
 <p>We&rsquo;ll have to start by adding the target IP Adress to our <code>/etc/hosts</code> use nano or vim to edit this.</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ff636f">[</span>YOUR_TARGET_IP<span style="color:#ff636f">]</span> creative.thm
 </span></span></code></pre></div><p>We can now take a look at the website <code>http://creative.thm</code>. It looks like a simple html website.
-<img alt="Screenshot 1" src="/posts/creative-tryhackme/1.webp"></p>
+<img src="/posts/creative-tryhackme/1.webp" alt="Screenshot 1"></p>
 <h2 id="enumeration">Enumeration</h2>
 <p>We&rsquo;ll just start off with a simple Nmap scan. We see that the ports 22 and 80 are open.
-<img alt="Screenshot 2" src="/posts/creative-tryhackme/2.webp"></p>
+<img src="/posts/creative-tryhackme/2.webp" alt="Screenshot 2"></p>
 <p>Let&rsquo;s try to find some directories with Gobuster.</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gobuster dir -u http://creative.thm -w /usr/share/wordlists/dirbuster/direcotry-list-lowercase-2.3-medium.txt
-</span></span></code></pre></div><p><img alt="Screenshot 3" src="/posts/creative-tryhackme/3.webp">
+</span></span></code></pre></div><p><img src="/posts/creative-tryhackme/3.webp" alt="Screenshot 3">
 Hmmm nothing interesting there. Let&rsquo;s try subdomains.</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gobuster vhost -u http://creative.thm -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt --append-domain creative.thm
-</span></span></code></pre></div><p><img alt="Screenshot 4" src="/posts/creative-tryhackme/4.webp">
+</span></span></code></pre></div><p><img src="/posts/creative-tryhackme/4.webp" alt="Screenshot 4">
 We found something. Let&rsquo;s check it out. Add <code>beta.creative.thm</code> to your <code>/etc/hosts</code>.
-<img alt="Screenshot 5" src="/posts/creative-tryhackme/5.webp"></p>
+<img src="/posts/creative-tryhackme/5.webp" alt="Screenshot 5"></p>
 <p>Ok, it explains what it does. Let&rsquo;s test it! I have created a test.txt and setup a python http server.
-<img alt="Screenshot 7" src="/posts/creative-tryhackme/7.webp">
-<img alt="Screenshot 6" src="/posts/creative-tryhackme/6.webp">
+<img src="/posts/creative-tryhackme/7.webp" alt="Screenshot 7">
+<img src="/posts/creative-tryhackme/6.webp" alt="Screenshot 6">
 And it connects! We can see that it sends a GET request and on the website it displays the test.txt.
-<img alt="Screenshot 8" src="/posts/creative-tryhackme/26.webp"></p>
+<img src="/posts/creative-tryhackme/26.webp" alt="Screenshot 8"></p>
 <p>Let&rsquo;s try and see if we can connect to the localhost (127.0.0.1) of the website.
-<img alt="Screenshot 8" src="/posts/creative-tryhackme/8.webp">
+<img src="/posts/creative-tryhackme/8.webp" alt="Screenshot 8">
 Which returns the content of the page.
-<img alt="Screenshot 9" src="/posts/creative-tryhackme/9.webp"></p>
+<img src="/posts/creative-tryhackme/9.webp" alt="Screenshot 9"></p>
 <p>Now let&rsquo;s try to see if there are any ports that are not accesible from the outside. We&rsquo;ll use <code>ffuf</code> for this. But we first need to make a ports.txt we can do that with <code>seq</code>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>seq <span style="color:#a6be9d">65535</span> &gt; ports.txt
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffuf -u http://beta.creative.thm/ -w ports.txt -X POST -H <span style="color:#a6be9d">&#34;Content-Type: application/x-www-form-urlencoded&#34;</span> -d <span style="color:#a6be9d">&#34;url=http://localhost:FUZZ&#34;</span> -fw <span style="color:#a6be9d">3</span>
-</span></span></code></pre></div><p><img alt="Screenshot 10" src="/posts/creative-tryhackme/10.webp">
+</span></span></code></pre></div><p><img src="/posts/creative-tryhackme/10.webp" alt="Screenshot 10">
 And we got a open port 1337!</p>
 <h2 id="getting-access">Getting Access</h2>
 <p>Now, with the <code>http://localhost:1337/</code> payload on <code>http://beta.creative.thm</code>, we are able to get the contents of the web server.
-<img alt="Screenshot 11" src="/posts/creative-tryhackme/11.webp"></p>
-<p><img alt="Screenshot 12" src="/posts/creative-tryhackme/12.webp"></p>
+<img src="/posts/creative-tryhackme/11.webp" alt="Screenshot 11"></p>
+<p><img src="/posts/creative-tryhackme/12.webp" alt="Screenshot 12"></p>
 <p>Let&rsquo;s try going to <code>/home</code> and see what users we got.
-<img alt="Screenshot 13" src="/posts/creative-tryhackme/13.webp"></p>
+<img src="/posts/creative-tryhackme/13.webp" alt="Screenshot 13"></p>
 <p>We get a user called Saad. Let&rsquo;s go into Saad&rsquo;s home folder.
-<img alt="Screenshot 14" src="/posts/creative-tryhackme/14.webp"></p>
+<img src="/posts/creative-tryhackme/14.webp" alt="Screenshot 14"></p>
 <p>We can see that Saad has a .ssh folder.
-<img alt="Screenshot 15" src="/posts/creative-tryhackme/15.webp"></p>
+<img src="/posts/creative-tryhackme/15.webp" alt="Screenshot 15"></p>
 <p>Let&rsquo;s get Saad <code>id_rsa</code>
-<img alt="Screenshot 16" src="/posts/creative-tryhackme/16.webp"></p>
+<img src="/posts/creative-tryhackme/16.webp" alt="Screenshot 16"></p>
 <p>To get the correct formatting of the <code>id_rsa</code> (to not get any errors when logging in with ssh), you&rsquo;ll have to view page source and then copy the contents of the <code>id_rsa</code>.
-<img alt="Screenshot 17" src="/posts/creative-tryhackme/17.webp"></p>
+<img src="/posts/creative-tryhackme/17.webp" alt="Screenshot 17"></p>
 <p>After having copied the <code>id_rsa</code> we have to give 600 permission to the <code>id_rsa</code>.</p>
-<p><img alt="Screenshot 18" src="/posts/creative-tryhackme/18.webp"></p>
+<p><img src="/posts/creative-tryhackme/18.webp" alt="Screenshot 18"></p>
 <p>Looks like we need a passphrase. We can use <code>john</code> to get the password but we first have to convert the <code>id_rsa</code> to a .hash with <code>ssh2john</code> like so.</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh2john id_rsa &gt; id_rsa.hash
-</span></span></code></pre></div><p><img alt="Screenshot 19" src="/posts/creative-tryhackme/19.webp"></p>
+</span></span></code></pre></div><p><img src="/posts/creative-tryhackme/19.webp" alt="Screenshot 19"></p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>john id_rsa.hash --wordlist<span style="color:#ff636f">=</span>/usr/share/wordlists/rockyou.txt
-</span></span></code></pre></div><p><img alt="Screenshot 20" src="/posts/creative-tryhackme/20.webp"></p>
+</span></span></code></pre></div><p><img src="/posts/creative-tryhackme/20.webp" alt="Screenshot 20"></p>
 <p>Nice! We got the passphrase, now we can ssh into Saad.</p>
-<p><img alt="Screenshot 21" src="/posts/creative-tryhackme/21.webp"></p>
+<p><img src="/posts/creative-tryhackme/21.webp" alt="Screenshot 21"></p>
 <p>And we&rsquo;re able to get the first flag 😃</p>
-<p><img alt="Screenshot 22" src="/posts/creative-tryhackme/22.webp"></p>
+<p><img src="/posts/creative-tryhackme/22.webp" alt="Screenshot 22"></p>
 <h2 id="privilege-escalation">Privilege Escalation</h2>
 <p>After looking a bit around I found Saad&rsquo;s password in the <strong>.bash_history</strong>.
-<img alt="Screenshot 23" src="/posts/creative-tryhackme/23.webp"></p>
+<img src="/posts/creative-tryhackme/23.webp" alt="Screenshot 23"></p>
 <p>We can then see what privileges we have with <code>sudo -L</code>.
-<img alt="Screenshot 24" src="/posts/creative-tryhackme/24.webp">
+<img src="/posts/creative-tryhackme/24.webp" alt="Screenshot 24">
 We see that Saad can run <code>ping</code> as root, but we can&rsquo;t do much with <code>ping</code>. If we look closely on the <code>sudo -L</code> output, we can see that it contains:</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#58a1dd">env_keep</span><span style="color:#ff636f">+=</span>LD_PRELOAD
 </span></span></code></pre></div><p>The <code>LD_PRELOAD</code> environment variable is used to specify shared libraries that should be loaded before others when a program is run. This allows us to override functions in existing libraries. We can leverage this feature to inject malicious code into a process running with elevated privileges.</p>
@@ -306,7 +310,7 @@ We see that Saad can run <code>ping</code> as root, but we can&rsquo;t do much w
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gcc -fPIC -shared -o escalate.so escalate.c -nostartfiles
 </span></span></code></pre></div><p>Finally, we run the <code>ping</code> command with our <code>LD_PRELOAD</code> variable pointing to our malicious library</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo <span style="color:#58a1dd">LD_PRELOAD</span><span style="color:#ff636f">=</span>/tmp/escalate.so /usr/bin/ping
-</span></span></code></pre></div><p><img alt="Screenshot 25" src="/posts/creative-tryhackme/25.webp"></p>
+</span></span></code></pre></div><p><img src="/posts/creative-tryhackme/25.webp" alt="Screenshot 25"></p>
 <p>And we get root and are able to get the second flag 🥳 This was a fun room, hope you learned something from this write-up. Happy Hacking!</p>
 
             </div>

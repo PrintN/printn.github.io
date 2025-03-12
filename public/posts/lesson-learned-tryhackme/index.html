@@ -68,21 +68,25 @@
     </script>
 
 
-<meta name="generator" content="Hugo 0.123.7">
+<meta name="generator" content="Hugo 0.144.0">
 
     
-    <meta property="og:title" content="Lesson Learned? - TryHackMe Write-Up" />
-<meta property="og:description" content="A write-up on the room Lesson Learned?." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/lesson-learned-tryhackme/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-11-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-11-04T00:00:00+00:00" />
-
+    <meta property="og:url" content="http://localhost:1313/posts/lesson-learned-tryhackme/">
+  <meta property="og:site_name" content="PrintN">
+  <meta property="og:title" content="Lesson Learned? - TryHackMe Write-Up">
+  <meta property="og:description" content="A write-up on the room Lesson Learned?.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-04T00:00:00+00:00">
 
 
     
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Lesson Learned? - TryHackMe Write-Up"/>
-<meta name="twitter:description" content="A write-up on the room Lesson Learned?."/>
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lesson Learned? - TryHackMe Write-Up">
+  <meta name="twitter:description" content="A write-up on the room Lesson Learned?.">
 
 
     
@@ -211,7 +215,7 @@ stroke-linejoin="round" class="feather feather-home">
 </nav>
     </details>
             <div class="page-content">
-                <p><img alt="Image 0" src="/posts/lesson-learned-tryhackme/0.webp"></p>
+                <p><img src="/posts/lesson-learned-tryhackme/0.webp" alt="Image 0"></p>
 <h2 id="introduction">Introduction</h2>
 <p>Today we&rsquo;re going to take a look at <a
 
@@ -236,7 +240,7 @@ stroke-linejoin="round" class="feather feather-home">
 
 </a> room made by TryHackMe and Tib3rius. The difficulty is easy.</p>
 <p>The challenge description states there is no rabbit holes or hidden files but we have to treat the box as a real target. Going to the website <code>https://[MACHINE_IP]/</code> we&rsquo;re presented with a login form.
-<img alt="Screenshot 1" src="/posts/lesson-learned-tryhackme/1.webp"></p>
+<img src="/posts/lesson-learned-tryhackme/1.webp" alt="Screenshot 1"></p>
 <h2 id="enumeration">Enumeration</h2>
 <p>Doing a quick <code>nmap</code> scan we find the ports <code>22</code> and <code>80</code> open.</p>
 <div class="highlight"><pre tabindex="0" style="color:#1d2432;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>┌──<span style="color:#ff636f">(</span>printn㉿kali<span style="color:#ff636f">)</span>-<span style="color:#ff636f">[</span>~<span style="color:#ff636f">]</span>
@@ -273,7 +277,7 @@ stroke-linejoin="round" class="feather feather-home">
 </span></span><span style="display:flex;"><span>/manual               <span style="color:#ff636f">(</span>Status: 301<span style="color:#ff636f">)</span> <span style="color:#ff636f">[</span>Size: 315<span style="color:#ff636f">]</span> <span style="color:#ff636f">[</span>--&gt; http://10.10.132.122/manual/<span style="color:#ff636f">]</span>
 </span></span></code></pre></div><h2 id="osint">OSINT</h2>
 <p>We have been told that we have to treat it like an real target so let&rsquo;s try doing some Open Source Intelligence (OSINT). When checking out the room creator Tib3rius out on his X / Twitter account we find some interesting posts regarding best practices with SQL injections and the dangers of using <code>OR 1=1</code>.
-<img alt="Screenshot 2" src="/posts/lesson-learned-tryhackme/2.webp"></p>
+<img src="/posts/lesson-learned-tryhackme/2.webp" alt="Screenshot 2"></p>
 <p><em><a
 
 	
@@ -341,9 +345,9 @@ stroke-linejoin="round" class="feather feather-home">
 </span></span></code></pre></div><h2 id="sql-injection">SQL Injection</h2>
 <p>Great so now we got some usernames we can use, now it&rsquo;s time for the SQL injection. By using our knowledge from the post and the article we can craft the injection while ensuring we don&rsquo;t erase the database.</p>
 <p>We craft the injection <code>martin' AND '1'='1'-- -</code> which we could also shorten to <code>martin'-- -</code>.
-<img alt="Screenshot 4" src="/posts/lesson-learned-tryhackme/4.webp"></p>
+<img src="/posts/lesson-learned-tryhackme/4.webp" alt="Screenshot 4"></p>
 <p>And we receive the flag 🥳 and an explanation about the risks of using <code>OR 1=1</code> in SQL injections.
-<img alt="Screenshot 5" src="/posts/lesson-learned-tryhackme/5.webp"></p>
+<img src="/posts/lesson-learned-tryhackme/5.webp" alt="Screenshot 5"></p>
 
             </div>
         </article></main>
