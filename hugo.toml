@@ -51,15 +51,10 @@ defaultContentLanguage = "en-gb"
     url = '/about/'
     weight = 20
   [[Languages.en-gb.menu.main]]
-    pageRef="links"
-    name = 'Links'
-    url = '/links/'
-    weight = 30
-  [[Languages.en-gb.menu.main]]
     pageRef="donate"
     name = 'Donate'
     url = '/donate/'
-    weight = 40
+    weight = 30
 
 [Languages.en-gb.params]
   sitename = "PrintN"
@@ -82,15 +77,15 @@ defaultContentLanguage = "en-gb"
 ### LANGUAGE SPECIFICATION END ###
   
  [[Languages.en-gb.params.socialIcons]]
- name = "github" 
+ name = "GitHub" 
  url = "https://github.com/PrintN"
 
  [[Languages.en-gb.params.socialIcons]]
- name = "leetcode"
+ name = "LeetCode"
  url = "https://leetcode.com/PrintN"
 
  [[Languages.en-gb.params.socialIcons]]
- name = "tryhackme"
+ name = "TryHackMe"
  url = "https://tryhackme.com/p/PrintN"
 
  [[Languages.en-gb.params.socialIcons]] 

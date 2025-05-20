@@ -709,7 +709,7 @@ Have you ever seen those ads promising that using a VPN will keep you safe from 
       <guid>http://localhost:1313/posts/my-first-blog-post/</guid>
       
       <description>&lt;div align=&#34;center&#34;&gt;
-    &lt;img src=&#34;https://media1.tenor.com/m/fNAswc_iQIUAAAAC/despicable-me-minion.gif&#34; alt=&#34;Minion Dancing&#34;&gt;
+    &lt;img src=&#34;minion.gif&#34; alt=&#34;Minion Dancing&#34;&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;welcome-to-my-first-post-on-this-blog-here-is-a-quick-overview-of-what-you-can-expect&#34;&gt;Welcome to my first post on this blog, here is a quick overview of what you can expect:&lt;/h3&gt;
 &lt;ul&gt;
@@ -729,19 +729,29 @@ Have you ever seen those ads promising that using a VPN will keep you safe from 
       
       <description>&lt;p&gt;Hi 👋 I&amp;rsquo;m PrintN. I enjoy creating scripts and applications as well as playing Capture The Flags. I have been into cybersecurity and programming as a hobby for about 2 years.&lt;/p&gt;
 &lt;style&gt;
-    details {
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        padding: 10px;
-        margin-bottom: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
+details {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
 
-    summary {
-        font-weight: bold;
-        cursor: pointer;
-    }
+details[open] {
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.project-period {
+    float: right;
+}
 
 .technologies {
     margin-top: 20px;
@@ -789,10 +799,25 @@ Have you ever seen those ads promising that using a VPN will keep you safe from 
     text-align: center;
 }
 &lt;/style&gt;
+&lt;script&gt;
+document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+    document.querySelectorAll(&#39;details&#39;).forEach((detail) =&gt; {
+        detail.addEventListener(&#39;toggle&#39;, () =&gt; {
+            if (detail.open) {
+                document.querySelectorAll(&#39;details&#39;).forEach((otherDetail) =&gt; {
+                    if (otherDetail !== detail) {
+                        otherDetail.open = false;
+                    }
+                });
+            }
+        });
+    });
+});
+&lt;/script&gt;
 &lt;h4 id=&#34;projects&#34;&gt;Projects&lt;/h4&gt;
 &lt;details&gt;
-    &lt;summary&gt;YouTube Automation Bot&lt;/summary&gt;
-    &lt;p&gt;I built this YouTube automation bot as a fun side project using Python and GitHub Actions to run daily. I wanted to learn more about video creation with Python and was inspired by the many automated channels on YouTube.&lt;/p&gt;</description>
+    &lt;summary&gt;Touch Grass&lt;div class=&#34;project-period&#34;&gt;Aug 3, 2023&lt;/div&gt;&lt;/summary&gt;
+    &lt;p&gt;A simple extension to touch some grass without going outside. This was one of my first projects. Made as a joke and to learn how to make extensions.&lt;/p&gt;</description>
       
     </item>
     
@@ -807,62 +832,6 @@ Have you ever seen those ads promising that using a VPN will keep you safe from 
 &lt;h5 id=&#34;monero-xmr&#34;&gt;Monero (XMR)&lt;/h5&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;8A2TTUxXCmuVZf9GRAMyfB2xXngdUSzzCHQ4dW73bKgKgfMcmFyxVKKF1LRYpzP7RfHwoCVGh9rBeKBNRCfUw4UbEbA6ffz
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/donate/monero_qr.png&#34; alt=&#34;Monero QR&#34;&gt;&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Links</title>
-      <link>http://localhost:1313/links/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/links/</guid>
-      
-      <description>&lt;p&gt;Here are some links to websites and YouTube channels I recommend you checking out.&lt;/p&gt;
-&lt;style&gt;
-    details {
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        padding: 10px;
-        margin-bottom: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    summary {
-        font-weight: bold;
-        cursor: pointer;
-    }
-&lt;/style&gt;
-&lt;details&gt;
-    &lt;summary&gt;Websites&lt;/summary&gt;
-    &lt;a href=&#34;http://blog.nowherejezfoltodf4jiyl6r56jnzintap5vyjlia7fkirfsnfizflqd.onion/&#34; target=&#34;_blank&#34;&gt;The Nihilism Blog&lt;/a&gt;
-    &lt;br&gt;
-    &lt;a href=&#34;http://benzosbbvk7gu6taxbjpcpsi3u3dgg3wb3ewwr4jx7tholioxmnwagyd.onion/DNBible/&#34; target=&#34;_blank&#34;&gt;DNM Bible&lt;/a&gt;
-&lt;/details&gt;
-&lt;details&gt;
-    &lt;summary&gt;YouTube / Odysee&lt;/summary&gt;
-    Mental Outlaw (&lt;a href=&#34;https://odysee.com/@AlphaNerd:8&#34; target=&#34;_blank&#34;&gt;Odysee&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/@MentalOutlaw&#34; target=&#34;_blank&#34;&gt;YouTube&lt;/a&gt;)
-    &lt;br&gt;
-    Luke Smith (&lt;a href=&#34;https://odysee.com/@Luke:7&#34; target=&#34;_blank&#34;&gt;Odysee&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/@LukeSmithxyz&#34; target=&#34;_blank&#34;&gt;YouTube&lt;/a&gt;)
-    &lt;br&gt;
-    Horses (&lt;a href=&#34;https://www.youtube.com/@HorsesOnYT&#34; target=&#34;_blank&#34;&gt;YouTube&lt;/a&gt;)
-    &lt;br&gt;
-    Eric Murphy (&lt;a href=&#34;https://odysee.com/@ericnmurphy:9&#34; target=&#34;_blank&#34;&gt;Odysee&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/@EricMurphyxyz&#34; target=&#34;_blank&#34;&gt;YouTube&lt;/a&gt;)
-&lt;/details&gt;
-&lt;details&gt;
-    &lt;summary&gt;GitHub Repositories&lt;/summary&gt;
-    &lt;a href=&#34;https://github.com/mendel5/alternative-front-ends&#34; target=&#34;_blank&#34;&gt;alternative-front-ends&lt;/a&gt;
-    &lt;br&gt;
-    &lt;a href=&#34;https://github.com/Lissy93/awesome-privacy&#34; target=&#34;_blank&#34;&gt;Awesome Privacy&lt;/a&gt;
-    &lt;br&gt;
-    &lt;a href=&#34;https://github.com/awesome-selfhosted/awesome-selfhosted&#34; target=&#34;_blank&#34;&gt;Awesome-Selfhosted&lt;/a&gt;
-    &lt;br&gt;
-    &lt;a href=&#34;https://github.com/VSCodium/vscodium&#34; target=&#34;_blank&#34;&gt;VSCodium&lt;/a&gt;
-    &lt;br&gt;
-    &lt;a href=&#34;https://github.com/keepassxreboot/keepassxc&#34; target=&#34;_blank&#34;&gt;KeePassXC&lt;/a&gt;
-    &lt;br&gt;
-    &lt;a href=&#34;https://github.com/simplex-chat/simplex-chat&#34; target=&#34;_blank&#34;&gt;SimpleX Chat&lt;/a&gt;
-&lt;/details&gt;</description>
       
     </item>
     
