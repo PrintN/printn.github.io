@@ -2,7 +2,7 @@
 My portfolio / blog website.
 
 ## Git Mirror
-![GitHub](https://img.shields.io/static/v1?logo=github&label=&message=GitHub&color=000&style=for-the-badge)](https://github.com/printn/printn.github.io)
+[![GitHub](https://img.shields.io/static/v1?logo=github&label=&message=GitHub&color=000&style=for-the-badge)](https://github.com/printn/printn.github.io)
 [![Codeberg](https://img.shields.io/static/v1?logo=codeberg&label=&message=Codeberg&color=000&style=for-the-badge)](https://codeberg.org/printn/printn.github.io)
 
 ## License
