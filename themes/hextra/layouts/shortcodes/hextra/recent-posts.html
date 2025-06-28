@@ -1,0 +1,15 @@
+{{ range first 3 .Site.RegularPages }}
+    <a href="{{ .Permalink }}" target="_blank" class="hx-text-primary-600 hover:hx-text-primary-800 font-semibold">
+        <li class="blog-post-card">
+            <h2>{{ .Title }}</h2>
+            <div class="hx-flex hx-justify-between hx-text-gray-500 hx-text-sm hx-mt-1">
+                <span>{{ .Date | time.Format ":date_long" }}</span>
+                {{ if .Params.authors }}
+                    {{ range .Params.authors }}
+                        <span>{{ .name }}</span>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </li>
+    </a>
+{{ end }}

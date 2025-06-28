@@ -1,0 +1,87 @@
+# Configuration
+baseURL: "https://printn.dev/"
+title: "PrintN"
+
+enableRobotsTXT: true
+enableGitInfo: true
+# enableEmoji: false
+hasCJKLanguage: true
+
+# services:
+#   googleAnalytics:
+#     ID: G-MEASUREMENT_ID
+
+outputs:
+  home: [HTML]
+  page: [HTML]
+  section: [HTML, RSS]
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.112.0"
+
+  workspace: hugo.work
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
+
+enableInlineShortcodes: true
+
+params:
+  description: Online privacy made simple with Beginner Privacy. Learn how to protect your data with our actionable roadmap and guides.
+  images:
+    - images/og_image.png
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/logo.svg
+      dark: images/logo-dark.svg
+      width: 25
+      height: 25
+      # link: /
+    width: wide
+
+  page:
+    # full (100%), wide (90rem), normal (1280px)
+    width: normal
+
+  theme:
+    # light | dark | system
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: true
+    width: normal
+
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  articles:
+    list:
+      displayTags: true
+      # date | lastmod | publishDate | title | weight
+      sortBy: date
+      sortOrder: desc # or "asc"
+
+  highlight:
+    copy:
+      enable: true
+      # hover | always
+      display: hover

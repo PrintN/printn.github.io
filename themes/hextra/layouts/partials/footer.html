@@ -1,0 +1,51 @@
+<footer class="hextra-footer hx-pt-8">
+  <!-- Wave SVG -->
+  <div class="waves">
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use class="wave" xlink:href="#gentle-wave" x="48" y="0" fill="rgba(243,244,246,0.7)" />
+        <use class="wave" xlink:href="#gentle-wave" x="48" y="3" fill="rgba(243,244,246,0.5)" />
+        <use class="wave" xlink:href="#gentle-wave" x="48" y="5" fill="rgba(243,244,246,0.3)" />
+        <use class="wave" xlink:href="#gentle-wave" x="48" y="7" fill="#e8e9eb" />
+      </g>
+    </svg>
+  </div>
+
+  <div class="footer-container mx-auto">
+    <div class="footer-content hx-flex hx-flex-col md:hx-flex-row hx-justify-between hx-items-center hx-py-4 hx-pt-12">
+      <!-- Navigation Links Section -->
+      <div class="footer-nav-links hx-flex hx-flex-wrap hx-justify-center hx-gap-8 hx-mb-6 md:hx-mb-0">
+          <a href="/" class="hx-text-black dark:hx-text-black dark:hx-text-white">Home</a>
+          <a href="/#about" class="hx-ml-4 hx-text-black dark:hx-text-black dark:hx-text-white">About</a>
+          <a href="/blog" class="hx-ml-4 hx-text-black dark:hx-text-white">Blog</a>
+          <a href="/#contact" class="hx-ml-4 hx-text-black dark:hx-text-white">Contact</a>
+          <a href="/donate" class="hx-ml-4 hx-text-black dark:hx-text-white">Donate</a>
+          <a href="/#portfolio" class="hx-ml-4 hx-text-black dark:hx-text-white">Portfolio</a>
+      </div>
+      <!-- Social Media Section -->
+      <div class="social-media hx-flex hx-flex-wrap hx-justify-center hx-gap-4">
+        <a href="https://github.com/PrintN" title="GitHub" target="_blank" rel="noopener noreferrer" class="hx-text-black dark:hx-text-white">
+          {{ partial "utils/icon.html" (dict "name" "github" "attributes" "height=30") }}
+        </a>
+        <a href="https://leetcode.com/PrintN" title="LeetCode" target="_blank" rel="noopener noreferrer" class="hx-text-black dark:hx-text-white">
+          {{ partial "utils/icon.html" (dict "name" "leetcode" "attributes" "height=30") }}
+        </a>
+        <a href="https://tryhackme.com/p/PrintN" title="TryHackMe" target="_blank" rel="noopener noreferrer" class="hx-text-black dark:hx-text-white">
+          {{ partial "utils/icon.html" (dict "name" "tryhackme" "attributes" "height=30") }}
+        </a>
+        <a href="/blog/index.xml" title="RSS" target="_blank" rel="noopener noreferrer" class="hx-text-black dark:hx-text-white">
+          {{ partial "utils/icon.html" (dict "name" "rss" "attributes" "height=30") }}
+        </a>
+      </div>
+    </div>
+    <!-- Divider Line -->
+    <hr class="hx-border-black/5 dark:hx-border-white/10 hx-my-2" />
+    <!-- Copyright Section -->
+    <div class="copyright-section hx-text-center hx-text-black dark:hx-text-white hx-py-4">
+        <p></p>
+    </div>
+  </div>
+</footer>
