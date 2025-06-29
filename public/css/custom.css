@@ -59,6 +59,14 @@ body {
     transition: opacity 0.25s ease-out;
 }
 
+.printn-text::after {
+    content: "";
+    transition: opacity 0.25s ease-out;
+    position: absolute;
+    top: 5;
+    left: 0;
+}
+
 .printn-text::before {
     content: "PrintN";
     opacity: 1;
@@ -431,6 +439,10 @@ section#contact {
 }
 
 @media only screen and (max-width: 650px) {
+    .theme-toggle-container {
+        margin-bottom: 2px;
+    }
+
     .nav-dots {
         display: none;
     }

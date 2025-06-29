@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PrintN – Blog</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>http://192.168.0.136:1313/blog/</link>
     <description>Recent content in Blog on PrintN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://192.168.0.136:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>FactCheck - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/factcheck-picoctf/</link>
+      <link>http://192.168.0.136:1313/blog/factcheck-picoctf/</link>
       <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/factcheck-picoctf/</guid>
+      <guid>http://192.168.0.136:1313/blog/factcheck-picoctf/</guid>
       <description>
         
         
@@ -380,10 +380,10 @@
     
     <item>
       <title>Understand Your Threat Model</title>
-      <link>http://localhost:1313/blog/understand-your-threat-model/</link>
+      <link>http://192.168.0.136:1313/blog/understand-your-threat-model/</link>
       <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/understand-your-threat-model/</guid>
+      <guid>http://192.168.0.136:1313/blog/understand-your-threat-model/</guid>
       <description>
         
         
@@ -423,10 +423,10 @@
     
     <item>
       <title>Why You Should Set Up an RSS Feed</title>
-      <link>http://localhost:1313/blog/why-you-should-start-using-rss-feed/</link>
+      <link>http://192.168.0.136:1313/blog/why-you-should-start-using-rss-feed/</link>
       <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/why-you-should-start-using-rss-feed/</guid>
+      <guid>http://192.168.0.136:1313/blog/why-you-should-start-using-rss-feed/</guid>
       <description>
         
         
@@ -486,10 +486,10 @@
     
     <item>
       <title>Step-by-Step Guide for Publishing Your Open Source App on F-Droid</title>
-      <link>http://localhost:1313/blog/step-by-step-guide-for-publishing-your-open-source-app-on-f-droid/</link>
+      <link>http://192.168.0.136:1313/blog/step-by-step-guide-for-publishing-your-open-source-app-on-f-droid/</link>
       <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/step-by-step-guide-for-publishing-your-open-source-app-on-f-droid/</guid>
+      <guid>http://192.168.0.136:1313/blog/step-by-step-guide-for-publishing-your-open-source-app-on-f-droid/</guid>
       <description>
         
         
@@ -732,10 +732,10 @@ F-Droid is an open source app repository that provides a wide range of free and 
     
     <item>
       <title>Collaborative Development - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/collaborative-development-picoctf/</link>
+      <link>http://192.168.0.136:1313/blog/collaborative-development-picoctf/</link>
       <pubDate>Thu, 07 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/collaborative-development-picoctf/</guid>
+      <guid>http://192.168.0.136:1313/blog/collaborative-development-picoctf/</guid>
       <description>
         
         
@@ -871,10 +871,10 @@ F-Droid is an open source app repository that provides a wide range of free and 
     
     <item>
       <title>Lesson Learned? - TryHackMe Write-Up</title>
-      <link>http://localhost:1313/blog/lesson-learned-tryhackme/</link>
+      <link>http://192.168.0.136:1313/blog/lesson-learned-tryhackme/</link>
       <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/lesson-learned-tryhackme/</guid>
+      <guid>http://192.168.0.136:1313/blog/lesson-learned-tryhackme/</guid>
       <description>
         
         
@@ -997,10 +997,10 @@ Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;./https://tryhackm
     
     <item>
       <title>How To Calculate Time Complexity</title>
-      <link>http://localhost:1313/blog/how-to-calculate-time-complexity/</link>
+      <link>http://192.168.0.136:1313/blog/how-to-calculate-time-complexity/</link>
       <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/how-to-calculate-time-complexity/</guid>
+      <guid>http://192.168.0.136:1313/blog/how-to-calculate-time-complexity/</guid>
       <description>
         
         
@@ -1183,10 +1183,10 @@ Time complexity measures how the time to complete an algorithm grows with the si
     
     <item>
       <title>Redaction gone wrong - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/redaction-gone-wrong-picoctf/</link>
+      <link>http://192.168.0.136:1313/blog/redaction-gone-wrong-picoctf/</link>
       <pubDate>Thu, 24 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/redaction-gone-wrong-picoctf/</guid>
+      <guid>http://192.168.0.136:1313/blog/redaction-gone-wrong-picoctf/</guid>
       <description>
         
         
@@ -1222,10 +1222,10 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
     
     <item>
       <title>10 Essential Nmap Flags</title>
-      <link>http://localhost:1313/blog/10-essential-nmap-flags/</link>
+      <link>http://192.168.0.136:1313/blog/10-essential-nmap-flags/</link>
       <pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/10-essential-nmap-flags/</guid>
+      <guid>http://192.168.0.136:1313/blog/10-essential-nmap-flags/</guid>
       <description>
         
         
@@ -1408,10 +1408,10 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
     
     <item>
       <title>unpackme - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/unpackme-picoctf/</link>
+      <link>http://192.168.0.136:1313/blog/unpackme-picoctf/</link>
       <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/unpackme-picoctf/</guid>
+      <guid>http://192.168.0.136:1313/blog/unpackme-picoctf/</guid>
       <description>
         
         
@@ -1545,10 +1545,10 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
     
     <item>
       <title>Plumbing - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/plumbing-picoctf/</link>
+      <link>http://192.168.0.136:1313/blog/plumbing-picoctf/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/plumbing-picoctf/</guid>
+      <guid>http://192.168.0.136:1313/blog/plumbing-picoctf/</guid>
       <description>
         
         
@@ -1619,10 +1619,10 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
     
     <item>
       <title>Blame Game - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/blame-game-picoctf/</link>
+      <link>http://192.168.0.136:1313/blog/blame-game-picoctf/</link>
       <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/blame-game-picoctf/</guid>
+      <guid>http://192.168.0.136:1313/blog/blame-game-picoctf/</guid>
       <description>
         
         
@@ -1728,10 +1728,10 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
     
     <item>
       <title>PermX - HackTheBox Write-Up</title>
-      <link>http://localhost:1313/blog/permx-hackthebox/</link>
+      <link>http://192.168.0.136:1313/blog/permx-hackthebox/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/permx-hackthebox/</guid>
+      <guid>http://192.168.0.136:1313/blog/permx-hackthebox/</guid>
       <description>
         
         
@@ -1918,10 +1918,10 @@ Let&amp;rsquo;s take a look at &lt;code&gt;/opt/acl.sh&lt;/code&gt;.&lt;/p&gt;
     
     <item>
       <title>Creative - TryHackMe Write-Up</title>
-      <link>http://localhost:1313/blog/creative-tryhackme/</link>
+      <link>http://192.168.0.136:1313/blog/creative-tryhackme/</link>
       <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/creative-tryhackme/</guid>
+      <guid>http://192.168.0.136:1313/blog/creative-tryhackme/</guid>
       <description>
         
         
@@ -2129,10 +2129,10 @@ We see that Saad can run &lt;code&gt;ping&lt;/code&gt; as root, but we can&amp;r
     
     <item>
       <title>W1seGuy - TryHackMe Write-Up</title>
-      <link>http://localhost:1313/blog/w1seguy-tryhackme/</link>
+      <link>http://192.168.0.136:1313/blog/w1seguy-tryhackme/</link>
       <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/w1seguy-tryhackme/</guid>
+      <guid>http://192.168.0.136:1313/blog/w1seguy-tryhackme/</guid>
       <description>
         
         
@@ -2251,10 +2251,10 @@ Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;https://
     
     <item>
       <title>good_boy - Crackmes Write-Up</title>
-      <link>http://localhost:1313/blog/good_boy-crackmes/</link>
+      <link>http://192.168.0.136:1313/blog/good_boy-crackmes/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/good_boy-crackmes/</guid>
+      <guid>http://192.168.0.136:1313/blog/good_boy-crackmes/</guid>
       <description>
         
         
@@ -2364,10 +2364,10 @@ Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;https://
     
     <item>
       <title>easy_reverse - Crackmes Write-Up</title>
-      <link>http://localhost:1313/blog/easy_reverse-crackmes/</link>
+      <link>http://192.168.0.136:1313/blog/easy_reverse-crackmes/</link>
       <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/easy_reverse-crackmes/</guid>
+      <guid>http://192.168.0.136:1313/blog/easy_reverse-crackmes/</guid>
       <description>
         
         
@@ -2471,10 +2471,10 @@ Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;https://
     
     <item>
       <title>My First Blog Post 🥳</title>
-      <link>http://localhost:1313/blog/my-first-blog-post/</link>
+      <link>http://192.168.0.136:1313/blog/my-first-blog-post/</link>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/my-first-blog-post/</guid>
+      <guid>http://192.168.0.136:1313/blog/my-first-blog-post/</guid>
       <description>
         
         

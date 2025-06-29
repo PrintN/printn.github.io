@@ -758,6 +758,9 @@ video {
 .hx-h-full {
   height: 100%;
 }
+.hx-h-30px {
+  height: 30px;
+}
 .hx-max-h-64 {
   max-height: 16rem;
 }
