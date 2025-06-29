@@ -589,6 +589,9 @@ video {
 .hx-m-\[11px\] {
   margin: 11px;
 }
+.hx-m-0-auto {
+  margin: 0 auto;
+}
 .hx-mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;

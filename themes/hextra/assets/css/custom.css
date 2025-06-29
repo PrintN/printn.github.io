@@ -56,9 +56,6 @@ body {
 .printn-text::before,
 .printn-text::after {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
     transition: opacity 0.25s ease-out;
 }
 
@@ -157,6 +154,7 @@ section#contact {
     content: "↓";
     display: inline-block;
     transition: transform 0.3s ease;
+    margin-left: 10px;
 }
 
 .learn-more-btn:hover::after {

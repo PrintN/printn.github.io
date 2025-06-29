@@ -324,13 +324,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowLeft') prevButton.click();
     });
 
-    let interval = setInterval(() => nextButton.click(), 8000);
-    
-    slidesContainer.addEventListener('mouseenter', () => clearInterval(interval));
-    slidesContainer.addEventListener('mouseleave', () => {
-        interval = setInterval(() => nextButton.click(), 8000);
-    });
-
     slidesContainer.addEventListener('mousedown', (e) => {
         startX = e.pageX - slidesContainer.offsetLeft;
         isDragging = true;
