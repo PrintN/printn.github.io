@@ -27,7 +27,7 @@
                     {{ end -}}
                     <img src="{{ $image | safeURL }}" alt="{{ $author.name }}" class="hx-inline-block hx-h-4 hx-w-4 hx-rounded-full" {{ if $lazyLoading }}loading="lazy"{{ end }} />
                   {{ end -}}
-                  <div class="group-hover:hx-underline">{{ $author.name }}</div>
+                  <div class="group-hover:hx-underline hx-text-gray-500">{{ $author.name }}</div>
                 </a>
               {{- else -}}
                 {{- if $i }}<span class="hx-mr-1">,</span>{{ end -}}<span class="hx-mx-1">{{ $author }}</span>

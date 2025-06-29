@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{- $readMore := (T "readMore") | default "Read more →" -}}
+  {{- $readMore := "Read more" -}}
   <div class="hx-mx-auto hx-flex {{ partial `utils/page-width` . }}">
     {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" true) }}
     <article class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]">
@@ -20,8 +20,8 @@
             {{- end -}}
             <p class="hx-opacity-80 hx-mt-4 hx-leading-7">{{- partial "utils/page-description" . -}}</p>
             <p class="hx-opacity-80 hx-mt-1 hx-leading-7">
-              <a class="hx-text-[color:hsl(var(--primary-hue),100%,50%)] hx-underline hx-underline-offset-2 hx-decoration-from-font" href="{{ .RelPermalink }}">
-                {{- $readMore -}}
+              <a class="read-more-link hx-text-[color:hsl(var(--primary-hue),100%,50%)]" href="{{ .RelPermalink }}">
+                {{- $readMore -}}<span class="blog-arrow">&rarr;</span>
               </a>
             </p>
             <p class="hx-opacity-50 hx-text-sm hx-mt-4 hx-leading-7">{{ partial "utils/format-date" .Date }}</p>

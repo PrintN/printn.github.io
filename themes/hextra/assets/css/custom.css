@@ -383,8 +383,19 @@ section#contact {
     transition: transform 0.2s ease-in-out;
 }
 
-.blog-post-card:hover .blog-arrow {
+.blog-post-card:hover .blog-arrow,
+.read-more-link:hover .blog-arrow {
     transform: translateX(5px);
+}
+
+.read-more-link {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.read-more-link .blog-arrow {
+  margin-left: 10px;
 }
 
 /* Mobile */

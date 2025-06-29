@@ -197,7 +197,7 @@ layout: hextra-home
             I would love to hear from you! Whether you have a question, a project idea, or just want to connect, feel free to reach out.
         </p>
         <p>Option 1: SimpleX Chat</p>
-        <div class="hextra-code-block hx-relative hx-m-0-auto hx-max-w-6xl hx-group/code">
+        <div class="hextra-code-block hx-relative hx-m-0-auto hx-max-w-60vw hx-group/code">
             <div>
                 <div class="highlight">
                     <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2FUkMFNAXLXeAAe0beCa4w6X_zp18PwxSaSjY17BKUGXQ%3D%40smp12.simplex.im%2Fpp0TKpGjO4zqj42t8H2Mgxkm9J3zgure%23%2F%3Fv%3D1-4%26dh%3DMCowBQYDK2VuAyEA6Vt5L1LGdIHad5_JcoeEeUWqDqYBsQrF5rBYXVax8zo%253D%26q%3Dc%26srv%3Die42b5weq7zdkghocs3mgxdjeuycheeqqmksntj57rmejagmg4eor5yd.onion</code></pre>
@@ -206,7 +206,7 @@ layout: hextra-home
             <div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0"><button class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50" title="Copy code"><div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div><div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div></button></div>
         </div>
         <p>Option 2: Email</p>
-        <div class="hextra-code-block hx-relative hx-m-0-auto hx-max-w-6xl hx-group/code">
+        <div class="hextra-code-block hx-relative hx-m-0-auto hx-max-w-60vw hx-group/code">
             <div>
                 <div class="highlight">
                     <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">printn@tutamail.com</code></pre>

@@ -825,6 +825,9 @@ video {
 .hx-max-w-\[90rem\] {
   max-width: 90rem;
 }
+.hx-max-w-60vw {
+  max-width: 60vw;
+}
 .hx-max-w-\[94vw\] {
   max-width: 94vw;
 }
