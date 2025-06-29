@@ -11,11 +11,19 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>good_boy - Crackmes Write-Up – PrintN</title>
-  <meta name="description" content="Hello 👋 Today we are going to reverse engineer “good_boy” by fdisotto. NOTE: Please try to …" /><link rel="canonical" href="http://localhost:1313/blog/good_boy-crackmes/" itemprop="url" />
+  <meta name="description" content="Hello 👋 Today we are going to reverse engineer “good_boy” by fdisotto.
+ℹ️ Please try to …" /><link rel="canonical" href="http://localhost:1313/blog/good_boy-crackmes/" itemprop="url" />
 
 <meta property="og:title" content="PrintN" />
 <meta property="og:description" content="Hello 👋 Today we are going to reverse engineer &ldquo;good_boy&rdquo; by fdisotto.
-    NOTE: Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&rsquo;t solve it then please don&rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.
+
+  ℹ️
+
+  
+    Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&rsquo;t solve it, then please don&rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.
+  
+
+
 Prerequisites:
     
 Ghidra
@@ -27,13 +35,20 @@ What does it do?
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/blog/good_boy-crackmes/" /><meta property="og:image" content="http://localhost:1313/images/og_image.png"/><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2024-08-08T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-08-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-06-28T18:39:16+02:00" />
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://beginnerprivacy.com/images/og_image.png">
 <meta name="twitter:title" content="PrintN">
 <meta name="twitter:description" content="Hello 👋 Today we are going to reverse engineer &ldquo;good_boy&rdquo; by fdisotto.
-    NOTE: Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&rsquo;t solve it then please don&rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.
+
+  ℹ️
+
+  
+    Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&rsquo;t solve it, then please don&rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.
+  
+
+
 Prerequisites:
     
 Ghidra
@@ -44,11 +59,11 @@ What does it do?
 ">
 
   <meta itemprop="name" content="good_boy - Crackmes Write-Up">
-  <meta itemprop="description" content="Hello 👋 Today we are going to reverse engineer “good_boy” by fdisotto. NOTE: Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can’t solve it then please don’t just take the answer and leave immediately because that is not how you learn reverse engineering.
-Prerequisites: Ghidra good_boy executable (unzip with password “crackmes.one”) What does it do? So the program is very simple it just asks us to provide a password when running it and if we give the false password it calls us a bad boy.">
+  <meta itemprop="description" content="Hello 👋 Today we are going to reverse engineer “good_boy” by fdisotto.
+ℹ️ Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can’t solve it, then please don’t just take the answer and leave immediately because that is not how you learn reverse engineering. Prerequisites: Ghidra good_boy executable (unzip with password “crackmes.one”) What does it do? So the program is very simple it just asks us to provide a password when running it and if we give the false password it calls us a bad boy.">
   <meta itemprop="datePublished" content="2024-08-08T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-08-08T00:00:00+00:00">
-  <meta itemprop="wordCount" content="431">
+  <meta itemprop="dateModified" content="2025-06-28T18:39:16+02:00">
+  <meta itemprop="wordCount" content="415">
   <meta itemprop="image" content="http://localhost:1313/images/og_image.png">
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -347,10 +362,6 @@ Prerequisites: Ghidra good_boy executable (unzip with password “crackmes.one�
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#hello--today-we-are-going-to-reverse-engineer-good_boy-by-fdisotto">Hello 👋 Today we are going to reverse engineer “good_boy” by fdisotto.
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#prerequisites">Prerequisites:
         </a>
       </li>
@@ -400,8 +411,15 @@ Prerequisites: Ghidra good_boy executable (unzip with password “crackmes.one�
                   <div class="group-hover:hx-underline">PrintN</div>
                 </a></div>
         <div class="content">
-          <h4>Hello 👋 Today we are going to reverse engineer &ldquo;good_boy&rdquo; by fdisotto.<span class="hx-absolute -hx-mt-20" id="hello--today-we-are-going-to-reverse-engineer-good_boy-by-fdisotto"></span>
-    <a href="#hello--today-we-are-going-to-reverse-engineer-good_boy-by-fdisotto" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><strong>NOTE:</strong> Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&rsquo;t solve it then please don&rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.</p>
+          <p>Hello 👋 Today we are going to reverse engineer &ldquo;good_boy&rdquo; by fdisotto.</p>
+<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+  <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"><div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">ℹ️</div></div>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&rsquo;t solve it, then please don&rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.</div>
+  </div>
+</div>
+
 <h3>Prerequisites:<span class="hx-absolute -hx-mt-20" id="prerequisites"></span>
     <a href="#prerequisites" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ol>
 <li>Ghidra</li>
@@ -492,11 +510,11 @@ Prerequisites: Ghidra good_boy executable (unzip with password “crackmes.one�
 <p>In a little-endian architecture, the least significant byte is stored first. So it expected h4x0 (0x68347830) but because it is stored with litte-endian architecture it is in reverse order 0x4h (0x30783468).</p>
 <p>So let&rsquo;s try typing it in reverse order so the password should be &lsquo;h4x0r&rsquo;
 <img src="./6.webp" alt="Screenshot 6" loading="lazy" /></p>
-<p>It works and we got the message Good Boy! I hope you learned something new, don&rsquo;t forget to check me out on <a href="https://youtube.com/@PrintN42" target="_blank" rel="noopener noreferrer nofollow">Youtube</a> and <a href="https://x.com/PrintN42" target="_blank" rel="noopener noreferrer nofollow">𝕏</a>.</p>
+<p>It works and we got the message Good Boy!</p>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2024-08-08T00:00:00.000Z">August 8, 2024</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-06-28T18:39:16.000Z">June 28, 2025</time></div>
         
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/blog/easy_reverse-crackmes/"

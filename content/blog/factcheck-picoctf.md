@@ -6,7 +6,6 @@ authors:
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
 ---
-### Introduction
 Hello👋 Today we're going to take a look at the challenge FactCheck on PicoCTF by Junias Bonou. The difficulty is medium.
 
 ### Challenge Description
@@ -117,7 +116,12 @@ Hmmm, let's do some static analysis with Ghidra. Open the file up in Ghidra and 
   }
 
 ```
-We can see that it first gives us the first part of the flag. Let's start by changing the variable names for all the basic string functions to the character they each represent. We can do that by double-clicking on the `&DAT_`, and it will show us the character, and then just simply rename the variable name. Once done, it should look something like this (**Note: Each flag is unique, so your characters will be different from mine**).
+We can see that it first gives us the first part of the flag. Let's start by changing the variable names for all the basic string functions to the character they each represent. We can do that by double-clicking on the `&DAT_`, and it will show us the character, and then just simply rename the variable name. Once done, it should look something like this. 
+
+{{< callout type="info" >}}
+  Each flag is unique, so your characters will be different from mine
+{{< /callout >}}
+
 ```c++
   std::allocator<char>::allocator();
                     /* try { // try from 001012cf to 001012d3 has its CatchHandler @ 00101975 */

@@ -11,32 +11,35 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Redaction gone wrong - PicoCTF Write-Up – PrintN</title>
-  <meta name="description" content="Introduction Hello! 👋 Today, we’re going to take a look at the ‘Redaction gone wrong’ …" /><link rel="canonical" href="http://localhost:1313/blog/redaction-gone-wrong-picoctf/" itemprop="url" />
+  <meta name="description" content="Hello! 👋 Today, we’re going to take a look at the ‘Redaction gone wrong’ challenge on …" /><link rel="canonical" href="http://localhost:1313/blog/redaction-gone-wrong-picoctf/" itemprop="url" />
 
 <meta property="og:title" content="PrintN" />
-<meta property="og:description" content="Introduction
-    Hello! 👋 Today, we&rsquo;re going to take a look at the &lsquo;Redaction gone wrong&rsquo; challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.
+<meta property="og:description" content="Hello! 👋 Today, we&rsquo;re going to take a look at the &lsquo;Redaction gone wrong&rsquo; challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.
 Challenge Description
-    Now you DON’T see me. This report has some critical data in it, some of which have been redacted correctly, while some were not. Can you find an important key that was not redacted properly?" />
+    Now you DON’T see me. This report has some critical data in it, some of which have been redacted correctly, while some were not. Can you find an important key that was not redacted properly?
+Solution
+    Let&rsquo;s start by opening the provided PDF file. It looks like we have a financial report but there are some words that have been redacted. Based on the challenge description we know that there are some redacted words that were not redacted correctly." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/blog/redaction-gone-wrong-picoctf/" /><meta property="og:image" content="http://localhost:1313/images/og_image.png"/><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2024-10-24T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-10-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-06-28T18:39:16+02:00" />
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://beginnerprivacy.com/images/og_image.png">
 <meta name="twitter:title" content="PrintN">
-<meta name="twitter:description" content="Introduction
-    Hello! 👋 Today, we&rsquo;re going to take a look at the &lsquo;Redaction gone wrong&rsquo; challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.
+<meta name="twitter:description" content="Hello! 👋 Today, we&rsquo;re going to take a look at the &lsquo;Redaction gone wrong&rsquo; challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.
 Challenge Description
-    Now you DON’T see me. This report has some critical data in it, some of which have been redacted correctly, while some were not. Can you find an important key that was not redacted properly?">
+    Now you DON’T see me. This report has some critical data in it, some of which have been redacted correctly, while some were not. Can you find an important key that was not redacted properly?
+Solution
+    Let&rsquo;s start by opening the provided PDF file. It looks like we have a financial report but there are some words that have been redacted. Based on the challenge description we know that there are some redacted words that were not redacted correctly.">
 
   <meta itemprop="name" content="Redaction gone wrong - PicoCTF Write-Up">
-  <meta itemprop="description" content="Introduction Hello! 👋 Today, we’re going to take a look at the ‘Redaction gone wrong’ challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.
-Challenge Description Now you DON’T see me. This report has some critical data in it, some of which have been redacted correctly, while some were not. Can you find an important key that was not redacted properly?">
+  <meta itemprop="description" content="Hello! 👋 Today, we’re going to take a look at the ‘Redaction gone wrong’ challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.
+Challenge Description Now you DON’T see me. This report has some critical data in it, some of which have been redacted correctly, while some were not. Can you find an important key that was not redacted properly?
+Solution Let’s start by opening the provided PDF file. It looks like we have a financial report but there are some words that have been redacted. Based on the challenge description we know that there are some redacted words that were not redacted correctly.">
   <meta itemprop="datePublished" content="2024-10-24T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-10-24T00:00:00+00:00">
-  <meta itemprop="wordCount" content="174">
+  <meta itemprop="dateModified" content="2025-06-28T18:39:16+02:00">
+  <meta itemprop="wordCount" content="173">
   <meta itemprop="image" content="http://localhost:1313/images/og_image.png">
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -335,10 +338,6 @@ Challenge Description Now you DON’T see me. This report has some critical data
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#introduction">Introduction
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#challenge-description">Challenge Description
         </a>
       </li>
@@ -376,8 +375,7 @@ Challenge Description Now you DON’T see me. This report has some critical data
                   <div class="group-hover:hx-underline">PrintN</div>
                 </a></div>
         <div class="content">
-          <h3>Introduction<span class="hx-absolute -hx-mt-20" id="introduction"></span>
-    <a href="#introduction" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Hello! 👋 Today, we&rsquo;re going to take a look at the &lsquo;Redaction gone wrong&rsquo; challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.</p>
+          <p>Hello! 👋 Today, we&rsquo;re going to take a look at the &lsquo;Redaction gone wrong&rsquo; challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.</p>
 <h3>Challenge Description<span class="hx-absolute -hx-mt-20" id="challenge-description"></span>
     <a href="#challenge-description" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Now you DON’T see me. This <a href="https://artifacts.picoctf.net/c/84/Financial_Report_for_ABC_Labs.pdf" target="_blank" rel="noopener noreferrer nofollow">report</a> has some critical data in it, some of which have been redacted correctly, while some were not. Can you find an important key that was not redacted properly?</p>
 <h3>Solution<span class="hx-absolute -hx-mt-20" id="solution"></span>
@@ -406,7 +404,7 @@ Redacted document.</code></pre><div class="hextra-code-copy-btn-container hx-opa
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2024-10-24T00:00:00.000Z">October 24, 2024</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-06-28T18:39:16.000Z">June 28, 2025</time></div>
         
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/blog/10-essential-nmap-flags/"

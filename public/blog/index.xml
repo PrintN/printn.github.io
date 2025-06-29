@@ -23,8 +23,7 @@
       <description>
         
         
-        &lt;h3&gt;Introduction&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at the challenge FactCheck on PicoCTF by Junias Bonou. The difficulty is medium.&lt;/p&gt;
+        &lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at the challenge FactCheck on PicoCTF by Junias Bonou. The difficulty is medium.&lt;/p&gt;
 &lt;h3&gt;Challenge Description&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;challenge-description&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#challenge-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This binary is putting together some important piece of information&amp;hellip; Can you uncover that information? Examine this &lt;a href=&#34;https://artifacts.picoctf.net/c_titan/186/bin&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;file&lt;/a&gt;. Do you understand its inner workings?&lt;/p&gt;
 &lt;h3&gt;Solution&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;solution&#34;&gt;&lt;/span&gt;
@@ -156,7 +155,15 @@
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;We can see that it first gives us the first part of the flag. Let&amp;rsquo;s start by changing the variable names for all the basic string functions to the character they each represent. We can do that by double-clicking on the &lt;code&gt;&amp;amp;DAT_&lt;/code&gt;, and it will show us the character, and then just simply rename the variable name. Once done, it should look something like this (&lt;strong&gt;Note: Each flag is unique, so your characters will be different from mine&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;We can see that it first gives us the first part of the flag. Let&amp;rsquo;s start by changing the variable names for all the basic string functions to the character they each represent. We can do that by double-clicking on the &lt;code&gt;&amp;amp;DAT_&lt;/code&gt;, and it will show us the character, and then just simply rename the variable name. Once done, it should look something like this.&lt;/p&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;ℹ️&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;Each flag is unique, so your characters will be different from mine&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;allocator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;allocator&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
@@ -486,9 +493,8 @@
       <description>
         
         
-        &lt;p&gt;&lt;img src=&#34;./0.webp&#34; alt=&#34;Image 0&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h3&gt;Introduction&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;F-Droid is an open source app repository that provides a wide range of free and open source applications for Android devices. It offers a user-friendly alternative to Google Play, focusing on privacy and transparency. I just recently published my app to F-Droid, you can check it out here 👉 &lt;a href=&#34;https://f-droid.org/en/packages/io.github.printn.humanbenchmark/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;Human Benchmark&lt;/a&gt;.&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&#34;./0.webp&#34; alt=&#34;Image 0&#34; loading=&#34;lazy&#34; /&gt;
+F-Droid is an open source app repository that provides a wide range of free and open source applications for Android devices. It offers a user-friendly alternative to Google Play, focusing on privacy and transparency. I just recently published my app to F-Droid, you can check it out here 👉 &lt;a href=&#34;https://f-droid.org/en/packages/io.github.printn.humanbenchmark/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;Human Benchmark&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Prerequisites&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;prerequisites&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#prerequisites&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;A Linux environment (use a virtual machine if you&amp;rsquo;re on Windows).&lt;/li&gt;
@@ -733,8 +739,7 @@
       <description>
         
         
-        &lt;h3&gt;Introduction&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Today we&amp;rsquo;re going to take a look at the challenge Collaborative Development on PicoCTF by Jeffery John. The difficulty is easy.&lt;/p&gt;
+        &lt;p&gt;Today we&amp;rsquo;re going to take a look at the challenge Collaborative Development on PicoCTF by Jeffery John. The difficulty is easy.&lt;/p&gt;
 &lt;h3&gt;Challenge Description&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;challenge-description&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#challenge-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;My team has been working very hard on new features for our flag printing program! I wonder how they&amp;rsquo;ll work together? You can download the challenge files here:&lt;/p&gt;
 &lt;ul&gt;
@@ -873,9 +878,8 @@
       <description>
         
         
-        &lt;p&gt;&lt;img src=&#34;./0.webp&#34; alt=&#34;Image 0&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h3&gt;Introduction&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;./https://tryhackme.com/r/room/lessonlearned&#34; &gt;Lesson Learned?&lt;/a&gt; room made by TryHackMe and Tib3rius. The difficulty is easy.&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&#34;./0.webp&#34; alt=&#34;Image 0&#34; loading=&#34;lazy&#34; /&gt;
+Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;./https://tryhackme.com/r/room/lessonlearned&#34; &gt;Lesson Learned?&lt;/a&gt; room made by TryHackMe and Tib3rius. The difficulty is easy.&lt;/p&gt;
 &lt;p&gt;The challenge description states there is no rabbit holes or hidden files but we have to treat the box as a real target. Going to the website &lt;code&gt;https://[MACHINE_IP]/&lt;/code&gt; we&amp;rsquo;re presented with a login form.
 &lt;img src=&#34;./1.webp&#34; alt=&#34;Screenshot 1&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3&gt;Enumeration&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;enumeration&#34;&gt;&lt;/span&gt;
@@ -1000,9 +1004,8 @@
       <description>
         
         
-        &lt;p&gt;&lt;img src=&#34;././0.webp&#34; alt=&#34;Image 0&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h3&gt;Introduction to Time Complexity&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction-to-time-complexity&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction-to-time-complexity&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Time complexity measures how the time to complete an algorithm grows with the size of its input. Understanding time complexity is crucial for optimizing performance in software development.&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&#34;././0.webp&#34; alt=&#34;Image 0&#34; loading=&#34;lazy&#34; /&gt;
+Time complexity measures how the time to complete an algorithm grows with the size of its input. Understanding time complexity is crucial for optimizing performance in software development.&lt;/p&gt;
 &lt;h4&gt;Time Complexity vs. Space Complexity&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;time-complexity-vs-space-complexity&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#time-complexity-vs-space-complexity&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Time Complexity&lt;/strong&gt;: Focuses on how long an algorithm takes to run.&lt;/li&gt;
@@ -1187,8 +1190,7 @@
       <description>
         
         
-        &lt;h3&gt;Introduction&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Hello! 👋 Today, we&amp;rsquo;re going to take a look at the &amp;lsquo;Redaction gone wrong&amp;rsquo; challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.&lt;/p&gt;
+        &lt;p&gt;Hello! 👋 Today, we&amp;rsquo;re going to take a look at the &amp;lsquo;Redaction gone wrong&amp;rsquo; challenge on PicoCTF by Mubarak Mikail. The difficulty level is medium.&lt;/p&gt;
 &lt;h3&gt;Challenge Description&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;challenge-description&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#challenge-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Now you DON’T see me. This &lt;a href=&#34;https://artifacts.picoctf.net/c/84/Financial_Report_for_ABC_Labs.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;report&lt;/a&gt; has some critical data in it, some of which have been redacted correctly, while some were not. Can you find an important key that was not redacted properly?&lt;/p&gt;
 &lt;h3&gt;Solution&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;solution&#34;&gt;&lt;/span&gt;
@@ -1413,8 +1415,7 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
       <description>
         
         
-        &lt;h3&gt;Introduction&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Hello! 👋 Today, we&amp;rsquo;re going to take a look at the &amp;lsquo;unpackme&amp;rsquo; challenge on PicoCTF by LT &amp;lsquo;syreal&amp;rsquo; Jones. The difficulty level is medium.&amp;quot;&lt;/p&gt;
+        &lt;p&gt;Hello! 👋 Today, we&amp;rsquo;re going to take a look at the &amp;lsquo;unpackme&amp;rsquo; challenge on PicoCTF by LT &amp;lsquo;syreal&amp;rsquo; Jones. The difficulty level is medium.&amp;quot;&lt;/p&gt;
 &lt;h3&gt;Challenge Description&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;challenge-description&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#challenge-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Can you get the flag?&lt;/p&gt;
 &lt;p&gt;Reverse engineer this &lt;a href=&#34;https://artifacts.picoctf.net/c/205/unpackme-upx&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;binary&lt;/a&gt;.&lt;/p&gt;
@@ -1551,8 +1552,7 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
       <description>
         
         
-        &lt;h3&gt;Introduction&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at the challenge Plumbing on PicoCTF by Alex Fulton &amp;amp; Danny Tunitis. The difficulty is medium.&lt;/p&gt;
+        &lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at the challenge Plumbing on PicoCTF by Alex Fulton &amp;amp; Danny Tunitis. The difficulty is medium.&lt;/p&gt;
 &lt;h3&gt;Challenge Description&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;challenge-description&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#challenge-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Sometimes you need to handle process data outside of a file. Can you find a way to keep the output from this program and search for the flag? Connect to &lt;code&gt;jupiter.challenges.picoctf.org 4427&lt;/code&gt;.&lt;/p&gt;
 &lt;h3&gt;Solution&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;solution&#34;&gt;&lt;/span&gt;
@@ -1626,8 +1626,7 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
       <description>
         
         
-        &lt;h3&gt;Introduction&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at the challenge Blame Game on PicoCTF by Jeffery John. The difficulty is easy.&lt;/p&gt;
+        &lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at the challenge Blame Game on PicoCTF by Jeffery John. The difficulty is easy.&lt;/p&gt;
 &lt;h3&gt;Challenge Description&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;challenge-description&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#challenge-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Someone&amp;rsquo;s commits seems to be preventing the program from working. Who is it?&lt;/p&gt;
 &lt;p&gt;You can download the challenge files here:&lt;/p&gt;
@@ -1736,9 +1735,8 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
       <description>
         
         
-        &lt;p&gt;&lt;img src=&#34;./0.webp&#34; alt=&#34;Image 0&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h3&gt;Introduction&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;./https://www.hackthebox.com/machines/permx&#34; &gt;PermX&lt;/a&gt; machine on HackTheBox by mtzsec. The difficulty is easy.&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&#34;./0.webp&#34; alt=&#34;Image 0&#34; loading=&#34;lazy&#34; /&gt;
+Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;./https://www.hackthebox.com/machines/permx&#34; &gt;PermX&lt;/a&gt; machine on HackTheBox by mtzsec. The difficulty is easy.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;ll have to start by adding the target IP Adress to our &lt;code&gt;/etc/hosts&lt;/code&gt; use nano or vim to edit this.&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
@@ -2260,8 +2258,15 @@ Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;https://
       <description>
         
         
-        &lt;h4&gt;Hello 👋 Today we are going to reverse engineer &amp;ldquo;good_boy&amp;rdquo; by fdisotto.&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;hello--today-we-are-going-to-reverse-engineer-good_boy-by-fdisotto&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#hello--today-we-are-going-to-reverse-engineer-good_boy-by-fdisotto&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&amp;rsquo;t solve it then please don&amp;rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.&lt;/p&gt;
+        &lt;p&gt;Hello 👋 Today we are going to reverse engineer &amp;ldquo;good_boy&amp;rdquo; by fdisotto.&lt;/p&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;ℹ️&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&amp;rsquo;t solve it, then please don&amp;rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;h3&gt;Prerequisites:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;prerequisites&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#prerequisites&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;Ghidra&lt;/li&gt;
@@ -2352,7 +2357,7 @@ Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;https://
 &lt;p&gt;In a little-endian architecture, the least significant byte is stored first. So it expected h4x0 (0x68347830) but because it is stored with litte-endian architecture it is in reverse order 0x4h (0x30783468).&lt;/p&gt;
 &lt;p&gt;So let&amp;rsquo;s try typing it in reverse order so the password should be &amp;lsquo;h4x0r&amp;rsquo;
 &lt;img src=&#34;./6.webp&#34; alt=&#34;Screenshot 6&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;It works and we got the message Good Boy! I hope you learned something new, don&amp;rsquo;t forget to check me out on &lt;a href=&#34;https://youtube.com/@PrintN42&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;Youtube&lt;/a&gt; and &lt;a href=&#34;https://x.com/PrintN42&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;𝕏&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It works and we got the message Good Boy!&lt;/p&gt;
 
       </description>
     </item>
@@ -2366,8 +2371,15 @@ Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;https://
       <description>
         
         
-        &lt;h4&gt;Hello 👋 Today we are going to reverse engineer &amp;ldquo;easy_reverse&amp;rdquo; from cbm-hackers.&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;hello--today-we-are-going-to-reverse-engineer-easy_reverse-from-cbm-hackers&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#hello--today-we-are-going-to-reverse-engineer-easy_reverse-from-cbm-hackers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&amp;rsquo;t solve it then please don&amp;rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.&lt;/p&gt;
+        &lt;p&gt;Hello 👋 Today we are going to reverse engineer &amp;ldquo;easy_reverse&amp;rdquo; from cbm-hackers.&lt;/p&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;ℹ️&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can&amp;rsquo;t solve it, then please don&amp;rsquo;t just take the answer and leave immediately because that is not how you learn reverse engineering.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;h3&gt;Prerequisites:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;prerequisites&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#prerequisites&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;Ghidra&lt;/li&gt;
@@ -2452,7 +2464,7 @@ Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;https://
 &lt;h3&gt;Running it with the correct password&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;running-it-with-the-correct-password&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#running-it-with-the-correct-password&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;So now we can construct a password that meets the correct conditions.
 &lt;img src=&#34;./4.webp&#34; alt=&#34;Screenshot 4&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;It works! I hope you learned something new, don&amp;rsquo;t forget to check me out on &lt;a href=&#34;https://youtube.com/@PrintN42&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;Youtube&lt;/a&gt; where I have some great videos.&lt;/p&gt;
+&lt;p&gt;It works and we get the flag!&lt;/p&gt;
 
       </description>
     </item>

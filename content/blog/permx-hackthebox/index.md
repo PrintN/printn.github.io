@@ -7,7 +7,6 @@ authors:
     image: https://github.com/PrintN.png
 ---
 ![Image 0](./0.webp)
-### Introduction
 Hello👋 Today we're going to take a look at [PermX](./https://www.hackthebox.com/machines/permx) machine on HackTheBox by mtzsec. The difficulty is easy.
 
 We'll have to start by adding the target IP Adress to our ```/etc/hosts``` use nano or vim to edit this.

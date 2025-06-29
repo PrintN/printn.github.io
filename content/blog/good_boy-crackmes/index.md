@@ -6,8 +6,11 @@ authors:
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
 ---
-#### Hello 👋 Today we are going to reverse engineer "good_boy" by fdisotto.
-**NOTE:** Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can't solve it then please don't just take the answer and leave immediately because that is not how you learn reverse engineering. 
+Hello 👋 Today we are going to reverse engineer "good_boy" by fdisotto.
+
+{{< callout type="info" >}}
+  Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can't solve it, then please don't just take the answer and leave immediately because that is not how you learn reverse engineering. 
+{{< /callout >}}
 
 ### Prerequisites:
 1. Ghidra
@@ -83,4 +86,4 @@ In a little-endian architecture, the least significant byte is stored first. So 
 So let's try typing it in reverse order so the password should be 'h4x0r'
 ![Screenshot 6](./6.webp)
 
-It works and we got the message Good Boy! I hope you learned something new, don't forget to check me out on [Youtube](https://youtube.com/@PrintN42) and [𝕏](https://x.com/PrintN42).
+It works and we got the message Good Boy!

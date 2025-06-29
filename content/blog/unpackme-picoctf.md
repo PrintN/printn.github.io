@@ -6,7 +6,6 @@ authors:
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
 ---
-### Introduction
 Hello! 👋 Today, we're going to take a look at the 'unpackme' challenge on PicoCTF by LT 'syreal' Jones. The difficulty level is medium."
 
 ### Challenge Description

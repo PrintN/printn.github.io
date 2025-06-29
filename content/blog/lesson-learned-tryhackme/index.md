@@ -7,7 +7,6 @@ authors:
     image: https://github.com/PrintN.png
 ---
 ![Image 0](./0.webp)
-### Introduction
 Today we're going to take a look at [Lesson Learned?](./https://tryhackme.com/r/room/lessonlearned) room made by TryHackMe and Tib3rius. The difficulty is easy.
 
 The challenge description states there is no rabbit holes or hidden files but we have to treat the box as a real target. Going to the website `https://[MACHINE_IP]/` we're presented with a login form.

@@ -6,7 +6,6 @@ authors:
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
 ---
-### Introduction
 Hello👋 Today we're going to take a look at the challenge Blame Game on PicoCTF by Jeffery John. The difficulty is easy.
 
 ### Challenge Description

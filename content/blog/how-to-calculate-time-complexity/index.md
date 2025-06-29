@@ -7,7 +7,6 @@ authors:
     image: https://github.com/PrintN.png
 ---
 ![Image 0](././0.webp)
-### Introduction to Time Complexity
 Time complexity measures how the time to complete an algorithm grows with the size of its input. Understanding time complexity is crucial for optimizing performance in software development.
 
 #### Time Complexity vs. Space Complexity

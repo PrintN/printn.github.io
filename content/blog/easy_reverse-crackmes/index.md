@@ -6,8 +6,11 @@ authors:
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
 ---
-#### Hello 👋 Today we are going to reverse engineer "easy_reverse" from cbm-hackers.
-**NOTE:** Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can't solve it then please don't just take the answer and leave immediately because that is not how you learn reverse engineering. 
+Hello 👋 Today we are going to reverse engineer "easy_reverse" from cbm-hackers.
+
+{{< callout type="info" >}}
+  Please try to solve this challenge by yourself first before looking at the solution. If you have tried your best and can't solve it, then please don't just take the answer and leave immediately because that is not how you learn reverse engineering. 
+{{< /callout >}}
 
 ### Prerequisites:
 1. Ghidra
@@ -73,4 +76,4 @@ if (*(char *)(param_2[1] + 4) == '@') {
 So now we can construct a password that meets the correct conditions.
 ![Screenshot 4](./4.webp)
 
-It works! I hope you learned something new, don't forget to check me out on [Youtube](https://youtube.com/@PrintN42) where I have some great videos.
+It works and we get the flag!

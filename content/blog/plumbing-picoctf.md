@@ -6,7 +6,6 @@ authors:
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
 ---
-### Introduction
 Hello👋 Today we're going to take a look at the challenge Plumbing on PicoCTF by Alex Fulton & Danny Tunitis. The difficulty is medium.
 
 ### Challenge Description

@@ -6,7 +6,6 @@ authors:
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
 ---
-### Introduction
 Today we're going to take a look at the challenge Collaborative Development on PicoCTF by Jeffery John. The difficulty is easy.
 
 ### Challenge Description
