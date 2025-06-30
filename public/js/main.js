@@ -1,9 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-  if (!("color-theme" in localStorage)) {
-    setDarkTheme();
-    localStorage.setItem("color-theme", "dark");
-  }
-});
+if (!("color-theme" in localStorage)) {
+  setDarkTheme();
+  localStorage.setItem("color-theme", "dark");
+}
 
 (function () {
   const defaultTheme = 'system'
