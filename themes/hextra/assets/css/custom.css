@@ -120,7 +120,6 @@ section#contact {
     font-size: 4rem;
     font-weight: bold;
     color: #006ce8;
-    margin-left: 10px;
     position: absolute;
     transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0;
@@ -188,7 +187,7 @@ section#contact {
 /* Navigation dots */
 .nav-dots {
     position: fixed;
-    right: 4%;
+    right: 3.45%;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
