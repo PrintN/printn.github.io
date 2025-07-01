@@ -41,7 +41,7 @@ markup:
 enableInlineShortcodes: true
 
 params:
-  description: Online privacy made simple with Beginner Privacy. Learn how to protect your data with our actionable roadmap and guides.
+  description: Meet PrintN—software developer, CTF player, and privacy advocate. I build secure, minimalist software with a mission to make privacy-focused solutions the best option, not just an alternative.
   images:
     - images/og_image.png
   navbar:
