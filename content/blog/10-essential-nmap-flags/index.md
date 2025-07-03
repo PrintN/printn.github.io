@@ -5,6 +5,9 @@ authors:
   - name: PrintN
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
+tags:
+  - Guide
+  - Nmap
 ---
 ![Image 0](./0.webp)
 ### What is Nmap?

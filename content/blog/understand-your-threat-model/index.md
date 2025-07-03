@@ -5,6 +5,8 @@ authors:
   - name: PrintN
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
+tags:
+  - Privacy
 ---
 ### What Is a Threat Model?
 A threat model is a way to systematically identify and evaluate potential security risks to a system or asset. It helps both individuals and organizations recognize their vulnerabilities, understand the possible impacts of different threats, and determine the best strategies to protect against them.

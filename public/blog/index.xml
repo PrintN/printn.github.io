@@ -16,14 +16,14 @@
     
     <item>
       <title>FactCheck - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/factcheck-picoctf/</link>
+      <link>http://localhost:1313/blog/factcheck-picoctf-write-up/</link>
       <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/factcheck-picoctf/</guid>
+      <guid>http://localhost:1313/blog/factcheck-picoctf-write-up/</guid>
       <description>
         
         
-        &lt;p&gt;Hello👋 Today we&amp;rsquo;re going to take a look at the challenge FactCheck on PicoCTF by Junias Bonou. The difficulty is medium.&lt;/p&gt;
+        &lt;p&gt;Hello 👋 Today we&amp;rsquo;re going to take a look at the challenge FactCheck on PicoCTF by Junias Bonou. The difficulty is medium.&lt;/p&gt;
 &lt;h3&gt;Challenge Description&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;challenge-description&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#challenge-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This binary is putting together some important piece of information&amp;hellip; Can you uncover that information? Examine this &lt;a href=&#34;https://artifacts.picoctf.net/c_titan/186/bin&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;file&lt;/a&gt;. Do you understand its inner workings?&lt;/p&gt;
 &lt;h3&gt;Solution&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;solution&#34;&gt;&lt;/span&gt;
@@ -732,10 +732,10 @@ F-Droid is an open source app repository that provides a wide range of free and 
     
     <item>
       <title>Collaborative Development - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/collaborative-development-picoctf/</link>
+      <link>http://localhost:1313/blog/collaborative-development-picoctf-write-up/</link>
       <pubDate>Thu, 07 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/collaborative-development-picoctf/</guid>
+      <guid>http://localhost:1313/blog/collaborative-development-picoctf-write-up/</guid>
       <description>
         
         
@@ -871,10 +871,10 @@ F-Droid is an open source app repository that provides a wide range of free and 
     
     <item>
       <title>Lesson Learned? - TryHackMe Write-Up</title>
-      <link>http://localhost:1313/blog/lesson-learned-tryhackme/</link>
+      <link>http://localhost:1313/blog/lesson-learned-tryhackme-write-up/</link>
       <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/lesson-learned-tryhackme/</guid>
+      <guid>http://localhost:1313/blog/lesson-learned-tryhackme-write-up/</guid>
       <description>
         
         
@@ -1183,10 +1183,10 @@ Time complexity measures how the time to complete an algorithm grows with the si
     
     <item>
       <title>Redaction gone wrong - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/redaction-gone-wrong-picoctf/</link>
+      <link>http://localhost:1313/blog/redaction-gone-wrong-picoctf-write-up/</link>
       <pubDate>Thu, 24 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/redaction-gone-wrong-picoctf/</guid>
+      <guid>http://localhost:1313/blog/redaction-gone-wrong-picoctf-write-up/</guid>
       <description>
         
         
@@ -1408,10 +1408,10 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
     
     <item>
       <title>unpackme - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/unpackme-picoctf/</link>
+      <link>http://localhost:1313/blog/unpackme-picoctf-write-up/</link>
       <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/unpackme-picoctf/</guid>
+      <guid>http://localhost:1313/blog/unpackme-picoctf-write-up/</guid>
       <description>
         
         
@@ -1545,10 +1545,10 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
     
     <item>
       <title>Plumbing - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/plumbing-picoctf/</link>
+      <link>http://localhost:1313/blog/plumbing-picoctf-write-up/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/plumbing-picoctf/</guid>
+      <guid>http://localhost:1313/blog/plumbing-picoctf-write-up/</guid>
       <description>
         
         
@@ -1619,10 +1619,10 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
     
     <item>
       <title>Blame Game - PicoCTF Write-Up</title>
-      <link>http://localhost:1313/blog/blame-game-picoctf/</link>
+      <link>http://localhost:1313/blog/blame-game-picoctf-write-up/</link>
       <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/blame-game-picoctf/</guid>
+      <guid>http://localhost:1313/blog/blame-game-picoctf-write-up/</guid>
       <description>
         
         
@@ -1728,10 +1728,10 @@ Redacted document.&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-b
     
     <item>
       <title>PermX - HackTheBox Write-Up</title>
-      <link>http://localhost:1313/blog/permx-hackthebox/</link>
+      <link>http://localhost:1313/blog/permx-hackthebox-write-up/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/permx-hackthebox/</guid>
+      <guid>http://localhost:1313/blog/permx-hackthebox-write-up/</guid>
       <description>
         
         
@@ -1918,10 +1918,10 @@ Let&amp;rsquo;s take a look at &lt;code&gt;/opt/acl.sh&lt;/code&gt;.&lt;/p&gt;
     
     <item>
       <title>Creative - TryHackMe Write-Up</title>
-      <link>http://localhost:1313/blog/creative-tryhackme/</link>
+      <link>http://localhost:1313/blog/creative-tryhackme-write-up/</link>
       <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/creative-tryhackme/</guid>
+      <guid>http://localhost:1313/blog/creative-tryhackme-write-up/</guid>
       <description>
         
         
@@ -2129,10 +2129,10 @@ We see that Saad can run &lt;code&gt;ping&lt;/code&gt; as root, but we can&amp;r
     
     <item>
       <title>W1seGuy - TryHackMe Write-Up</title>
-      <link>http://localhost:1313/blog/w1seguy-tryhackme/</link>
+      <link>http://localhost:1313/blog/w1seguy-tryhackme-write-up/</link>
       <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/w1seguy-tryhackme/</guid>
+      <guid>http://localhost:1313/blog/w1seguy-tryhackme-write-up/</guid>
       <description>
         
         
@@ -2251,10 +2251,10 @@ Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;https://
     
     <item>
       <title>good_boy - Crackmes Write-Up</title>
-      <link>http://localhost:1313/blog/good_boy-crackmes/</link>
+      <link>http://localhost:1313/blog/goodboy-crackmes-write-up/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/good_boy-crackmes/</guid>
+      <guid>http://localhost:1313/blog/goodboy-crackmes-write-up/</guid>
       <description>
         
         
@@ -2364,10 +2364,10 @@ Hello👋 Today we&amp;rsquo;re going to take a look at &lt;a href=&#34;https://
     
     <item>
       <title>easy_reverse - Crackmes Write-Up</title>
-      <link>http://localhost:1313/blog/easy_reverse-crackmes/</link>
+      <link>http://localhost:1313/blog/easyreverse-crackmes-write-up/</link>
       <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/easy_reverse-crackmes/</guid>
+      <guid>http://localhost:1313/blog/easyreverse-crackmes-write-up/</guid>
       <description>
         
         

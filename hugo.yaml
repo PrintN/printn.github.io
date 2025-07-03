@@ -73,7 +73,7 @@ params:
   displayUpdatedDate: true
   dateFormat: "January 2, 2006"
 
-  articles:
+  blog:
     list:
       displayTags: true
       # date | lastmod | publishDate | title | weight

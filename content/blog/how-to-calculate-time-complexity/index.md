@@ -5,6 +5,8 @@ authors:
   - name: PrintN
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
+tags:
+  - Guide
 ---
 ![Image 0](././0.webp)
 Time complexity measures how the time to complete an algorithm grows with the size of its input. Understanding time complexity is crucial for optimizing performance in software development.

@@ -1,23 +1,59 @@
 {{ define "main" }}
   {{- $readMore := "Read more" -}}
   <div class="hx-mx-auto hx-flex {{ partial `utils/page-width` . }}">
-    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" true) }}
     <article class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]">
       <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
         <br class="hx-mt-1.5 hx-text-sm" />
         {{ if .Title }}<h1 class="hx-text-center hx-mt-2 hx-text-4xl hx-font-bold hx-tracking-tight hx-text-slate-900 dark:hx-text-slate-100">{{ .Title }}</h1>{{ end }}
         <div class="content">{{ .Content }}</div>
+        
+        <div class="hx-mt-4">
+          <input type="text" id="searchBar" placeholder="Search blog posts..." class="hx-w-full hx-outline-none hx-bg-white dark:hx-bg-black hx-p-2 hx-border hx-border-gray-300 hx-rounded" />
+        </div>
+
+        <div class="hx-mt-4">
+          <label class="hx-block hx-mb-2">Filter by Category:</label>
+          <div class="relative">
+            <div id="dropdownContainer" class="hx-border hx-w-full hx-border-gray-300 hx-rounded hx-overflow-hidden">
+              <div id="selectedOption" class="hx-p-2 hx-cursor-pointer hx-flex hx-items-center hx-justify-between">
+                <span>All Categories</span>
+                <svg width="20px" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              
+              <div id="dropdownOptions" class="hx-hidden">
+                <hr class="hx-border-black/5 dark:hx-border-white/10" />
+
+                <div class="dropdown-option hx-p-2 hx-cursor-pointer hover:hx-bg-gray-100 dark:hover:hx-bg-primary-100/5" data-value="all">All Categories</div>
+                <div class="dropdown-option hx-p-2 hx-cursor-pointer hover:hx-bg-gray-100 dark:hover:hx-bg-primary-100/5" data-value="guide">Guide</div>
+                <div class="dropdown-option hx-p-2 hx-cursor-pointer hover:hx-bg-gray-100 dark:hover:hx-bg-primary-100/5" data-value="privacy">Privacy</div>
+                
+                <div class="dropdown-option hx-p-2 hx-cursor-pointer hx-flex hx-items-center hx-justify-between hx-pr-2 hover:hx-bg-gray-100 dark:hover:hx-bg-primary-100/5" id="ctfHeader">
+                  <span>CTF</span>
+                  <svg width="20px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+                <div id="ctfOptions" class="hx-hidden hx-ml-4">
+                  <div class="dropdown-option hx-p-2 hx-cursor-pointer hover:hx-bg-gray-100 dark:hover:hx-bg-primary-100/5" data-value="tryhackme">TryHackMe</div>
+                  <div class="dropdown-option hx-p-2 hx-cursor-pointer hover:hx-bg-gray-100 dark:hover:hx-bg-primary-100/5" data-value="picoctf">PicoCTF</div>
+                  <div class="dropdown-option hx-p-2 hx-cursor-pointer hover:hx-bg-gray-100 dark:hover:hx-bg-primary-100/5" data-value="crackmes">Crackmes</div>
+                  <div class="dropdown-option hx-p-2 hx-cursor-pointer hover:hx-bg-gray-100 dark:hover:hx-bg-primary-100/5" data-value="hackthebox">HackTheBox</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="blogPostsContainer">
         {{- $pages := partial "utils/sort-pages" (dict "page" . "by" site.Params.article.list.sortBy "order" site.Params.article.list.sortOrder) -}}
         {{- range $pages }}
-          <div class="hx-mb-10">
-            <h3><a style="color: inherit; text-decoration: none;" class="hx-block hx-font-semibold hx-mt-8 hx-text-2xl " href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            {{- if site.Params.article.list.displayTags -}}
-              {{ with .Params.tags }}
-                <p class="hx-opacity-50 hx-text-sm hx-leading-7">
-                  {{- range . }}<a class="hx-inline-block hx-mr-2">#{{ . }}</a>{{ end -}}
-                </p>
-              {{ end -}}
-            {{- end -}}
+          <div class="hx-mb-10 blog-post" data-title="{{ lower .Title }}" data-categories="{{ with .Params.tags }}{{ range . }}{{ lower . }} {{ end }}{{ end }}">
+            <h3><a class="hx-block hx-text-color-inherit hx-font-semibold hx-mt-8 hx-text-2xl" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ if site.Params.blog.list.displayTags }}
+              {{ partial "tags.html" . }}
+            {{ end }}
             <p class="hx-opacity-80 hx-mt-4 hx-leading-7">{{- partial "utils/page-description" . -}}</p>
             <p class="hx-opacity-80 hx-mt-1 hx-leading-7">
               <a class="read-more-link hx-text-[color:hsl(var(--primary-hue),100%,50%)]" href="{{ .RelPermalink }}">
@@ -27,8 +63,80 @@
             <p class="hx-opacity-50 hx-text-sm hx-mt-4 hx-leading-7">{{ partial "utils/format-date" .Date }}</p>
           </div>
         {{ end -}}
+        </div>
       </main>
     </article>
-    <div class="max-xl:hx-hidden hx-h-0 hx-w-64 hx-shrink-0"></div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const blogPosts = document.querySelectorAll('.blog-post');
+      const searchBar = document.getElementById('searchBar');
+      const selectedOption = document.getElementById('selectedOption');
+      const dropdownOptions = document.getElementById('dropdownOptions');
+      const dropdownContainer = document.getElementById('dropdownContainer');
+      const ctfHeader = document.getElementById('ctfHeader');
+      const ctfOptions = document.getElementById('ctfOptions');
+      let currentFilter = 'all';
+
+      // Toggle dropdown visibility
+      selectedOption.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownOptions.classList.toggle('hx-hidden');
+        
+        // Close CTF submenu when closing main dropdown
+        if (dropdownOptions.classList.contains('hx-hidden')) {
+          ctfOptions.classList.add('hx-hidden');
+        }
+      });
+
+      // Toggle CTF submenu
+      ctfHeader.addEventListener('click', function(e) {
+        e.stopPropagation();
+        ctfOptions.classList.toggle('hx-hidden');
+      });
+
+      // Handle option selection
+      document.querySelectorAll('.dropdown-option').forEach(option => {
+        option.addEventListener('click', function(e) {
+          if (this.dataset.value) { // Skip header click
+            e.stopPropagation();
+            currentFilter = this.dataset.value;
+            selectedOption.querySelector('span').textContent = this.textContent;
+            dropdownOptions.classList.add('hx-hidden');
+            filterPosts();
+          }
+        });
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function() {
+        dropdownOptions.classList.add('hx-hidden');
+        ctfOptions.classList.add('hx-hidden');
+      });
+
+      // Filter posts based on selected category and search input
+      function filterPosts() {
+        const searchTerm = searchBar.value.toLowerCase();
+        
+        blogPosts.forEach(post => {
+          const postCategories = post.dataset.categories.trim().split(/\s+/);
+          const matchesCategory = currentFilter === 'all' || postCategories.includes(currentFilter);
+          const matchesSearch = post.dataset.title.includes(searchTerm) || post.textContent.toLowerCase().includes(searchTerm);
+          
+          if (matchesCategory && matchesSearch) {
+            post.style.display = 'block';
+          } else {
+            post.style.display = 'none';
+          }
+        });
+      }
+
+      // Search functionality
+      searchBar.addEventListener('input', filterPosts);
+      
+      // Initialize filtering
+      filterPosts();
+    });
+  </script>
 {{- end -}}

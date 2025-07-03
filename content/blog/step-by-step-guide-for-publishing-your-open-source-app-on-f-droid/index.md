@@ -5,6 +5,9 @@ authors:
   - name: PrintN
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
+tags:
+  - Guide
+  - F-Droid
 ---
 ![Image 0](./0.webp)
 F-Droid is an open source app repository that provides a wide range of free and open source applications for Android devices. It offers a user-friendly alternative to Google Play, focusing on privacy and transparency. I just recently published my app to F-Droid, you can check it out here 👉 [Human Benchmark](https://f-droid.org/en/packages/io.github.printn.humanbenchmark/).

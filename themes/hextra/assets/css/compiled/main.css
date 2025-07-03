@@ -524,6 +524,15 @@ video {
 .hx-pointer-events-none {
   pointer-events: none;
 }
+.hx-outline-none {
+  outline: none;
+}
+.hx-text-decoration-none {
+  text-decoration: none;
+}
+.hx-text-color-inherit {
+  color: inherit !important;
+}
 .hx-fixed {
   position: fixed;
 }
@@ -1045,6 +1054,9 @@ video {
   background-color: rgb(254 243 199 / var(--tw-bg-opacity));
 }
 .hx-bg-black {
+  background-color: rgb(0 0 0);
+}
+.dark\:hx-bg-black:is(html[class~="dark"] *) {
   background-color: rgb(0 0 0);
 }
 .hx-bg-black\/80 {

@@ -405,6 +405,25 @@ section#contact {
   margin-left: 10px;
 }
 
+/* Blog filter */
+.sub-category-dropdown {
+  display: none; /* Initially hidden */
+}
+
+.sub-category-dropdown.hidden {
+  display: none; /* Keep it hidden */
+}
+
+.sub-category-dropdown .sub-category-option {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.sub-category-dropdown .sub-category-option:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+
 /* Mobile */
 @media only screen and (max-width: 1000px) {
     .portfolio-carousel .carousel-button {

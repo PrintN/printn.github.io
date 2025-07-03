@@ -27,9 +27,11 @@ function rotateText() {
     }, 500);
 }
 
-rotatingText.textContent = texts[currentIndex];
-rotatingText.style.opacity = 1;
-setInterval(rotateText, 3000);
+if (rotatingText) {
+    rotatingText.textContent = texts[currentIndex];
+    rotatingText.style.opacity = 1;
+    setInterval(rotateText, 3000);
+}
 
 // Learn more
 const aboutSectionId = document.getElementById('about');

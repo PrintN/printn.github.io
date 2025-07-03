@@ -5,6 +5,9 @@ authors:
   - name: PrintN
     link: https://github.com/PrintN
     image: https://github.com/PrintN.png
+tags:
+  - Privacy
+  - RSS
 ---
 
 ![Introduction Image](0.webp)

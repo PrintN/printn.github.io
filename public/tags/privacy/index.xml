@@ -1,0 +1,125 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PrintN – Privacy</title>
+    <link>http://localhost:1313/tags/privacy/</link>
+    <description>Recent content in Privacy on PrintN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 17 Dec 2024 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="http://localhost:1313/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Understand Your Threat Model</title>
+      <link>http://localhost:1313/blog/understand-your-threat-model/</link>
+      <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/understand-your-threat-model/</guid>
+      <description>
+        
+        
+        &lt;h3&gt;What Is a Threat Model?&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;what-is-a-threat-model&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#what-is-a-threat-model&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A threat model is a way to systematically identify and evaluate potential security risks to a system or asset. It helps both individuals and organizations recognize their vulnerabilities, understand the possible impacts of different threats, and determine the best strategies to protect against them.&lt;/p&gt;
+&lt;h3&gt;Assesing Your Threat Model&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;assesing-your-threat-model&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#assesing-your-threat-model&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;0.webp&#34; alt=&#34;Spectrum&#34; loading=&#34;lazy&#34; /&gt;
+&lt;em&gt;&lt;a href=&#34;https://ericmurphy.xyz/images/spectrum.png&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;https://ericmurphy.xyz/images/spectrum.png&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;When assessing your individual threat model, consider the following steps to create a practical and effective strategy:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Self-Assessment and Goals:&lt;/strong&gt; Evaluate your privacy needs and set clear goals. Position yourself on the privacy spectrum by asking:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Who am I trying to protect myself from?&lt;/li&gt;
+&lt;li&gt;What information am I willing to share online?&lt;/li&gt;
+&lt;li&gt;What are my main privacy concerns, such as tracking by big corporations?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Identify Key Threats:&lt;/strong&gt; Focus on the specific threats that align with your privacy goals.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Evaluate Current Practices:&lt;/strong&gt; Review your security measures and software to ensure they align with your position on the privacy spectrum.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Implement Practical Solutions:&lt;/strong&gt; Choose manageable actions that align with your privacy goals.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Stay Informed and Adapt:&lt;/strong&gt; Privacy threats evolve, so stay informed about new risks and best practices. Regularly revisit your threat model and adjust your strategies as needed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Conclusion&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;conclusion&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#conclusion&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;It&amp;rsquo;s very important to understand your threat model, as everyone&amp;rsquo;s threat model is different. For those who are moderately privacy-conscious, implementing a few practical measures can offer effective protection without resorting to extreme privacy measures.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Why You Should Set Up an RSS Feed</title>
+      <link>http://localhost:1313/blog/why-you-should-start-using-rss-feed/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/why-you-should-start-using-rss-feed/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;img src=&#34;0.webp&#34; alt=&#34;Introduction Image&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;What is RSS?&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;what-is-rss&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#what-is-rss&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;RSS (Really Simple Syndication), is a way to get updates from your favorite websites and blogs in one place. It&amp;rsquo;s like a personalized feed that delivers new content from the sites you care about, so you don&amp;rsquo;t have to constantly check them individually.&lt;/p&gt;
+&lt;h3&gt;Why You Should Start Using RSS&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;why-you-should-start-using-rss&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#why-you-should-start-using-rss&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;There are many reasons why one should setup a RSS feed. Here are the main reasons.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Productivity:&lt;/strong&gt; Save time by getting all your favorite content in one place.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy:&lt;/strong&gt; Your reading habits stay private, no tracking or data selling.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Control:&lt;/strong&gt; You choose what you see, from who you trust.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Where Can You Use RSS?&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;where-can-you-use-rss&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#where-can-you-use-rss&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;RSS is widely supported across the web. You can find RSS feeds on many websites, blogs, and online services. To access RSS feeds, you will need an RSS feed reader / news aggregator.&lt;/p&gt;
+&lt;h3&gt;Best RSS Feeders&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;best-rss-feeders&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#best-rss-feeders&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;Desktop&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;desktop&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#desktop&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;h6&gt;Linux&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;linux&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#linux&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GUI:&lt;/strong&gt; &lt;a href=&#34;https://apps.kde.org/akregator/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;Akregator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CLI:&lt;/strong&gt; &lt;a href=&#34;https://newsboat.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;Newsboat&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6&gt;Windows&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;windows&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#windows&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9P71FC94LRH8?cid=website&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;Fluent&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6&gt;MacOS&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;macos&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#macos&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://apps.apple.com/app/id1520907427&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;Fluent&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Mobile&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;mobile&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#mobile&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;h6&gt;Android&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;android&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#android&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.nononsenseapps.feeder/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;Feeder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6&gt;iOS&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;ios&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#ios&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://apps.apple.com/us/app/feeeed-rss-reader-and-more/id1600187490&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer nofollow&#34;&gt;Feeeed&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Adding YouTube Channels To Your RSS Feed&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;adding-youtube-channels-to-your-rss-feed&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#adding-youtube-channels-to-your-rss-feed&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;To add YouTube channels to your RSS feed, follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Find the channel ID of the YouTube channel you want to subscribe to. To find the channel ID of a YouTube channel, go to the channel, add &lt;code&gt;view-source:&lt;/code&gt; at the beginning of the URL, then search for &lt;code&gt;channelId&lt;/code&gt; in the page source code.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Paste the channel ID together with this URL into your RSS feed reader:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://youtube.com/feeds/videos.xml?channel_id=&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now you&amp;rsquo;ll be notified of new videos from your favorite YouTube channels without having to sign in or share your personal information.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;conclusion&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#conclusion&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;RSS feeds are a powerful tool for staying updated, boosting productivity, and protecting your privacy. By using RSS, you can take control of your online experience and enjoy a more focused, efficient, and enjoyable way to consume content. If you want, feel free to subscribe to my RSS feed to get notified when I publish a new post :)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
