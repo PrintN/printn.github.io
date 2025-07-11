@@ -1,13 +1,14 @@
 {{- $jsTheme := resources.Get "js/theme.js" | resources.ExecuteAsTemplate "theme.js" . -}}
 {{- $jsTabs := resources.Get "js/tabs.js" -}}
-{{- $jsLang := resources.Get "js/lang.js" -}}
 {{- $jsCodeCopy := resources.Get "js/code-copy.js" -}}
 {{- $jsFileTree := resources.Get "js/filetree.js" -}}
 {{- $jsSidebar := resources.Get "js/sidebar.js" -}}
 {{- $jsBackToTop := resources.Get "js/back-to-top.js" -}}
 {{- $jsMisc := resources.Get "js/misc.js" -}}
+{{- $jsHomepage := resources.Get "js/homepage.js" -}}
+{{- $jsNav := resources.Get "js/nav.js" -}}
 
-{{- $scripts := slice $jsTheme $jsCodeCopy $jsTabs $jsLang $jsFileTree $jsSidebar $jsBackToTop $jsMisc | resources.Concat "js/main.js" -}}
+{{- $scripts := slice $jsTheme $jsCodeCopy $jsTabs $jsFileTree $jsSidebar $jsBackToTop $jsMisc $jsHomepage $jsNav | resources.Concat "js/main.js" -}}
 {{- if hugo.IsProduction -}}
   {{- $scripts = $scripts | minify | fingerprint -}}
 {{- end -}}

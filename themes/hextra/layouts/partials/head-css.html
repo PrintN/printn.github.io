@@ -17,13 +17,25 @@
 
 <!-- Custom CSS -->
 {{- $custom := resources.Get "css/custom.css" }}
+{{- $blog := resources.Get "css/components/custom/blog.css" }}
 {{- $footer := resources.Get "css/components/custom/footer.css" }}
+{{- $homepage := resources.Get "css/components/custom/homepage.css" }}
+{{- $nav := resources.Get "css/components/custom/nav.css" }}
 {{- if hugo.IsProduction -}}
   {{- $custom = $custom | minify | fingerprint }}
+  {{- $blog = $blog | minify | fingerprint }}
   {{- $footer = $footer | minify | fingerprint }}
+  {{- $homepage = $homepage | minify | fingerprint }}
+  {{- $nav = $nav | minify | fingerprint }}
   <link href="{{ $custom.RelPermalink }}" rel="stylesheet" integrity="{{ $custom.Data.Integrity }}" />
+  <link href="{{ $blog.RelPermalink }}" rel="stylesheet" integrity="{{ $blog.Data.Integrity }}" />
   <link href="{{ $footer.RelPermalink }}" rel="stylesheet" integrity="{{ $footer.Data.Integrity }}" />
+  <link href="{{ $homepage.RelPermalink }}" rel="stylesheet" integrity="{{ $homepage.Data.Integrity }}" />
+  <link href="{{ $nav.RelPermalink }}" rel="stylesheet" integrity="{{ $nav.Data.Integrity }}" />
 {{- else }}
   <link href="{{ $custom.RelPermalink }}" rel="stylesheet" />
+  <link href="{{ $blog.RelPermalink }}" rel="stylesheet" />
   <link href="{{ $footer.RelPermalink }}" rel="stylesheet" />
+  <link href="{{ $homepage.RelPermalink }}" rel="stylesheet" />
+  <link href="{{ $nav.RelPermalink }}" rel="stylesheet" />
 {{- end }}
