@@ -46,15 +46,15 @@ Why You Should Start Using RSS There are many reasons why one should setup a RSS
 
 
 
-  <link href="/css/custom.css" rel="stylesheet" />
-  <link href="/css/components/custom/blog.css" rel="stylesheet" />
-  <link href="/css/components/custom/footer.css" rel="stylesheet" />
+  <link href="/css/custom.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="/css/components/custom/blog.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="/css/components/custom/footer.css" rel="stylesheet" media="print" onload="this.media='all'" />
   <link href="/css/components/custom/homepage.css" rel="stylesheet" />
-  <link href="/css/components/custom/nav.css" rel="stylesheet" />
+  <link href="/css/components/custom/nav.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
   <script>
      
-    const defaultTheme = 'system';
+    const defaultTheme = 'dark';
 
     const setDarkTheme = () => {
       document.documentElement.classList.add("dark");
@@ -98,7 +98,7 @@ Why You Should Start Using RSS There are many reasons why one should setup a RSS
   <div class="nav-container-blur hx-pointer-events-none hx-absolute hx-z-[-1] hx-h-full hx-w-full hx-bg-white dark:hx-bg-dark hx-shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] contrast-more:hx-shadow-[0_0_0_1px_#000] dark:hx-shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:dark:hx-shadow-[0_0_0_1px_#fff]"></div>
 
   <nav class="hx-mx-auto hx-flex hx-items-center hx-justify-end hx-gap-2 hx-h-16 hx-max-w-[94vw]">
-    <a class="hx-flex hx-items-center hover:hx-opacity-75 ltr:hx-mr-auto rtl:hx-ml-auto" href="/">
+    <a class="hx-flex hx-items-center hover:hx-opacity-75 ltr:hx-mr-auto rtl:hx-ml-auto" href="/" aria-label="Home">
       <div class="printn-container">
         <span class="printn-text hx-text-2xl hx-font-bold hx-inline hx-select-none"></span>
       </div>

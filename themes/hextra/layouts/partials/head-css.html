@@ -27,15 +27,15 @@
   {{- $footer = $footer | minify | fingerprint }}
   {{- $homepage = $homepage | minify | fingerprint }}
   {{- $nav = $nav | minify | fingerprint }}
-  <link href="{{ $custom.RelPermalink }}" rel="stylesheet" integrity="{{ $custom.Data.Integrity }}" />
-  <link href="{{ $blog.RelPermalink }}" rel="stylesheet" integrity="{{ $blog.Data.Integrity }}" />
-  <link href="{{ $footer.RelPermalink }}" rel="stylesheet" integrity="{{ $footer.Data.Integrity }}" />
+  <link href="{{ $custom.RelPermalink }}" rel="stylesheet" integrity="{{ $custom.Data.Integrity }}" media="print" onload="this.media='all'" />
+  <link href="{{ $blog.RelPermalink }}" rel="stylesheet" integrity="{{ $blog.Data.Integrity }}" media="print" onload="this.media='all'" />
+  <link href="{{ $footer.RelPermalink }}" rel="stylesheet" integrity="{{ $footer.Data.Integrity }}" media="print" onload="this.media='all'" />
   <link href="{{ $homepage.RelPermalink }}" rel="stylesheet" integrity="{{ $homepage.Data.Integrity }}" />
-  <link href="{{ $nav.RelPermalink }}" rel="stylesheet" integrity="{{ $nav.Data.Integrity }}" />
+  <link href="{{ $nav.RelPermalink }}" rel="stylesheet" integrity="{{ $nav.Data.Integrity }}" media="print" onload="this.media='all'" />
 {{- else }}
-  <link href="{{ $custom.RelPermalink }}" rel="stylesheet" />
-  <link href="{{ $blog.RelPermalink }}" rel="stylesheet" />
-  <link href="{{ $footer.RelPermalink }}" rel="stylesheet" />
+  <link href="{{ $custom.RelPermalink }}" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="{{ $blog.RelPermalink }}" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="{{ $footer.RelPermalink }}" rel="stylesheet" media="print" onload="this.media='all'" />
   <link href="{{ $homepage.RelPermalink }}" rel="stylesheet" />
-  <link href="{{ $nav.RelPermalink }}" rel="stylesheet" />
+  <link href="{{ $nav.RelPermalink }}" rel="stylesheet" media="print" onload="this.media='all'" />
 {{- end }}

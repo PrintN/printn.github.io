@@ -34,15 +34,15 @@
 
 
 
-  <link href="/css/custom.css" rel="stylesheet" />
-  <link href="/css/components/custom/blog.css" rel="stylesheet" />
-  <link href="/css/components/custom/footer.css" rel="stylesheet" />
+  <link href="/css/custom.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="/css/components/custom/blog.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="/css/components/custom/footer.css" rel="stylesheet" media="print" onload="this.media='all'" />
   <link href="/css/components/custom/homepage.css" rel="stylesheet" />
-  <link href="/css/components/custom/nav.css" rel="stylesheet" />
+  <link href="/css/components/custom/nav.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
   <script>
      
-    const defaultTheme = 'system';
+    const defaultTheme = 'dark';
 
     const setDarkTheme = () => {
       document.documentElement.classList.add("dark");
@@ -86,7 +86,7 @@
   <div class="nav-container-blur hx-pointer-events-none hx-absolute hx-z-[-1] hx-h-full hx-w-full hx-bg-white dark:hx-bg-dark hx-shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] contrast-more:hx-shadow-[0_0_0_1px_#000] dark:hx-shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:dark:hx-shadow-[0_0_0_1px_#fff]"></div>
 
   <nav class="hx-mx-auto hx-flex hx-items-center hx-justify-end hx-gap-2 hx-h-16 hx-max-w-[94vw]">
-    <a class="hx-flex hx-items-center hover:hx-opacity-75 ltr:hx-mr-auto rtl:hx-ml-auto" href="/">
+    <a class="hx-flex hx-items-center hover:hx-opacity-75 ltr:hx-mr-auto rtl:hx-ml-auto" href="/" aria-label="Home">
       <div class="printn-container">
         <span class="printn-text hx-text-2xl hx-font-bold hx-inline hx-select-none"></span>
       </div>
@@ -333,9 +333,9 @@
             <h2 id="rotating-text">Hobby Software Developer</h2>
         </div>
     </div>
-    <a onclick="learnMore();" class="learn-more-btn bounce">
+    <div onclick="learnMore();" class="learn-more-btn bounce">
         Learn more
-    </a>
+    </div>
 </section>
 <section id="about">
     <div class="hx-container hx-text-center">
@@ -417,9 +417,10 @@
         <div class="carousel">
             <div class="slides">
                 <div class="slide active">
-                    <ul class="hx-list-disc hx-pl-5">
+                    <div class="hx-list-disc hx-pl-5">
                         <span class="hx-text-2xl hx-font-bold">YouTube Automation Bot</span>
-                        <li class="hx-mb-2">I built this YouTube automation bot as a fun side project using Python and GitHub Actions to run it daily. I wanted to learn more about video creation with Python and was inspired by the many automated channels on YouTube.</li>
+                        <br>
+                        <span class="hx-mb-2">I built this YouTube automation bot as a fun side project using Python and GitHub Actions to run it daily. I wanted to learn more about video creation with Python and was inspired by the many automated channels on YouTube.</span>
                         <div class="tech-icons hx-mt-2">
                             <div class="icon-container">
                                 <svg viewBox="0 0 128 128"><linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"></stop><stop offset="1" stop-color="#306998"></stop></linearGradient><linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"></stop><stop offset="1" stop-color="#FFE873"></stop></linearGradient><path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)"></path><path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)"></path><radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8B8B8" stop-opacity=".498"></stop><stop offset="1" stop-color="#7F7F7F" stop-opacity="0"></stop></radialGradient><path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z"></path></svg>
@@ -431,12 +432,13 @@
                             </div>
                         </div>
                         <a href="https://github.com/PrintN/Youtube-Automation-Bot" target="_blank"><img src="https://img.shields.io/github/stars/PrintN/Youtube-Automation-Bot?style=social" alt="Star Count"></a>
-                    </ul>
+                    </div>
                 </div>
                 <div class="slide">
-                    <ul class="hx-list-disc hx-pl-5">
+                    <div class="hx-list-disc hx-pl-5">
                         <span class="hx-text-2xl hx-font-bold">Human Benchmark</span>
-                        <li class="hx-mb-2">An app to test your abilities. Built to learn more about mobile development with Flutter. The app offers various tests, including memory, reaction time, pattern recognition, aim training, and typing tests, each designed to measure different aspects of your mental capabilities.</li>
+                        <br>
+                        <span class="hx-mb-2">An app to test your abilities. Built to learn more about mobile development with Flutter. The app offers various tests, including memory, reaction time, pattern recognition, aim training, and typing tests, each designed to measure different aspects of your mental capabilities.</span>
                         <div class="tech-icons hx-mt-2">
                             <div class="icon-container">
                                 <svg viewBox="0 0 128 128"><path fill="#00c4b3" d="M35.2 34.9l-8.3-8.3v59.7l.1 2.8c0 1.3.2 2.8.7 4.3l65.6 23.1 16.3-7.2-74.4-74.4z"></path><path d="M27.7 93.4zm81.9 15.9l-16.3 7.2-65.4-23.1c1.3 4.8 4 10.1 7 13.2l21.3 21.2 47.6.1 5.8-18.6z" fill="#22d3c5"></path><path fill="#0075c9" d="M1.7 65.1C-.4 67.3.7 72 4 75.5l14.7 14.8 9.2 3.3c-.3-1.5-.7-3-.7-4.3l-.1-2.8-.2-59.8m82.7 82.6l7.2-16.4-23-65.6c-1.5-.3-3-.6-4.3-.7l-2.9-.1-59.6.1"></path><path d="M93.6 27.3c.2 0 .2 0 0 0 .2 0 .2 0 0 0zm16 82l17.7-5.8V54.8l-20.4-20.5c-3-3-8.3-5.8-13.2-7l23.1 65.6" fill="#00a8e1"></path><path fill="#00c4b3" d="M90.5 18.2L75.7 3.5c-3.4-3.4-8-4.4-10.4-2.3L26.9 26.6h59.5l2.9.1c1.3 0 2.8.2 4.3.7l-3.1-9.2z"></path></svg>
@@ -452,12 +454,13 @@
                             </div>
                         </div>
                         <a href="https://github.com/PrintN/Human-Benchmark" target="_blank"><img src="https://img.shields.io/github/stars/PrintN/Human-Benchmark?style=social" alt="Star Count"></a>
-                    </ul>
+                    </div>
                 </div>
                 <div class="slide">
-                    <ul class="hx-list-disc hx-pl-5">
+                    <div class="hx-list-disc hx-pl-5">
                         <span class="hx-text-2xl hx-font-bold">Beginner Privacy</span>
-                        <li class="hx-mb-2">This is one of my larger projects. Beginner Privacy is a website dedicated to simplifying online privacy for everyone. It provides accessible resources and practical tools to help users understand and protect their personal information in the digital world.</li>
+                        <br>
+                        <span class="hx-mb-2">This is one of my larger projects. Beginner Privacy is a website dedicated to simplifying online privacy for everyone. It provides accessible resources and practical tools to help users understand and protect their personal information in the digital world.</span>
                         <div class="tech-icons hx-mt-2">
                             <div class="icon-container">
                                 <svg viewBox="0 0 370 391" xmlns="http://www.w3.org/2000/svg"><g clip-rule="evenodd" fill-rule="evenodd"><path d="m207.5 22.4 114.4 66.6c13.5 7.9 21.9 22.4 21.9 38v136.4c0 17.3-9.3 33.3-24.5 41.8l-113.5 63.9a49.06 49.06 0 0 1 -48.5-.2l-104.5-60.1c-16.4-9.5-26.6-27-26.6-45.9v-129.5c0-19.1 9.9-36.8 26.1-46.8l102.8-63.5c16-9.9 36.2-10.1 52.4-.7z" fill="#ff4088" stroke="#c9177e" stroke-width="27" /><path d="m105.6 298.2v-207.2h43.4v75.5h71.9v-75.5h43.5v207.2h-43.5v-90.6h-71.9v90.6z" fill="#fff" /></g></svg>
@@ -477,13 +480,13 @@
                             </div>
                         </div>
                         <a href="https://github.com/BeginnerPrivacy/beginnerprivacy.github.io" target="_blank"><img src="https://img.shields.io/github/stars/BeginnerPrivacy/beginnerprivacy.github.io?style=social" alt="Star Count"></a>
-                    </ul>
+                    </div>
                 </div>
             </div>
             <div class="indicators">
-                <button class="indicator active" aria-label="Go to slide 1"></button>
-                <button class="indicator" aria-label="Go to slide 2"></button>
-                <button class="indicator" aria-label="Go to slide 3"></button>
+                <div class="indicator active" aria-label="Go to slide 1"></div>
+                <div class="indicator" aria-label="Go to slide 2"></div>
+                <div class="indicator" aria-label="Go to slide 3"></div>
             </div>
         </div>
         <button class="carousel-button prev" aria-label="Previous slide">&#10094;</button>
@@ -496,10 +499,10 @@
         <p class="hx-text-lg hx-mb-6">
             I enjoy sharing my thoughts and experiences through my blog. Here are some recent posts:
         </p>
-        <ul class="hx-list-disc hx-pl-5 hx-mb-2 hx-inline-flex hx-flex-wrap hx-justify-center">
+        <div class="hx-list-disc hx-pl-5 hx-mb-2 hx-inline-flex hx-flex-wrap hx-justify-center">
             
                 <a href="http://localhost:1313/blog/factcheck-picoctf-write-up/" target="_blank" class="hx-text-primary-600 hover:hx-text-primary-800 font-semibold">
-                    <li class="blog-post-card">
+                    <div class="blog-post-card">
                         <h2>FactCheck - PicoCTF Write-Up</h2>
                         <div class="hx-flex hx-justify-between hx-text-gray-500 hx-text-sm hx-mt-1">
                             <span>January 8, 2025</span>
@@ -509,11 +512,11 @@
                                 
                             
                         </div>
-                    </li>
+                    </div>
                 </a>
             
                 <a href="http://localhost:1313/blog/understand-your-threat-model/" target="_blank" class="hx-text-primary-600 hover:hx-text-primary-800 font-semibold">
-                    <li class="blog-post-card">
+                    <div class="blog-post-card">
                         <h2>Understand Your Threat Model</h2>
                         <div class="hx-flex hx-justify-between hx-text-gray-500 hx-text-sm hx-mt-1">
                             <span>December 17, 2024</span>
@@ -523,11 +526,11 @@
                                 
                             
                         </div>
-                    </li>
+                    </div>
                 </a>
             
                 <a href="http://localhost:1313/blog/why-you-should-start-using-rss-feed/" target="_blank" class="hx-text-primary-600 hover:hx-text-primary-800 font-semibold">
-                    <li class="blog-post-card">
+                    <div class="blog-post-card">
                         <h2>Why You Should Set Up an RSS Feed</h2>
                         <div class="hx-flex hx-justify-between hx-text-gray-500 hx-text-sm hx-mt-1">
                             <span>December 9, 2024</span>
@@ -537,11 +540,11 @@
                                 
                             
                         </div>
-                    </li>
+                    </div>
                 </a>
 
-            <a href="/blog" class="hx-text-primary-600 hover:hx-text-primary-800"><li class="blog-post-card">View all posts<br><div class="blog-arrow">&rarr;</div></li></a>
-        </ul>
+            <a href="/blog" class="hx-text-primary-600 hover:hx-text-primary-800"><div class="blog-post-card">View all posts<br><div class="blog-arrow">&rarr;</div></div></a>
+        </div>
     </div>
 </section>
 <section id="contact">

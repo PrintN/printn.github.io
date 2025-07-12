@@ -17,9 +17,9 @@ layout: hextra-home
             <h2 id="rotating-text">Hobby Software Developer</h2>
         </div>
     </div>
-    <a onclick="learnMore();" class="learn-more-btn bounce">
+    <div onclick="learnMore();" class="learn-more-btn bounce">
         Learn more
-    </a>
+    </div>
 </section>
 
 <section id="about">
@@ -103,9 +103,10 @@ layout: hextra-home
         <div class="carousel">
             <div class="slides">
                 <div class="slide active">
-                    <ul class="hx-list-disc hx-pl-5">
+                    <div class="hx-list-disc hx-pl-5">
                         <span class="hx-text-2xl hx-font-bold">YouTube Automation Bot</span>
-                        <li class="hx-mb-2">I built this YouTube automation bot as a fun side project using Python and GitHub Actions to run it daily. I wanted to learn more about video creation with Python and was inspired by the many automated channels on YouTube.</li>
+                        <br>
+                        <span class="hx-mb-2">I built this YouTube automation bot as a fun side project using Python and GitHub Actions to run it daily. I wanted to learn more about video creation with Python and was inspired by the many automated channels on YouTube.</span>
                         <div class="tech-icons hx-mt-2">
                             <div class="icon-container">
                                 {{< hextra/icon name="python" >}}
@@ -117,12 +118,13 @@ layout: hextra-home
                             </div>
                         </div>
                         <a href="https://github.com/PrintN/Youtube-Automation-Bot" target="_blank"><img src="https://img.shields.io/github/stars/PrintN/Youtube-Automation-Bot?style=social" alt="Star Count"></a>
-                    </ul>
+                    </div>
                 </div>
                 <div class="slide">
-                    <ul class="hx-list-disc hx-pl-5">
+                    <div class="hx-list-disc hx-pl-5">
                         <span class="hx-text-2xl hx-font-bold">Human Benchmark</span>
-                        <li class="hx-mb-2">An app to test your abilities. Built to learn more about mobile development with Flutter. The app offers various tests, including memory, reaction time, pattern recognition, aim training, and typing tests, each designed to measure different aspects of your mental capabilities.</li>
+                        <br>
+                        <span class="hx-mb-2">An app to test your abilities. Built to learn more about mobile development with Flutter. The app offers various tests, including memory, reaction time, pattern recognition, aim training, and typing tests, each designed to measure different aspects of your mental capabilities.</span>
                         <div class="tech-icons hx-mt-2">
                             <div class="icon-container">
                                 {{< hextra/icon name="dart" >}}
@@ -138,12 +140,13 @@ layout: hextra-home
                             </div>
                         </div>
                         <a href="https://github.com/PrintN/Human-Benchmark" target="_blank"><img src="https://img.shields.io/github/stars/PrintN/Human-Benchmark?style=social" alt="Star Count"></a>
-                    </ul>
+                    </div>
                 </div>
                 <div class="slide">
-                    <ul class="hx-list-disc hx-pl-5">
+                    <div class="hx-list-disc hx-pl-5">
                         <span class="hx-text-2xl hx-font-bold">Beginner Privacy</span>
-                        <li class="hx-mb-2">This is one of my larger projects. Beginner Privacy is a website dedicated to simplifying online privacy for everyone. It provides accessible resources and practical tools to help users understand and protect their personal information in the digital world.</li>
+                        <br>
+                        <span class="hx-mb-2">This is one of my larger projects. Beginner Privacy is a website dedicated to simplifying online privacy for everyone. It provides accessible resources and practical tools to help users understand and protect their personal information in the digital world.</span>
                         <div class="tech-icons hx-mt-2">
                             <div class="icon-container">
                                 {{< hextra/icon name="hugo" >}}
@@ -163,13 +166,13 @@ layout: hextra-home
                             </div>
                         </div>
                         <a href="https://github.com/BeginnerPrivacy/beginnerprivacy.github.io" target="_blank"><img src="https://img.shields.io/github/stars/BeginnerPrivacy/beginnerprivacy.github.io?style=social" alt="Star Count"></a>
-                    </ul>
+                    </div>
                 </div>
             </div>
             <div class="indicators">
-                <button class="indicator active" aria-label="Go to slide 1"></button>
-                <button class="indicator" aria-label="Go to slide 2"></button>
-                <button class="indicator" aria-label="Go to slide 3"></button>
+                <div class="indicator active" aria-label="Go to slide 1"></div>
+                <div class="indicator" aria-label="Go to slide 2"></div>
+                <div class="indicator" aria-label="Go to slide 3"></div>
             </div>
         </div>
         <button class="carousel-button prev" aria-label="Previous slide">&#10094;</button>
@@ -183,10 +186,10 @@ layout: hextra-home
         <p class="hx-text-lg hx-mb-6">
             I enjoy sharing my thoughts and experiences through my blog. Here are some recent posts:
         </p>
-        <ul class="hx-list-disc hx-pl-5 hx-mb-2 hx-inline-flex hx-flex-wrap hx-justify-center">
+        <div class="hx-list-disc hx-pl-5 hx-mb-2 hx-inline-flex hx-flex-wrap hx-justify-center">
             {{< hextra/recent-posts >}}
-            <a href="/blog" class="hx-text-primary-600 hover:hx-text-primary-800"><li class="blog-post-card">View all posts<br><div class="blog-arrow">&rarr;</div></li></a>
-        </ul>
+            <a href="/blog" class="hx-text-primary-600 hover:hx-text-primary-800"><div class="blog-post-card">View all posts<br><div class="blog-arrow">&rarr;</div></div></a>
+        </div>
     </div>
 </section>
 

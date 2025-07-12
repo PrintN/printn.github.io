@@ -4,7 +4,7 @@ if (!("color-theme" in localStorage)) {
 }
 
 (function () {
-  const defaultTheme = 'system'
+  const defaultTheme = 'dark'
 
   const themeToggleButtons = document.querySelectorAll(".theme-toggle");
 
