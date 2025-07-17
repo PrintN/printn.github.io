@@ -75,7 +75,7 @@ function updateColors() {
     }
 
     const heartEmoji = colorTheme === 'dark' ? '💚' : '💙';
-    document.querySelector('.copyright-section p').innerHTML = `<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Made with ${heartEmoji} by PrintN.</strong></p>`;
+    document.querySelector('.copyright-section p').innerHTML = `Made with ${heartEmoji} by PrintN.</strong> <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0<svg class="hx-w-5 hx-h-5" style="display: inline; margin: 0 0 0.35rem 0.4rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg></a>`;
 }
 
 updateColors();

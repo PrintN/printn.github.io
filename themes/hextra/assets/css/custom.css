@@ -13,6 +13,7 @@
 
 @font-face {
     font-family: 'FiraCode';
+    font-display: swap;
     src: url('/fonts/FiraCode/FiraCode.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -20,18 +21,21 @@
 
 @font-face {
     font-family: 'FiraCode-Bold';
+    font-display: swap;
     src: url('/fonts/FiraCode/FiraCode.ttf') format('truetype');
     font-weight: 900;
 }
 
 @font-face {
     font-family: 'FiraCode-SemiBold';
+    font-display: swap;
     src: url('/fonts/FiraCode/FiraCode.ttf') format('truetype');
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Menlo';
+    font-display: optional;
     src: url('/fonts/Menlo/Menlo-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;

@@ -98,7 +98,7 @@ layout: hextra-home
             Here are some of the projects I have made that I'm the most proud of.
         </p>
         <p class="hx-text-lg hx-mb-6">
-            If you'd like to support my work, <a href="/donate">consider donating</a>.
+            If you'd like to support my work, <a href="/donate" target="_blank">consider donating<svg class="hx-w-5 hx-h-5" style="display: inline; margin: 0 0 0.35rem 0.4rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg></a>
         </p>
         <div class="carousel">
             <div class="slides">
@@ -170,9 +170,9 @@ layout: hextra-home
                 </div>
             </div>
             <div class="indicators">
-                <div class="indicator active" aria-label="Go to slide 1"></div>
-                <div class="indicator" aria-label="Go to slide 2"></div>
-                <div class="indicator" aria-label="Go to slide 3"></div>
+                <button class="indicator active" aria-label="Go to slide 1"></button>
+                <button class="indicator" aria-label="Go to slide 2"></button>
+                <button class="indicator" aria-label="Go to slide 3"></button>
             </div>
         </div>
         <button class="carousel-button prev" aria-label="Previous slide">&#10094;</button>
