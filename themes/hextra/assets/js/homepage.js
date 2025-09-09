@@ -48,14 +48,6 @@ function learnMore() {
 // Homepage scrolling
 let currentSectionIndex = 0;
 const sections = document.querySelectorAll('section');
-let isDragging = false;
-let mouseButtonPressed = false;
-let startY = 0;
-let startTime = 0;
-let momentum = 0;
-let dragDistance = 0;
-const DRAG_THRESHOLD = 60;
-const magnetThreshold = 0.2;
 const animationDuration = 400;
 
 if (window.location.pathname === '/' && window.innerHeight >= 825) {
@@ -136,118 +128,6 @@ if (window.location.pathname === '/' && window.innerHeight >= 825) {
             event.preventDefault();
             scrollToSection(currentSectionIndex - 1);
         }
-    });
-
-
-    const navHome = document.querySelector('.printn-container');
-    navHome.addEventListener('click', (event) => {
-        isDragging = false;
-    });
-
-    window.addEventListener('mousedown', (event) => {
-        if (event.button !== 0) return;
-        mouseButtonPressed = true;
-        isDragging = false;
-        startY = event.clientY;
-        startTime = Date.now();
-        dragDistance = 0;
-    });
-
-    window.addEventListener('mousemove', (event) => {
-        if (startY === null || !mouseButtonPressed) return;
-                
-        const currentY = event.clientY;
-        const deltaY = Math.abs(currentY - startY);
-        dragDistance += deltaY;
-        
-        if (!isDragging && dragDistance > DRAG_THRESHOLD) {
-            isDragging = true;
-        }
-        
-        if (isDragging) {
-            window.scrollBy(0, startY - currentY);
-            momentum = (currentY - startY) / (Date.now() - startTime);
-            startY = currentY;
-            startTime = Date.now();
-        }
-    });
-
-    window.addEventListener('mouseup', () => {
-        if (isDragging) {
-            if (Math.abs(momentum) > 1) {
-                const direction = Math.sign(momentum);
-                if (direction < 0 && currentSectionIndex < sections.length - 1) {
-                    scrollToSection(currentSectionIndex + 1);
-                } else if (direction > 0 && currentSectionIndex > 0) {
-                    scrollToSection(currentSectionIndex - 1);
-                }
-            } else {
-                snapToNearestSection();
-            }
-        }
-        isDragging = false;
-        mouseButtonPressed = false;
-        startY = null;
-    });
-
-    window.addEventListener('mouseleave', () => {
-        if (isDragging) {
-            snapToNearestSection();
-        }
-        isDragging = false;
-        mouseButtonPressed = false;
-        startY = null;
-    });
-
-    window.addEventListener('touchstart', (event) => {
-        isDragging = false;
-        startY = event.touches[0].clientY;
-        startTime = Date.now();
-        dragDistance = 0;
-    });
-
-    window.addEventListener('touchmove', (event) => {
-        if (startY === null) return;
-        const currentY = event.touches[0].clientY;
-        const deltaY = Math.abs(currentY - startY);
-        dragDistance += deltaY;
-        
-        if (!isDragging && dragDistance > DRAG_THRESHOLD) {
-            isDragging = true;
-        }
-        
-        if (isDragging) {
-            event.preventDefault();
-            window.scrollBy(0, startY - currentY);
-            momentum = (currentY - startY) / (Date.now() - startTime);
-            startY = currentY;
-            startTime = Date.now();
-        }
-    });
-
-    window.addEventListener('touchend', () => {
-        if (isDragging) {
-            if (Math.abs(momentum) > 0.5) {
-                const direction = Math.sign(momentum);
-                if (direction < 0 && currentSectionIndex < sections.length - 1) {
-                    scrollToSection(currentSectionIndex + 1);
-                } else if (direction > 0 && currentSectionIndex > 0) {
-                    scrollToSection(currentSectionIndex - 1);
-                }
-            } else {
-                snapToNearestSection();
-            }
-        }
-        isDragging = false;
-        startY = null;
-    });
-
-    window.addEventListener('DOMContentLoaded', () => {
-        currentSectionIndex = getSectionIndexFromScroll();
-    });
-
-    window.addEventListener('resize', () => {
-        scrollToSection(currentSectionIndex, 'auto');
     });
 }
 

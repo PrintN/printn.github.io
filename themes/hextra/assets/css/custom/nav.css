@@ -1,0 +1,116 @@
+/* Navigation bar */
+.printn-container {
+    display: inline-block;
+    font-family: monospace;
+}
+
+.printn-text {
+    position: relative;
+    white-space: nowrap;
+}
+
+.printn-text::before,
+.printn-text::after {
+    content: "";
+    transition: opacity 0.25s ease-out;
+}
+
+.printn-text::after {
+    content: "";
+    transition: opacity 0.25s ease-out;
+    position: absolute;
+    top: 5;
+    left: 0;
+}
+
+.printn-text::before {
+    content: "PrintN";
+    opacity: 1;
+}
+
+.printn-text::after {
+    content: "print(\"\\n\")";
+    opacity: 0;
+}
+
+.printn-container:hover .printn-text::before {
+    opacity: 0;
+}
+
+.printn-container:hover .printn-text::after {
+    opacity: 1;
+}
+
+/* Navigation dots */
+.nav-dots {
+    position: fixed;
+    right: 3.45%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 100;
+}
+
+.nav-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(16, 107, 192, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.nav-dot:is(html[class~="dark"] *) {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(16, 192, 80, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-dot.active {
+    background-color: #006ce8;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(0, 108, 232, 0.5);
+}
+.nav-dot.active:is(html[class~="dark"] *) {
+    background-color: #10C050;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(16, 192, 80, 0.5);
+}
+
+.nav-dot::after {
+    content: attr(data-title);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(30%);
+    opacity: 0;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+    width: max-content;
+}
+
+.nav-dot:hover::after {
+    transform: translateY(-50%) translateX(calc(-20px));
+    opacity: 1;
+}
+
+/* Mobile */
+@media only screen and (max-width: 650px) {
+    .theme-toggle-container {
+        margin-bottom: 2px;
+    }
+
+    .nav-dots {
+        display: none;
+    }
+}

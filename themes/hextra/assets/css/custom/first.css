@@ -1,0 +1,48 @@
+:root {
+    --bg-roadmap-modal: white;
+    --roadmap-step-pointer: black;
+    --color-black: black;
+    --color-white: white;
+}
+.dark {
+    --bg-roadmap-modal: #181818;
+    --roadmap-step-pointer: white;
+    --color-black: white;
+    --color-white: black;
+}
+
+@font-face {
+    font-family: 'FiraCode';
+    font-display: swap;
+    src: url('/fonts/FiraCode/FiraCode.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraCode-Bold';
+    font-display: swap;
+    src: url('/fonts/FiraCode/FiraCode.ttf') format('truetype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'FiraCode-SemiBold';
+    font-display: swap;
+    src: url('/fonts/FiraCode/FiraCode.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Menlo';
+    font-display: optional;
+    src: url('/fonts/Menlo/Menlo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'FiraCode', monospace;
+    scroll-behavior: smooth;
+}
