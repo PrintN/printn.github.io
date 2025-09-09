@@ -9,7 +9,7 @@
   {{ partialCached "favicons.html" . -}}
   <title>
     {{- if .IsHome -}}
-        {{ .Site.Title -}}&nbsp;– Code, CTFs & Privacy
+        {{ .Site.Title -}}&nbsp;– Programming, CTFs & Privacy
     {{ else -}}
       {{ with .Title }}{{ . }} – {{ end -}}
       {{ .Site.Title -}}

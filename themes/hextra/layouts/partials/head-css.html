@@ -23,7 +23,7 @@
 {{- $nav := resources.Get "css/custom/nav.css" }}
 {{- $404 := resources.Get "css/custom/404.css" }}
 {{- if hugo.IsProduction -}}
-  {{- $custom = $custom | minify | fingerprint }}
+  {{- $first = $first | minify | fingerprint }}
   {{- $blog = $blog | minify | fingerprint }}
   {{- $footer = $footer | minify | fingerprint }}
   {{- $homepage = $homepage | minify | fingerprint }}
